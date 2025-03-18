@@ -1,0 +1,87 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 200
+      min-spare: 30
+    connection-timeout: 5000ms
+  port: 8080
+  servlet:
+    context-path: /SchoolRoomSys
+
+spring:
+  #MySQL数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: Dl.030506
+      initial-size: 8
+      max-active: 16
+      min-idle: 8
+      max-wait: 60000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+  #热部署
+  devtools:
+    restart:
+      enabled: true #热部署默认会重启
+      additional-paths: src/main/java #添加那个目录的文件需要restart
+
+knife4j:
+  enable: true
+  basic:
+    enable: false
+
+mybatis:
+  #mapper配置文件
+#  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.dl.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+    # 开启日志功能
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+
+dl:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    school-secret-key: dongliang
+    # 设置jwt过期时间
+    school-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    school-token-name: token
+#    user-secret-key: dongliang
+#    user-ttl: 7200000
+#    user-token-name: authentication
+
+#pagehelper:
+#  # 设置方言，此处指定 MySQL 数据库
+#  helper-dialect: mysql
+#  # 是否启动合理化，默认是 false。
+#  # 启用合理化时，如果pageNum<1会查询第一页，如果pageNum>pages（最大页数）会查询最后一页。
+#  # 禁用合理化时，如果pageNum<1或pageNum>pages会返回空数据
+##  reasonable: false
+#  # 是否支持接口参数来传递分页参数，默认false
+#  support-methods-arguments: true
+#  # 为了支持startPage(Object params)方法，增加了该参数来配置参数映射，用于从对象中根据属性名取值
+#  params: count=countSql
+#  # 默认值为 false，当该参数设置为 true 时，如果 pageSize=0 或者 RowBounds.limit = 0 就会查询出全部的结果（相当于没有执行分页查询，但是返回结果仍然是 Page 类型）
+#  page-size-zero: true
+#  max-result-size: 1000 # 设置最大查询结果条数为 1000
+
+logging:
+  level:
+    com:
+      dl:
+        mapper: debug
+        service: info
+        controller: info
+    web: debug
+  config: classpath:logback.xml
+#  file:
+#    name: ../logs/SchoolRoomSys.log

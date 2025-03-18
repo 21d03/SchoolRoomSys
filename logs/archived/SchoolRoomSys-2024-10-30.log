@@ -1,0 +1,63 @@
+2024-10-30 10:17:04 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 10536 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-10-30 10:17:04 - No active profile set, falling back to 1 default profile: "default"
+2024-10-30 10:17:04 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-30 10:17:04 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-30 10:17:05 - Tomcat initialized with port(s): 8080 (http)
+2024-10-30 10:17:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-30 10:17:06 - Starting service [Tomcat]
+2024-10-30 10:17:06 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-10-30 10:17:06 - Initializing Spring embedded WebApplicationContext
+2024-10-30 10:17:06 - Root WebApplicationContext: initialization completed in 1232 ms
+2024-10-30 10:17:06 - Init DruidDataSource
+2024-10-30 10:17:07 - {dataSource-1} inited
+2024-10-30 10:17:08 - 生成school端接口文档
+2024-10-30 10:17:08 - LiveReload server is running on port 35729
+2024-10-30 10:17:08 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-10-30 10:17:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-30 10:17:08 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-10-30 10:17:08 - Documentation plugins bootstrapped
+2024-10-30 10:17:08 - Found 3 custom documentation plugin(s)
+2024-10-30 10:17:08 - Scanning for api listing references
+2024-10-30 10:17:08 - Scanning for api listing references
+2024-10-30 10:17:08 - Scanning for api listing references
+2024-10-30 10:17:08 - Started SchoolRoomSysApplication in 4.16 seconds (JVM running for 5.69)
+2024-10-30 10:17:15 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-30 10:17:15 - Initializing Servlet 'dispatcherServlet'
+2024-10-30 10:17:15 - Completed initialization in 1 ms
+2024-10-30 10:17:15 - 分页查询学生1，1
+2024-10-30 10:22:15 - {dataSource-1} closed
+2024-10-30 14:29:39 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 2068 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-10-30 14:29:39 - No active profile set, falling back to 1 default profile: "default"
+2024-10-30 14:29:39 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-30 14:29:39 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-30 14:29:40 - Tomcat initialized with port(s): 8080 (http)
+2024-10-30 14:29:40 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-30 14:29:40 - Starting service [Tomcat]
+2024-10-30 14:29:40 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-10-30 14:29:41 - Initializing Spring embedded WebApplicationContext
+2024-10-30 14:29:41 - Root WebApplicationContext: initialization completed in 1463 ms
+2024-10-30 14:29:41 - Init DruidDataSource
+2024-10-30 14:29:42 - {dataSource-1} inited
+2024-10-30 14:29:43 - 生成school端接口文档
+2024-10-30 14:29:43 - LiveReload server is running on port 35729
+2024-10-30 14:29:43 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-10-30 14:29:43 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-30 14:29:43 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-10-30 14:29:43 - Documentation plugins bootstrapped
+2024-10-30 14:29:43 - Found 3 custom documentation plugin(s)
+2024-10-30 14:29:43 - Scanning for api listing references
+2024-10-30 14:29:43 - Scanning for api listing references
+2024-10-30 14:29:43 - Scanning for api listing references
+2024-10-30 14:29:43 - Started SchoolRoomSysApplication in 4.396 seconds (JVM running for 6.072)
+2024-10-30 15:05:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-30 15:05:23 - Initializing Servlet 'dispatcherServlet'
+2024-10-30 15:05:23 - Completed initialization in 6 ms
+2024-10-30 15:05:23 - 分页查询学生1，1
+2024-10-30 15:05:24 - ==>  Preparing: SELECT * FROM student_info order by stu_id LIMIT ?
+2024-10-30 15:05:24 - ==> Parameters: 1(Long)
+2024-10-30 15:05:24 - <==      Total: 1
+2024-10-30 15:05:42 - 分页查询学生1，10
+2024-10-30 15:05:42 - ==>  Preparing: SELECT * FROM student_info order by stu_id LIMIT ?
+2024-10-30 15:05:42 - ==> Parameters: 10(Long)
+2024-10-30 15:05:42 - <==      Total: 10
+2024-10-30 15:06:03 - {dataSource-1} closed

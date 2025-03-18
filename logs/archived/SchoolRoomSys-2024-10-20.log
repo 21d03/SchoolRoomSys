@@ -1,0 +1,50 @@
+2024-10-20 18:59:07 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 9956 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-10-20 18:59:07 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 18:59:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-20 18:59:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-20 18:59:08 - Tomcat initialized with port(s): 8080 (http)
+2024-10-20 18:59:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 18:59:08 - Starting service [Tomcat]
+2024-10-20 18:59:08 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-10-20 18:59:08 - Initializing Spring embedded WebApplicationContext
+2024-10-20 18:59:08 - Root WebApplicationContext: initialization completed in 1285 ms
+2024-10-20 18:59:08 - Init DruidDataSource
+2024-10-20 18:59:09 - {dataSource-1} inited
+2024-10-20 18:59:10 - 开始注册自定义拦截器
+2024-10-20 18:59:10 - 生成school端接口文档
+2024-10-20 18:59:10 - LiveReload server is running on port 35729
+2024-10-20 18:59:10 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-10-20 18:59:10 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 18:59:10 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-10-20 18:59:10 - Documentation plugins bootstrapped
+2024-10-20 18:59:10 - Found 3 custom documentation plugin(s)
+2024-10-20 18:59:10 - Scanning for api listing references
+2024-10-20 18:59:10 - Scanning for api listing references
+2024-10-20 18:59:10 - Scanning for api listing references
+2024-10-20 18:59:10 - Started SchoolRoomSysApplication in 4.047 seconds (JVM running for 5.297)
+2024-10-20 18:59:58 - {dataSource-1} closed
+2024-10-20 19:00:04 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15296 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-10-20 19:00:04 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 19:00:05 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-20 19:00:05 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-20 19:00:06 - Tomcat initialized with port(s): 8080 (http)
+2024-10-20 19:00:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 19:00:06 - Starting service [Tomcat]
+2024-10-20 19:00:06 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-10-20 19:00:06 - Initializing Spring embedded WebApplicationContext
+2024-10-20 19:00:06 - Root WebApplicationContext: initialization completed in 1094 ms
+2024-10-20 19:00:06 - Init DruidDataSource
+2024-10-20 19:00:06 - {dataSource-1} inited
+2024-10-20 19:00:08 - 开始注册自定义拦截器
+2024-10-20 19:00:08 - 生成school端接口文档
+2024-10-20 19:00:08 - LiveReload server is running on port 35729
+2024-10-20 19:00:08 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-10-20 19:00:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 19:00:08 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-10-20 19:00:08 - Documentation plugins bootstrapped
+2024-10-20 19:00:08 - Found 3 custom documentation plugin(s)
+2024-10-20 19:00:08 - Scanning for api listing references
+2024-10-20 19:00:08 - Scanning for api listing references
+2024-10-20 19:00:08 - Scanning for api listing references
+2024-10-20 19:00:08 - Started SchoolRoomSysApplication in 3.848 seconds (JVM running for 5.077)
+2024-10-20 19:00:41 - {dataSource-1} closed

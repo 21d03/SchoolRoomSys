@@ -1,0 +1,351 @@
+2025-02-27 20:38:37 [background-preinit] - HV000001: Hibernate Validator 6.2.5.Final
+2025-02-27 20:38:37 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 18540 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-02-27 20:38:37 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-02-27 20:38:37 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-27 20:38:41 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-02-27 20:38:41 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:38:41 [restartedMain] - Starting service [Tomcat]
+2025-02-27 20:38:41 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-02-27 20:38:41 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-02-27 20:38:41 [restartedMain] - Root WebApplicationContext: initialization completed in 3401 ms
+2025-02-27 20:38:41 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-02-27 20:38:41 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-02-27 20:38:41 [restartedMain] - Filter 'corsFilter' configured for use
+2025-02-27 20:38:41 [restartedMain] - Init DruidDataSource
+2025-02-27 20:38:42 [restartedMain] - {dataSource-1} inited
+2025-02-27 20:38:45 [restartedMain] - 开始注册自定义拦截器
+2025-02-27 20:38:45 [restartedMain] - 11 mappings in 'requestMappingHandlerMapping'
+2025-02-27 20:38:45 [restartedMain] - 生成school端接口文档
+2025-02-27 20:38:45 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-02-27 20:38:45 [restartedMain] - LiveReload server is running on port 35729
+2025-02-27 20:38:45 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-27 20:38:46 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-27 20:38:46 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-02-27 20:38:46 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:38:46 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-02-27 20:38:46 [restartedMain] - Documentation plugins bootstrapped
+2025-02-27 20:38:46 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-02-27 20:38:46 [restartedMain] - Scanning for api listing references
+2025-02-27 20:38:46 [restartedMain] - Scanning for api listing references
+2025-02-27 20:38:46 [restartedMain] - Scanning for api listing references
+2025-02-27 20:38:46 [restartedMain] - Started SchoolRoomSysApplication in 9.848 seconds (JVM running for 11.6)
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2cc0b654
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@fbf6ad6
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-02-27 20:39:29 [http-nio-8080-exec-1] - Completed initialization in 4 ms
+2025-02-27 20:39:29 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 20:39:29 [http-nio-8080-exec-2] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 20:39:29 [http-nio-8080-exec-2] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=3, userId=0500001, password=123456)]
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - 用户登录：LoginDTO(userType=3, userId=0500001, password=123456)
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - ==>  Preparing: SELECT su.user_id, su.user_name, su.name, su.phone, su.pass_word as password, si.sex, si.college as college_name, si.profession, si.class_room, si.teacher_id, ti.name as teacher_name, su2.phone as teacher_phone, si.build_id, si.room_id FROM student_user su LEFT JOIN student_info si ON su.user_id = si.stu_id LEFT JOIN teacher_info ti ON si.teacher_id = ti.teacher_id LEFT JOIN school_user su2 ON si.teacher_id = su2.user_id WHERE su.user_id = ?
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - ==> Parameters: 0500001(String)
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - <==      Total: 0
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - 登录失败：用户不存在
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - Writing [Result(code=1, msg=用户不存在, data=null)]
+2025-02-27 20:39:30 [http-nio-8080-exec-2] - Completed 200 OK
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0500001, password=123456)]
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - 用户登录：LoginDTO(userType=1, userId=0500001, password=123456)
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - ==>  Preparing: SELECT su.*, ti.sex as teacher_sex, ci.college_name FROM school_user su LEFT JOIN teacher_info ti ON su.user_id = ti.teacher_id LEFT JOIN college_info ci ON su.level = ci.college_id WHERE su.user_id = ?
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - ==> Parameters: 0500001(String)
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - <==      Total: 1
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - 登录失败：非学校管理员账号
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - Writing [Result(code=1, msg=非学校管理员账号, data=null)]
+2025-02-27 20:39:33 [http-nio-8080-exec-3] - Completed 200 OK
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=2, userId=0500001, password=123456)]
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - 用户登录：LoginDTO(userType=2, userId=0500001, password=123456)
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - ==>  Preparing: SELECT su.*, ti.sex as teacher_sex, ci.college_name FROM school_user su LEFT JOIN teacher_info ti ON su.user_id = ti.teacher_id LEFT JOIN college_info ci ON su.level = ci.college_id WHERE su.user_id = ?
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - ==> Parameters: 0500001(String)
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - <==      Total: 1
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0500001, userName=penghuifeng, name=彭会锋, userType=2, to (truncated)...]
+2025-02-27 20:39:35 [http-nio-8080-exec-6] - Completed 200 OK
+2025-02-27 20:42:48 [File Watcher] - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-02-27 20:42:48 [Thread-5] - Pausing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:48 [Thread-5] - Stopping service [Tomcat]
+2025-02-27 20:42:48 [Thread-5] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-02-27 20:42:48 [Thread-5] - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:48 [Thread-5] - Destroying ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:48 [Thread-5] - {dataSource-1} closing ...
+2025-02-27 20:42:48 [Thread-5] - {dataSource-1} closed
+2025-02-27 20:42:48 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 18540 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-02-27 20:42:48 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-02-27 20:42:50 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-02-27 20:42:50 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:50 [restartedMain] - Starting service [Tomcat]
+2025-02-27 20:42:50 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-02-27 20:42:50 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-02-27 20:42:50 [restartedMain] - Root WebApplicationContext: initialization completed in 1260 ms
+2025-02-27 20:42:50 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-02-27 20:42:50 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-02-27 20:42:50 [restartedMain] - Filter 'corsFilter' configured for use
+2025-02-27 20:42:50 [restartedMain] - Init DruidDataSource
+2025-02-27 20:42:50 [restartedMain] - {dataSource-2} inited
+2025-02-27 20:42:51 [restartedMain] - 开始注册自定义拦截器
+2025-02-27 20:42:51 [restartedMain] - 11 mappings in 'requestMappingHandlerMapping'
+2025-02-27 20:42:51 [restartedMain] - 生成school端接口文档
+2025-02-27 20:42:52 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-02-27 20:42:52 [restartedMain] - LiveReload server is running on port 35729
+2025-02-27 20:42:52 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-27 20:42:52 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-27 20:42:52 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-02-27 20:42:52 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:52 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-02-27 20:42:52 [restartedMain] - Documentation plugins bootstrapped
+2025-02-27 20:42:52 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-02-27 20:42:52 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:52 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:52 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:52 [restartedMain] - Started SchoolRoomSysApplication in 3.718 seconds (JVM running for 257.332)
+2025-02-27 20:42:52 [restartedMain] - Condition evaluation unchanged
+2025-02-27 20:42:53 [File Watcher] - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2025-02-27 20:42:55 [Thread-8] - Pausing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:55 [Thread-8] - Stopping service [Tomcat]
+2025-02-27 20:42:55 [Thread-8] - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:55 [Thread-8] - Destroying ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:55 [Thread-8] - {dataSource-2} closing ...
+2025-02-27 20:42:55 [Thread-8] - {dataSource-2} closed
+2025-02-27 20:42:55 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 18540 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-02-27 20:42:55 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-02-27 20:42:56 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-02-27 20:42:56 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:56 [restartedMain] - Starting service [Tomcat]
+2025-02-27 20:42:56 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-02-27 20:42:56 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-02-27 20:42:56 [restartedMain] - Root WebApplicationContext: initialization completed in 598 ms
+2025-02-27 20:42:56 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-02-27 20:42:56 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-02-27 20:42:56 [restartedMain] - Filter 'corsFilter' configured for use
+2025-02-27 20:42:56 [restartedMain] - Init DruidDataSource
+2025-02-27 20:42:56 [restartedMain] - {dataSource-3} inited
+2025-02-27 20:42:57 [restartedMain] - 开始注册自定义拦截器
+2025-02-27 20:42:57 [restartedMain] - 11 mappings in 'requestMappingHandlerMapping'
+2025-02-27 20:42:57 [restartedMain] - 生成school端接口文档
+2025-02-27 20:42:57 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-02-27 20:42:57 [restartedMain] - LiveReload server is running on port 35729
+2025-02-27 20:42:57 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-27 20:42:57 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-27 20:42:57 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-02-27 20:42:58 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:42:58 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-02-27 20:42:58 [restartedMain] - Documentation plugins bootstrapped
+2025-02-27 20:42:58 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-02-27 20:42:58 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:58 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:58 [restartedMain] - Scanning for api listing references
+2025-02-27 20:42:58 [restartedMain] - Started SchoolRoomSysApplication in 2.611 seconds (JVM running for 262.876)
+2025-02-27 20:42:58 [restartedMain] - Condition evaluation unchanged
+2025-02-27 20:42:59 [File Watcher] - Restarting due to 100 class path changes (0 additions, 1 deletion, 99 modifications)
+2025-02-27 20:43:00 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:43:00 [Thread-12] - Stopping service [Tomcat]
+2025-02-27 20:43:00 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:43:00 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:43:00 [Thread-12] - {dataSource-3} closing ...
+2025-02-27 20:43:00 [Thread-12] - {dataSource-3} closed
+2025-02-27 20:43:00 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 18540 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-02-27 20:43:00 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-02-27 20:43:00 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-02-27 20:43:00 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:43:00 [restartedMain] - Starting service [Tomcat]
+2025-02-27 20:43:00 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-02-27 20:43:00 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-02-27 20:43:00 [restartedMain] - Root WebApplicationContext: initialization completed in 383 ms
+2025-02-27 20:43:00 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-02-27 20:43:00 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-02-27 20:43:00 [restartedMain] - Filter 'corsFilter' configured for use
+2025-02-27 20:43:01 [restartedMain] - Init DruidDataSource
+2025-02-27 20:43:01 [restartedMain] - {dataSource-4} inited
+2025-02-27 20:43:03 [restartedMain] - 开始注册自定义拦截器
+2025-02-27 20:43:03 [restartedMain] - 11 mappings in 'requestMappingHandlerMapping'
+2025-02-27 20:43:03 [restartedMain] - 生成school端接口文档
+2025-02-27 20:43:03 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-02-27 20:43:03 [restartedMain] - LiveReload server is running on port 35729
+2025-02-27 20:43:03 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-27 20:43:03 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-27 20:43:03 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-02-27 20:43:03 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-27 20:43:03 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-02-27 20:43:03 [restartedMain] - Documentation plugins bootstrapped
+2025-02-27 20:43:03 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-02-27 20:43:03 [restartedMain] - Scanning for api listing references
+2025-02-27 20:43:03 [restartedMain] - Scanning for api listing references
+2025-02-27 20:43:03 [restartedMain] - Scanning for api listing references
+2025-02-27 20:43:03 [restartedMain] - Started SchoolRoomSysApplication in 3.434 seconds (JVM running for 268.701)
+2025-02-27 20:43:03 [restartedMain] - Condition evaluation unchanged
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Initializing Servlet 'dispatcherServlet'
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Detected StandardServletMultipartResolver
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Detected AcceptHeaderLocaleResolver
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Detected FixedThemeResolver
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@182d1674
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@16eafb01
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-02-27 21:10:17 [http-nio-8080-exec-8] - Completed initialization in 24 ms
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636790
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636828
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636844
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636860
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636875
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636891
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636904
+2025-02-27 21:10:17 [http-nio-8080-exec-9] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1636918
+2025-02-27 21:10:18 [http-nio-8080-exec-9] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 21:10:18 [http-nio-8080-exec-9] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 21:10:18 [http-nio-8080-exec-9] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 21:10:18 [http-nio-8080-exec-9] - Completed 200 OK
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 99756
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 21:11:57 [http-nio-8080-exec-24] - Completed 200 OK
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 703023
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 21:23:40 [http-nio-8080-exec-19] - Completed 200 OK
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 2143661
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 21:59:24 [http-nio-8080-exec-14] - Completed 200 OK
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=000001, password=123456)]
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - 用户登录：LoginDTO(userType=1, userId=000001, password=123456)
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1213074
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - 登录失败：用户不存在
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - Writing [Result(code=1, msg=用户不存在, data=null)]
+2025-02-27 22:19:37 [http-nio-8080-exec-7] - Completed 200 OK
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:19:46 [http-nio-8080-exec-2] - Completed 200 OK
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1384570
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:42:51 [http-nio-8080-exec-5] - Completed 200 OK
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:42:55 [http-nio-8080-exec-8] - Completed 200 OK
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=3, userId=0000001, password=123456)]
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - 用户登录：LoginDTO(userType=3, userId=0000001, password=123456)
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - 登录失败：用户不存在
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - Writing [Result(code=1, msg=用户不存在, data=null)]
+2025-02-27 22:43:12 [http-nio-8080-exec-13] - Completed 200 OK
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:43:14 [http-nio-8080-exec-16] - Completed 200 OK
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 144904
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:45:39 [http-nio-8080-exec-21] - Completed 200 OK
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 732315
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:57:51 [http-nio-8080-exec-28] - Completed 200 OK
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:57:53 [http-nio-8080-exec-29] - Completed 200 OK
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:57:58 [http-nio-8080-exec-26] - Completed 200 OK
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 22:58:08 [http-nio-8080-exec-19] - Completed 200 OK
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 345676
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 23:03:53 [http-nio-8080-exec-14] - Completed 200 OK
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 1129410
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-02-27 23:22:43 [http-nio-8080-exec-7] - Completed 200 OK

@@ -1,0 +1,740 @@
+2024-11-01 14:19:36 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 6120 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:19:36 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:19:36 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:19:36 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:19:37 - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:19:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:19:37 - Starting service [Tomcat]
+2024-11-01 14:19:37 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:19:37 - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:19:37 - Root WebApplicationContext: initialization completed in 1352 ms
+2024-11-01 14:19:37 - Init DruidDataSource
+2024-11-01 14:19:38 - {dataSource-1} inited
+2024-11-01 14:19:39 - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:19:39 - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:19:39 - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:19:39 - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:19:40 - 生成school端接口文档
+2024-11-01 14:19:40 - LiveReload server is running on port 35729
+2024-11-01 14:19:40 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:19:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:19:40 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:19:40 - Documentation plugins bootstrapped
+2024-11-01 14:19:40 - Found 3 custom documentation plugin(s)
+2024-11-01 14:19:40 - Scanning for api listing references
+2024-11-01 14:19:40 - Scanning for api listing references
+2024-11-01 14:19:40 - Scanning for api listing references
+2024-11-01 14:19:40 - Started SchoolRoomSysApplication in 4.659 seconds (JVM running for 6.459)
+2024-11-01 14:20:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:20:38 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:20:38 - Completed initialization in 2 ms
+2024-11-01 14:20:38 - 分页查询学生1，10
+2024-11-01 14:20:44 - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:20:44 - ==> Parameters: null
+2024-11-01 14:20:44 - <==      Total: 0
+2024-11-01 14:21:14 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:64)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:21:25 - 老师端登录:SchoolLoginDTO(userName=, passWord=)
+2024-11-01 14:21:25 - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:21:25 - ==> Parameters: (String)
+2024-11-01 14:21:25 - <==      Total: 0
+2024-11-01 14:21:48 - 老师端登录:SchoolLoginDTO(userName=dongliang, passWord=123456)
+2024-11-01 14:21:48 - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:21:48 - ==> Parameters: dongliang(String)
+2024-11-01 14:21:48 - <==      Total: 1
+2024-11-01 14:22:43 - 分页查询学生1，10
+2024-11-01 14:22:55 - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:22:55 - ==> Parameters: null
+2024-11-01 14:22:55 - <==      Total: 0
+2024-11-01 14:23:30 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:64)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:23:48 - 分页查询学生1，10
+2024-11-01 14:24:58 - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:24:58 - ==> Parameters: null
+2024-11-01 14:24:58 - <==      Total: 0
+2024-11-01 14:25:03 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:64)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:26:01 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-01 14:26:01 - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:26:01 - Stopping service [Tomcat]
+2024-11-01 14:26:01 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-01 14:26:01 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:26:01 - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:26:01 - {dataSource-1} closed
+2024-11-01 14:26:01 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 6120 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:26:01 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:26:02 - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:26:02 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:26:02 - Starting service [Tomcat]
+2024-11-01 14:26:02 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:26:02 - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:26:02 - Root WebApplicationContext: initialization completed in 372 ms
+2024-11-01 14:26:02 - Init DruidDataSource
+2024-11-01 14:26:02 - {dataSource-2} inited
+2024-11-01 14:26:02 - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:26:02 - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:26:02 - 生成school端接口文档
+2024-11-01 14:26:02 - LiveReload server is running on port 35729
+2024-11-01 14:26:02 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:26:02 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:26:02 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:26:02 - Documentation plugins bootstrapped
+2024-11-01 14:26:02 - Found 3 custom documentation plugin(s)
+2024-11-01 14:26:02 - Scanning for api listing references
+2024-11-01 14:26:02 - Scanning for api listing references
+2024-11-01 14:26:02 - Scanning for api listing references
+2024-11-01 14:26:02 - Started SchoolRoomSysApplication in 1.171 seconds (JVM running for 388.845)
+2024-11-01 14:26:02 - Condition evaluation unchanged
+2024-11-01 14:26:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:26:28 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:26:28 - Completed initialization in 1 ms
+2024-11-01 14:26:28 - 分页查询学生1，10
+2024-11-01 14:27:01 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:64)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:27:18 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-01 14:27:19 - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:27:19 - Stopping service [Tomcat]
+2024-11-01 14:27:19 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-01 14:27:19 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:27:19 - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:27:19 - {dataSource-2} closed
+2024-11-01 14:27:19 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 6120 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:27:19 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:27:19 - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:27:19 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:27:19 - Starting service [Tomcat]
+2024-11-01 14:27:19 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:27:19 - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:27:19 - Root WebApplicationContext: initialization completed in 321 ms
+2024-11-01 14:27:19 - Init DruidDataSource
+2024-11-01 14:27:19 - {dataSource-3} inited
+2024-11-01 14:27:20 - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:27:20 - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:27:20 - 生成school端接口文档
+2024-11-01 14:27:20 - LiveReload server is running on port 35729
+2024-11-01 14:27:20 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:27:20 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:27:20 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:27:20 - Documentation plugins bootstrapped
+2024-11-01 14:27:20 - Found 3 custom documentation plugin(s)
+2024-11-01 14:27:20 - Scanning for api listing references
+2024-11-01 14:27:20 - Scanning for api listing references
+2024-11-01 14:27:20 - Scanning for api listing references
+2024-11-01 14:27:20 - Started SchoolRoomSysApplication in 1.061 seconds (JVM running for 466.332)
+2024-11-01 14:27:20 - Condition evaluation unchanged
+2024-11-01 14:27:57 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:27:57 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:27:57 - Completed initialization in 1 ms
+2024-11-01 14:27:57 - 分页查询学生1，10
+2024-11-01 14:30:04 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:64)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:30:05 - {dataSource-3} closed
+2024-11-01 14:30:15 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24956 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:30:15 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:30:15 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:30:15 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:30:16 - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:30:16 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:30:16 - Starting service [Tomcat]
+2024-11-01 14:30:16 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:30:16 - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:30:16 - Root WebApplicationContext: initialization completed in 1151 ms
+2024-11-01 14:30:16 - Init DruidDataSource
+2024-11-01 14:30:17 - {dataSource-1} inited
+2024-11-01 14:30:18 - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:30:18 - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:30:18 - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:30:18 - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:30:18 - 生成school端接口文档
+2024-11-01 14:30:18 - LiveReload server is running on port 35729
+2024-11-01 14:30:18 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:30:18 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:30:18 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:30:18 - Documentation plugins bootstrapped
+2024-11-01 14:30:18 - Found 3 custom documentation plugin(s)
+2024-11-01 14:30:18 - Scanning for api listing references
+2024-11-01 14:30:18 - Scanning for api listing references
+2024-11-01 14:30:18 - Scanning for api listing references
+2024-11-01 14:30:18 - Started SchoolRoomSysApplication in 3.838 seconds (JVM running for 4.839)
+2024-11-01 14:30:24 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:30:24 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:30:24 - Completed initialization in 1 ms
+2024-11-01 14:30:24 - 分页查询学生1，10
+2024-11-01 14:30:29 - 用户idnull
+2024-11-01 14:30:34 - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:30:34 - ==> Parameters: null
+2024-11-01 14:30:34 - <==      Total: 0
+2024-11-01 14:30:41 - Servlet.service() for servlet [dispatcherServlet] in context with path [/SchoolRoomSys] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.dl.service.impl.SchoolManageStuServiceImpl.pageQuery(SchoolManageStuServiceImpl.java:65)
+	at com.dl.controller.school.SchoolManageStuController.pageStu(SchoolManageStuController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-11-01 14:31:12 - 老师端登录:SchoolLoginDTO(userName=dongliang, passWord=123456)
+2024-11-01 14:31:25 - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:31:25 - ==> Parameters: dongliang(String)
+2024-11-01 14:31:25 - <==      Total: 1
+2024-11-01 14:33:31 - 老师端登录:SchoolLoginDTO(userName=dongliang, passWord=123456)
+2024-11-01 14:33:35 - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:33:35 - ==> Parameters: dongliang(String)
+2024-11-01 14:33:35 - <==      Total: 1
+2024-11-01 14:33:48 - {dataSource-1} closed
+2024-11-01 14:33:59 - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24020 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:33:59 - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:33:59 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:33:59 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:34:00 - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:34:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:34:00 - Starting service [Tomcat]
+2024-11-01 14:34:00 - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:34:00 - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:34:00 - Root WebApplicationContext: initialization completed in 1142 ms
+2024-11-01 14:34:00 - Init DruidDataSource
+2024-11-01 14:34:01 - {dataSource-1} inited
+2024-11-01 14:34:02 - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:34:02 - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:34:02 - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:34:02 - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:34:02 - 生成school端接口文档
+2024-11-01 14:34:02 - LiveReload server is running on port 35729
+2024-11-01 14:34:02 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:34:02 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:34:02 - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:34:02 - Documentation plugins bootstrapped
+2024-11-01 14:34:02 - Found 3 custom documentation plugin(s)
+2024-11-01 14:34:02 - Scanning for api listing references
+2024-11-01 14:34:02 - Scanning for api listing references
+2024-11-01 14:34:02 - Scanning for api listing references
+2024-11-01 14:34:02 - Started SchoolRoomSysApplication in 4.044 seconds (JVM running for 5.129)
+2024-11-01 14:34:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:34:11 - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:34:11 - Completed initialization in 1 ms
+2024-11-01 14:34:11 - 老师端登录:SchoolLoginDTO(userName=dongliang, passWord=123456)
+2024-11-01 14:34:14 - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:34:14 - ==> Parameters: dongliang(String)
+2024-11-01 14:34:14 - <==      Total: 1
+2024-11-01 14:34:25 - 用户id：1
+2024-11-01 14:34:51 - 分页查询学生1，10
+2024-11-01 14:34:59 - 用户idnull
+2024-11-01 14:35:10 - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:35:10 - ==> Parameters: null
+2024-11-01 14:35:10 - <==      Total: 0
+2024-11-01 14:35:11 - {dataSource-1} closed
+2024-11-01 14:36:38 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 17788 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:36:38 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:36:38 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:36:38 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:36:39 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:36:39 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:36:39 [restartedMain] - Starting service [Tomcat]
+2024-11-01 14:36:39 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:36:39 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:36:39 [restartedMain] - Root WebApplicationContext: initialization completed in 1308 ms
+2024-11-01 14:36:39 [restartedMain] - Init DruidDataSource
+2024-11-01 14:36:40 [restartedMain] - {dataSource-1} inited
+2024-11-01 14:36:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:36:41 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:36:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:36:41 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:36:41 [restartedMain] - 生成school端接口文档
+2024-11-01 14:36:41 [restartedMain] - LiveReload server is running on port 35729
+2024-11-01 14:36:42 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:36:42 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:36:42 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:36:42 [restartedMain] - Documentation plugins bootstrapped
+2024-11-01 14:36:42 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-01 14:36:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:36:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:36:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:36:42 [restartedMain] - Started SchoolRoomSysApplication in 4.756 seconds (JVM running for 6.19)
+2024-11-01 14:37:39 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:37:39 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:37:39 [http-nio-8080-exec-2] - Completed initialization in 0 ms
+2024-11-01 14:37:39 [http-nio-8080-exec-2] - 老师端登录:SchoolLoginDTO(userName=dongliang, passWord=123456)
+2024-11-01 14:37:43 [http-nio-8080-exec-2] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:37:43 [http-nio-8080-exec-2] - ==> Parameters: dongliang(String)
+2024-11-01 14:37:43 [http-nio-8080-exec-2] - <==      Total: 1
+2024-11-01 14:37:43 [http-nio-8080-exec-2] - 用户id：1
+2024-11-01 14:37:54 [http-nio-8080-exec-3] - 分页查询学生1，10
+2024-11-01 14:38:26 [http-nio-8080-exec-3] - 用户idnull
+2024-11-01 14:38:26 [http-nio-8080-exec-3] - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:38:26 [http-nio-8080-exec-3] - ==> Parameters: null
+2024-11-01 14:38:26 [http-nio-8080-exec-3] - <==      Total: 0
+2024-11-01 14:38:27 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-01 14:38:38 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 17480 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:38:38 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:38:38 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:38:38 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:38:39 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:38:39 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:38:39 [restartedMain] - Starting service [Tomcat]
+2024-11-01 14:38:39 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:38:39 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:38:39 [restartedMain] - Root WebApplicationContext: initialization completed in 1230 ms
+2024-11-01 14:38:39 [restartedMain] - Init DruidDataSource
+2024-11-01 14:38:40 [restartedMain] - {dataSource-1} inited
+2024-11-01 14:38:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:38:41 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:38:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:38:41 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:38:41 [restartedMain] - 开始注册自定义拦截器
+2024-11-01 14:38:41 [restartedMain] - 生成school端接口文档
+2024-11-01 14:38:41 [restartedMain] - LiveReload server is running on port 35729
+2024-11-01 14:38:41 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:38:41 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:38:41 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:38:41 [restartedMain] - Documentation plugins bootstrapped
+2024-11-01 14:38:41 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-01 14:38:41 [restartedMain] - Scanning for api listing references
+2024-11-01 14:38:41 [restartedMain] - Scanning for api listing references
+2024-11-01 14:38:41 [restartedMain] - Scanning for api listing references
+2024-11-01 14:38:41 [restartedMain] - Started SchoolRoomSysApplication in 4.213 seconds (JVM running for 5.351)
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - Completed initialization in 2 ms
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0NDkzMDgsInVzZXJJZCI6IjAwMDAwMDEifQ.ITo9rPPYWeqVdpR5L96cwxmtUhB3Z5C6hH7KVygS4T0
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-01 14:39:03 [http-nio-8080-exec-2] - 分页查询学生1，10
+2024-11-01 14:39:07 [http-nio-8080-exec-2] - 用户id1
+2024-11-01 14:39:17 [http-nio-8080-exec-2] - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:39:17 [http-nio-8080-exec-2] - ==> Parameters: 1(Long)
+2024-11-01 14:39:18 [http-nio-8080-exec-2] - <==      Total: 1
+2024-11-01 14:39:25 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info LIMIT ?
+2024-11-01 14:39:25 [http-nio-8080-exec-2] - ==> Parameters: 10(Long)
+2024-11-01 14:39:25 [http-nio-8080-exec-2] - <==      Total: 10
+2024-11-01 14:40:11 [http-nio-8080-exec-4] - 老师端登录:SchoolLoginDTO(userName=dongmengliang, passWord=123456)
+2024-11-01 14:40:14 [http-nio-8080-exec-4] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:40:14 [http-nio-8080-exec-4] - ==> Parameters: dongmengliang(String)
+2024-11-01 14:40:14 [http-nio-8080-exec-4] - <==      Total: 1
+2024-11-01 14:40:14 [http-nio-8080-exec-4] - 用户id：100001
+2024-11-01 14:40:37 [http-nio-8080-exec-3] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0NTA0MTQsInVzZXJJZCI6IjAxMDAwMDEifQ.S8Z_WpIGwiy5qdzWrT47lTN31EIYzcApK4NwyTwwEv0
+2024-11-01 14:40:37 [http-nio-8080-exec-3] - 当前登录id:100001
+2024-11-01 14:40:37 [http-nio-8080-exec-3] - 分页查询学生1，10
+2024-11-01 14:40:42 [http-nio-8080-exec-3] - 用户id100001
+2024-11-01 14:40:43 [http-nio-8080-exec-3] - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:40:43 [http-nio-8080-exec-3] - ==> Parameters: 100001(Long)
+2024-11-01 14:40:43 [http-nio-8080-exec-3] - <==      Total: 1
+2024-11-01 14:41:37 [http-nio-8080-exec-7] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:41:37 [http-nio-8080-exec-7] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:41:37 [http-nio-8080-exec-7] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:41:37 [http-nio-8080-exec-7] - <==      Total: 0
+2024-11-01 14:42:11 [http-nio-8080-exec-9] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:42:11 [http-nio-8080-exec-9] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:42:11 [http-nio-8080-exec-9] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:42:11 [http-nio-8080-exec-9] - <==      Total: 1
+2024-11-01 14:42:11 [http-nio-8080-exec-9] - Encoded password does not look like BCrypt
+2024-11-01 14:42:48 [http-nio-8080-exec-11] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:42:48 [http-nio-8080-exec-11] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:42:48 [http-nio-8080-exec-11] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:42:48 [http-nio-8080-exec-11] - <==      Total: 1
+2024-11-01 14:42:48 [http-nio-8080-exec-11] - Encoded password does not look like BCrypt
+2024-11-01 14:42:54 [http-nio-8080-exec-13] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:42:54 [http-nio-8080-exec-13] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:42:54 [http-nio-8080-exec-13] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:42:54 [http-nio-8080-exec-13] - <==      Total: 1
+2024-11-01 14:42:54 [http-nio-8080-exec-13] - Encoded password does not look like BCrypt
+2024-11-01 14:42:55 [http-nio-8080-exec-14] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:42:55 [http-nio-8080-exec-14] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:42:55 [http-nio-8080-exec-14] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:42:55 [http-nio-8080-exec-14] - <==      Total: 1
+2024-11-01 14:42:55 [http-nio-8080-exec-14] - Encoded password does not look like BCrypt
+2024-11-01 14:43:32 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-01 14:43:38 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 25140 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:43:38 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:43:38 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-01 14:43:38 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-01 14:43:39 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:43:39 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:43:39 [restartedMain] - Starting service [Tomcat]
+2024-11-01 14:43:39 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:43:39 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:43:39 [restartedMain] - Root WebApplicationContext: initialization completed in 1141 ms
+2024-11-01 14:43:39 [restartedMain] - Init DruidDataSource
+2024-11-01 14:43:40 [restartedMain] - {dataSource-1} inited
+2024-11-01 14:43:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:43:41 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:43:41 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:43:41 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-01 14:43:41 [restartedMain] - 开始注册自定义拦截器
+2024-11-01 14:43:41 [restartedMain] - 生成school端接口文档
+2024-11-01 14:43:41 [restartedMain] - LiveReload server is running on port 35729
+2024-11-01 14:43:41 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:43:42 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:43:42 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:43:42 [restartedMain] - Documentation plugins bootstrapped
+2024-11-01 14:43:42 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-01 14:43:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:43:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:43:42 [restartedMain] - Scanning for api listing references
+2024-11-01 14:43:42 [restartedMain] - Started SchoolRoomSysApplication in 3.966 seconds (JVM running for 5.177)
+2024-11-01 14:43:47 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-01 14:43:47 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-01 14:43:47 [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2024-11-01 14:43:47 [http-nio-8080-exec-1] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:43:47 [http-nio-8080-exec-1] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:43:48 [http-nio-8080-exec-1] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:43:48 [http-nio-8080-exec-1] - <==      Total: 1
+2024-11-01 14:43:48 [http-nio-8080-exec-1] - Encoded password does not look like BCrypt
+2024-11-01 14:48:07 [http-nio-8080-exec-9] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:48:07 [http-nio-8080-exec-9] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:48:07 [http-nio-8080-exec-9] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:48:07 [http-nio-8080-exec-9] - <==      Total: 1
+2024-11-01 14:48:07 [http-nio-8080-exec-9] - Encoded password does not look like BCrypt
+2024-11-01 14:48:20 [http-nio-8080-exec-7] - 老师端登录:SchoolLoginDTO(userName=, passWord=)
+2024-11-01 14:48:20 [http-nio-8080-exec-7] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:48:20 [http-nio-8080-exec-7] - ==> Parameters: (String)
+2024-11-01 14:48:20 [http-nio-8080-exec-7] - <==      Total: 0
+2024-11-01 14:48:34 [http-nio-8080-exec-10] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:48:34 [http-nio-8080-exec-10] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:48:34 [http-nio-8080-exec-10] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:48:34 [http-nio-8080-exec-10] - <==      Total: 1
+2024-11-01 14:48:34 [http-nio-8080-exec-10] - Encoded password does not look like BCrypt
+2024-11-01 14:48:35 [http-nio-8080-exec-6] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:48:35 [http-nio-8080-exec-6] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:48:35 [http-nio-8080-exec-6] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:48:35 [http-nio-8080-exec-6] - <==      Total: 1
+2024-11-01 14:48:35 [http-nio-8080-exec-6] - Encoded password does not look like BCrypt
+2024-11-01 14:48:40 [http-nio-8080-exec-3] - 老师端登录:SchoolLoginDTO(userName=zhaoyun, passWord=123456)
+2024-11-01 14:48:40 [http-nio-8080-exec-3] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:48:40 [http-nio-8080-exec-3] - ==> Parameters: zhaoyun(String)
+2024-11-01 14:48:40 [http-nio-8080-exec-3] - <==      Total: 1
+2024-11-01 14:48:40 [http-nio-8080-exec-3] - Encoded password does not look like BCrypt
+2024-11-01 14:49:11 [http-nio-8080-exec-11] - 老师端登录:SchoolLoginDTO(userName=penghuifeng, passWord=123456)
+2024-11-01 14:49:11 [http-nio-8080-exec-11] - ==>  Preparing: SELECT * FROM school_user WHERE user_name = ?
+2024-11-01 14:49:11 [http-nio-8080-exec-11] - ==> Parameters: penghuifeng(String)
+2024-11-01 14:49:11 [http-nio-8080-exec-11] - <==      Total: 1
+2024-11-01 14:49:11 [http-nio-8080-exec-11] - 用户id：500001
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0NTA5NTEsInVzZXJJZCI6IjA1MDAwMDEifQ.8GiPECaov6fFklfqBO0ftGFmkh4ryEYx1q_Hj1MBKMo
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - 当前登录id:500001
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - 分页查询学生1，10
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - 用户id500001
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - ==> Parameters: 500001(Long)
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - <==      Total: 1
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE (teacher_id = ?) LIMIT ?
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - ==> Parameters: 500001(Long), 10(Long)
+2024-11-01 14:50:24 [http-nio-8080-exec-14] - <==      Total: 10
+2024-11-01 14:51:16 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-01 14:51:17 [Thread-11] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:17 [Thread-11] - Stopping service [Tomcat]
+2024-11-01 14:51:17 [Thread-11] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-01 14:51:17 [Thread-11] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:17 [Thread-11] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:17 [Thread-11] - {dataSource-1} closed
+2024-11-01 14:51:17 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 25140 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:51:17 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:51:17 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:51:17 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:17 [restartedMain] - Starting service [Tomcat]
+2024-11-01 14:51:17 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:51:17 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:51:17 [restartedMain] - Root WebApplicationContext: initialization completed in 321 ms
+2024-11-01 14:51:17 [restartedMain] - Init DruidDataSource
+2024-11-01 14:51:17 [restartedMain] - {dataSource-2} inited
+2024-11-01 14:51:18 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:51:18 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:51:18 [restartedMain] - 开始注册自定义拦截器
+2024-11-01 14:51:18 [restartedMain] - 生成school端接口文档
+2024-11-01 14:51:18 [restartedMain] - LiveReload server is running on port 35729
+2024-11-01 14:51:18 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:51:18 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:18 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:51:18 [restartedMain] - Documentation plugins bootstrapped
+2024-11-01 14:51:18 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-01 14:51:18 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:18 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:18 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:18 [restartedMain] - Started SchoolRoomSysApplication in 1.11 seconds (JVM running for 461.376)
+2024-11-01 14:51:18 [restartedMain] - Condition evaluation unchanged
+2024-11-01 14:51:55 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-01 14:51:56 [Thread-19] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:56 [Thread-19] - Stopping service [Tomcat]
+2024-11-01 14:51:56 [Thread-19] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:56 [Thread-19] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:56 [Thread-19] - {dataSource-2} closed
+2024-11-01 14:51:56 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 25140 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-01 14:51:56 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-01 14:51:56 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-01 14:51:56 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:56 [restartedMain] - Starting service [Tomcat]
+2024-11-01 14:51:56 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-01 14:51:56 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-01 14:51:56 [restartedMain] - Root WebApplicationContext: initialization completed in 344 ms
+2024-11-01 14:51:56 [restartedMain] - Init DruidDataSource
+2024-11-01 14:51:56 [restartedMain] - {dataSource-3} inited
+2024-11-01 14:51:57 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-01 14:51:57 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-01 14:51:57 [restartedMain] - 开始注册自定义拦截器
+2024-11-01 14:51:57 [restartedMain] - 生成school端接口文档
+2024-11-01 14:51:57 [restartedMain] - LiveReload server is running on port 35729
+2024-11-01 14:51:57 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-01 14:51:57 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-01 14:51:57 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-01 14:51:57 [restartedMain] - Documentation plugins bootstrapped
+2024-11-01 14:51:57 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-01 14:51:57 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:57 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:57 [restartedMain] - Scanning for api listing references
+2024-11-01 14:51:57 [restartedMain] - Started SchoolRoomSysApplication in 1.078 seconds (JVM running for 500.276)
+2024-11-01 14:51:57 [restartedMain] - Condition evaluation unchanged
+2024-11-01 14:52:23 [SpringApplicationShutdownHook] - {dataSource-3} closed

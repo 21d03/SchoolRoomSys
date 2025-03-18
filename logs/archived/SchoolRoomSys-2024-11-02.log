@@ -1,0 +1,1879 @@
+2024-11-02 00:06:07 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 4720 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:06:07 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:06:07 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:06:07 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 00:06:08 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:06:08 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:06:08 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:06:08 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:06:08 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:06:08 [restartedMain] - Root WebApplicationContext: initialization completed in 1253 ms
+2024-11-02 00:06:08 [restartedMain] - Init DruidDataSource
+2024-11-02 00:06:09 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.CollegeInfo".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.CollegeInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.HouseMaster".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.HouseMaster ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RepairPeople".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.RepairPeople ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.RoomBuildDetails ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuild".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.RoomBuild ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomInfo".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.RoomInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentUser".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.StudentUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:10 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.TeacherInfo".
+2024-11-02 00:06:10 [restartedMain] - class com.dl.entity.pojo.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:11 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-02 00:06:11 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:11 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:11 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:11 [restartedMain] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dl.mapper.StudentUserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-11-02 00:06:11 [restartedMain] - {dataSource-1} closed
+2024-11-02 00:06:11 [restartedMain] - Stopping service [Tomcat]
+2024-11-02 00:06:11 [restartedMain] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-11-02 00:06:11 [restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.dl.mapper.StudentUserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.dl.mapper.StudentUserMapper' in your configuration.
+
+2024-11-02 00:06:24 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 8512 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:06:24 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:06:24 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:06:24 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 00:06:26 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:06:26 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:06:26 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:06:26 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:06:26 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:06:26 [restartedMain] - Root WebApplicationContext: initialization completed in 1189 ms
+2024-11-02 00:06:26 [restartedMain] - Init DruidDataSource
+2024-11-02 00:06:27 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.CollegeInfo".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.CollegeInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.HouseMaster".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.HouseMaster ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RepairPeople".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.RepairPeople ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.RoomBuildDetails ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuild".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.RoomBuild ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomInfo".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.RoomInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentUser".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.StudentUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:27 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.TeacherInfo".
+2024-11-02 00:06:27 [restartedMain] - class com.dl.entity.pojo.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:28 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-02 00:06:28 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:28 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:28 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:06:28 [restartedMain] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dl.mapper.StudentUserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-11-02 00:06:28 [restartedMain] - {dataSource-1} closed
+2024-11-02 00:06:28 [restartedMain] - Stopping service [Tomcat]
+2024-11-02 00:06:28 [restartedMain] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-11-02 00:06:28 [restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.dl.mapper.StudentUserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.dl.mapper.StudentUserMapper' in your configuration.
+
+2024-11-02 00:08:48 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 4276 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:08:48 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:08:48 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:08:48 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 00:08:49 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:08:49 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:08:49 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:08:49 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:08:49 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:08:49 [restartedMain] - Root WebApplicationContext: initialization completed in 1065 ms
+2024-11-02 00:08:49 [restartedMain] - Init DruidDataSource
+2024-11-02 00:08:50 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.CollegeInfo".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.CollegeInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.HouseMaster".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.HouseMaster ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RepairPeople".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.RepairPeople ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.RoomBuildDetails ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuild".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.RoomBuild ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomInfo".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.RoomInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentUser".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.StudentUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:50 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.TeacherInfo".
+2024-11-02 00:08:50 [restartedMain] - class com.dl.entity.pojo.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:51 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-02 00:08:51 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:51 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:51 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:08:51 [restartedMain] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolManageStuServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dl.mapper.StudentUserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-11-02 00:08:51 [restartedMain] - {dataSource-1} closed
+2024-11-02 00:08:51 [restartedMain] - Stopping service [Tomcat]
+2024-11-02 00:08:51 [restartedMain] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-11-02 00:08:51 [restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.dl.mapper.StudentUserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.dl.mapper.StudentUserMapper' in your configuration.
+
+2024-11-02 00:10:00 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 17200 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:10:00 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:10:00 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:10:00 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 00:10:01 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:10:01 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:10:01 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:10:01 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:10:01 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:10:01 [restartedMain] - Root WebApplicationContext: initialization completed in 1271 ms
+2024-11-02 00:10:01 [restartedMain] - Init DruidDataSource
+2024-11-02 00:10:02 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.CollegeInfo".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.CollegeInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.HouseMaster".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.HouseMaster ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RepairPeople".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.RepairPeople ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.RoomBuildDetails ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuild".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.RoomBuild ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomInfo".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.RoomInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentUser".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.StudentUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.TeacherInfo".
+2024-11-02 00:10:02 [restartedMain] - class com.dl.entity.pojo.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:03 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-02 00:10:03 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:03 [restartedMain] - class com.dl.entity.pojo.StudentInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:03 [restartedMain] - class com.dl.entity.pojo.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-11-02 00:10:03 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:10:03 [restartedMain] - 生成school端接口文档
+2024-11-02 00:10:03 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:10:03 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:10:03 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:10:03 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:10:03 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:10:03 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:10:03 [restartedMain] - Scanning for api listing references
+2024-11-02 00:10:03 [restartedMain] - Scanning for api listing references
+2024-11-02 00:10:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:10:04 [restartedMain] - Started SchoolRoomSysApplication in 4.376 seconds (JVM running for 5.468)
+2024-11-02 00:12:55 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:12:55 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:12:55 [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2024-11-02 00:12:55 [http-nio-8080-exec-1] - 老师端登录:SchoolLoginDTO(userId=000001, passWord=123456)
+2024-11-02 00:12:55 [http-nio-8080-exec-1] - 登录失败: Invalid bound statement (not found): com.dl.mapper.SchoolLoginMapper.selectById
+2024-11-02 00:15:23 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 00:15:23 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:15:23 [Thread-12] - Stopping service [Tomcat]
+2024-11-02 00:15:23 [Thread-12] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-02 00:15:23 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:15:23 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:15:23 [Thread-12] - {dataSource-1} closed
+2024-11-02 00:15:24 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 17200 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:15:24 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:15:24 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:15:24 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:15:24 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:15:24 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:15:24 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:15:24 [restartedMain] - Root WebApplicationContext: initialization completed in 360 ms
+2024-11-02 00:15:24 [restartedMain] - Init DruidDataSource
+2024-11-02 00:15:24 [restartedMain] - {dataSource-2} inited
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.CollegeInfo".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.HouseMaster".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RepairPeople".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuild".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomInfo".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentInfo".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.StudentUser".
+2024-11-02 00:15:24 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.TeacherInfo".
+2024-11-02 00:15:25 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.SchoolUser".
+2024-11-02 00:15:25 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:15:25 [restartedMain] - 生成school端接口文档
+2024-11-02 00:15:25 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:15:25 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:15:25 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:15:25 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:15:25 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:15:25 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:15:25 [restartedMain] - Scanning for api listing references
+2024-11-02 00:15:25 [restartedMain] - Scanning for api listing references
+2024-11-02 00:15:25 [restartedMain] - Scanning for api listing references
+2024-11-02 00:15:25 [restartedMain] - Started SchoolRoomSysApplication in 1.446 seconds (JVM running for 326.905)
+2024-11-02 00:15:25 [restartedMain] - Condition evaluation unchanged
+2024-11-02 00:19:36 [SpringApplicationShutdownHook] - {dataSource-2} closed
+2024-11-02 00:19:46 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 10564 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:19:46 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:19:46 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:19:46 [restartedMain] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-02 00:19:47 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:19:47 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:19:47 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:19:47 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:19:47 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:19:47 [restartedMain] - Root WebApplicationContext: initialization completed in 1134 ms
+2024-11-02 00:19:47 [restartedMain] - Init DruidDataSource
+2024-11-02 00:19:48 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:19:49 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:19:50 [restartedMain] - 生成school端接口文档
+2024-11-02 00:19:50 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:19:50 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:19:50 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:19:50 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:19:50 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:19:50 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:19:50 [restartedMain] - Scanning for api listing references
+2024-11-02 00:19:50 [restartedMain] - Scanning for api listing references
+2024-11-02 00:19:50 [restartedMain] - Scanning for api listing references
+2024-11-02 00:19:50 [restartedMain] - Started SchoolRoomSysApplication in 4.103 seconds (JVM running for 5.35)
+2024-11-02 00:23:31 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 00:23:38 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 3964 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:23:38 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:23:38 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:23:39 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:23:39 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:23:39 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:23:39 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:23:39 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:23:39 [restartedMain] - Root WebApplicationContext: initialization completed in 1117 ms
+2024-11-02 00:23:39 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:23:39 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:23:39 [restartedMain] - Init DruidDataSource
+2024-11-02 00:23:40 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:23:42 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:23:42 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:23:42 [restartedMain] - 生成school端接口文档
+2024-11-02 00:23:42 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:23:42 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:23:42 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:23:42 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:23:42 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:23:42 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:23:42 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:23:42 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:23:42 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:23:42 [restartedMain] - Scanning for api listing references
+2024-11-02 00:23:42 [restartedMain] - Scanning for api listing references
+2024-11-02 00:23:42 [restartedMain] - Scanning for api listing references
+2024-11-02 00:23:42 [restartedMain] - Started SchoolRoomSysApplication in 4.353 seconds (JVM running for 5.341)
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5a45418e
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6ce931a6
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Completed initialization in 3 ms
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/login", parameters={}
+2024-11-02 00:23:55 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolLoginController#login(SchoolLoginDTO)
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - Read "application/json;charset=UTF-8" to [SchoolLoginDTO(userId=0000001, passWord=123456)]
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - 老师端登录:SchoolLoginDTO(userId=0000001, passWord=123456)
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - ==>  Preparing: SELECT user_id,user_name,pass_word,name,phone,level FROM school_user WHERE user_id=?
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - ==> Parameters: 0000001(String)
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - <==      Total: 1
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - 用户id：1
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=1, msg=null, data=SchoolLoginVO(id=1, userName=dongliang,  (truncated)...]
+2024-11-02 00:23:56 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - GET "/SchoolRoomSys/school/manageStu/page?pageIndex=1&pageSize=10", parameters={masked}
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - Mapped to com.dl.controller.school.SchoolManageStuController#pageStu(Integer, Integer)
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - 当前登录id:1
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - 分页查询学生1，10
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - 用户id1
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - ==>  Preparing: SELECT level FROM school_user WHERE (user_id = ?)
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - ==> Parameters: 1(Long)
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - <==      Total: 1
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info LIMIT ?
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - ==> Parameters: 10(Long)
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - <==      Total: 10
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - Writing [Result(code=1, msg=null, data=Result(code=1, msg=null, data=com.baomidou.mybatisplus.extension.plugi (truncated)...]
+2024-11-02 00:24:53 [http-nio-8080-exec-6] - Completed 200 OK
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=2111102112&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - 当前登录id:1
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - 新增学生信息:StudentInfoDTO(stuId=2111102112, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - ==> Parameters: 2111102112(String)
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - <==      Total: 1
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - 学号重复
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:26:10 [http-nio-8080-exec-5] - Completed 200 OK
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - 当前登录id:1
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - ==> Parameters: 21111021121(String)
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - <==      Total: 0
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - 新增学生信息失败:null
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=null, data=null))]
+2024-11-02 00:26:33 [http-nio-8080-exec-7] - Completed 200 OK
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - 当前登录id:1
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - ==> Parameters: 21111021121(String)
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - <==      Total: 0
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - 新增学生信息失败:null
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=null, data=null))]
+2024-11-02 00:29:37 [http-nio-8080-exec-9] - Completed 200 OK
+2024-11-02 00:30:24 [http-nio-8080-exec-11] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:30:24 [http-nio-8080-exec-11] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:30:24 [http-nio-8080-exec-11] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:30:24 [http-nio-8080-exec-11] - 当前登录id:1
+2024-11-02 00:30:24 [http-nio-8080-exec-11] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:31:46 [http-nio-8080-exec-11] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:31:46 [http-nio-8080-exec-11] - ==> Parameters: 21111021121(String)
+2024-11-02 00:31:46 [http-nio-8080-exec-11] - <==      Total: 0
+2024-11-02 00:32:06 [http-nio-8080-exec-11] - 新增学生信息失败:null
+2024-11-02 00:32:10 [http-nio-8080-exec-11] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:32:10 [http-nio-8080-exec-11] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=null, data=null))]
+2024-11-02 00:32:10 [http-nio-8080-exec-11] - Completed 200 OK
+2024-11-02 00:37:02 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 00:37:02 [Thread-10] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:37:02 [Thread-10] - Stopping service [Tomcat]
+2024-11-02 00:37:02 [Thread-10] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-02 00:37:02 [Thread-10] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:37:02 [Thread-10] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:37:02 [Thread-10] - {dataSource-1} closed
+2024-11-02 00:37:03 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 3964 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:37:03 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:37:03 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:37:03 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:37:03 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:37:03 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:37:03 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:37:03 [restartedMain] - Root WebApplicationContext: initialization completed in 354 ms
+2024-11-02 00:37:03 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:37:03 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:37:03 [restartedMain] - Init DruidDataSource
+2024-11-02 00:37:03 [restartedMain] - {dataSource-2} inited
+2024-11-02 00:37:04 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:37:04 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:37:04 [restartedMain] - 生成school端接口文档
+2024-11-02 00:37:04 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:37:04 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:37:04 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:37:04 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:37:04 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:37:04 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:37:04 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:37:04 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:37:04 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:37:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:37:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:37:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:37:04 [restartedMain] - Started SchoolRoomSysApplication in 1.334 seconds (JVM running for 807.282)
+2024-11-02 00:37:04 [restartedMain] - Condition evaluation unchanged
+2024-11-02 00:42:49 [SpringApplicationShutdownHook] - {dataSource-2} closed
+2024-11-02 00:43:00 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 6920 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:43:00 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:43:00 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:43:01 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:43:01 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:43:01 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:43:01 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:43:01 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:43:01 [restartedMain] - Root WebApplicationContext: initialization completed in 1188 ms
+2024-11-02 00:43:01 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:43:01 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:43:01 [restartedMain] - Init DruidDataSource
+2024-11-02 00:43:02 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:43:03 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:43:03 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:43:03 [restartedMain] - 生成school端接口文档
+2024-11-02 00:43:04 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:43:04 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:43:04 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:43:04 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:43:04 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:43:04 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:43:04 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:43:04 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:43:04 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:43:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:43:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:43:04 [restartedMain] - Scanning for api listing references
+2024-11-02 00:43:04 [restartedMain] - Started SchoolRoomSysApplication in 4.491 seconds (JVM running for 5.566)
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Detected StandardServletMultipartResolver
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Detected FixedThemeResolver
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1d9a5720
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1cdde5a
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Completed initialization in 4 ms
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-02 00:43:07 [http-nio-8080-exec-2] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:43:13 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:43:13 [http-nio-8080-exec-2] - ==> Parameters: 21111021121(String)
+2024-11-02 00:43:13 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 00:43:39 [http-nio-8080-exec-2] - 新增学生信息失败:null
+2024-11-02 00:43:41 [http-nio-8080-exec-2] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:43:41 [http-nio-8080-exec-2] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=null, data=null))]
+2024-11-02 00:43:41 [http-nio-8080-exec-2] - Completed 200 OK
+2024-11-02 00:45:03 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 00:45:13 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 4852 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:45:13 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:45:13 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:45:14 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:45:14 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:45:14 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:45:14 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:45:14 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:45:14 [restartedMain] - Root WebApplicationContext: initialization completed in 1122 ms
+2024-11-02 00:45:14 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:45:14 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:45:14 [restartedMain] - Init DruidDataSource
+2024-11-02 00:45:15 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:45:17 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:45:17 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:45:17 [restartedMain] - 生成school端接口文档
+2024-11-02 00:45:17 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:45:17 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:45:17 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:45:17 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:45:17 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:45:17 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:45:17 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:45:17 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:45:17 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:45:17 [restartedMain] - Scanning for api listing references
+2024-11-02 00:45:17 [restartedMain] - Scanning for api listing references
+2024-11-02 00:45:17 [restartedMain] - Scanning for api listing references
+2024-11-02 00:45:17 [restartedMain] - Started SchoolRoomSysApplication in 4.187 seconds (JVM running for 5.202)
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Detected StandardServletMultipartResolver
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Detected FixedThemeResolver
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@37aa7853
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6cc78557
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Completed initialization in 1 ms
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=2111102112&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - 当前登录id:1
+2024-11-02 00:45:33 [http-nio-8080-exec-5] - 新增学生信息:StudentInfoDTO(stuId=2111102112, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:45:38 [http-nio-8080-exec-5] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:45:38 [http-nio-8080-exec-5] - ==> Parameters: 2111102112(String)
+2024-11-02 00:45:38 [http-nio-8080-exec-5] - <==      Total: 1
+2024-11-02 00:45:41 [http-nio-8080-exec-5] - 学号重复
+2024-11-02 00:45:43 [http-nio-8080-exec-5] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:45:43 [http-nio-8080-exec-5] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:45:43 [http-nio-8080-exec-5] - Completed 200 OK
+2024-11-02 00:50:57 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 00:51:06 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 2116 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:51:06 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:51:06 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:51:07 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:51:07 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:51:07 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:51:07 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:51:07 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:51:07 [restartedMain] - Root WebApplicationContext: initialization completed in 1071 ms
+2024-11-02 00:51:07 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:51:07 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:51:07 [restartedMain] - Init DruidDataSource
+2024-11-02 00:51:08 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:51:10 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:51:10 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:51:10 [restartedMain] - 生成school端接口文档
+2024-11-02 00:51:10 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:51:10 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:51:10 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:51:10 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:51:10 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:51:10 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:51:10 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:51:10 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:51:10 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:51:10 [restartedMain] - Scanning for api listing references
+2024-11-02 00:51:10 [restartedMain] - Scanning for api listing references
+2024-11-02 00:51:10 [restartedMain] - Scanning for api listing references
+2024-11-02 00:51:10 [restartedMain] - Started SchoolRoomSysApplication in 4.434 seconds (JVM running for 5.469)
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@bf95b16
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d5bf1df
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=2111102112&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 00:51:48 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=2111102112, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:51:53 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:51:53 [http-nio-8080-exec-1] - ==> Parameters: 2111102112(String)
+2024-11-02 00:51:53 [http-nio-8080-exec-1] - <==      Total: 1
+2024-11-02 00:51:59 [http-nio-8080-exec-1] - 新增学生信息失败:com.dl.entity.pojo.StudentInfo cannot be cast to java.lang.CharSequence
+2024-11-02 00:52:04 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:52:04 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=com.dl.entity.pojo.StudentInfo cannot be cast to ja (truncated)...]
+2024-11-02 00:52:04 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 00:52:44 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 00:52:55 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 6192 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:52:55 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:52:55 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:52:56 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:52:56 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:52:56 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:52:56 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:52:56 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:52:56 [restartedMain] - Root WebApplicationContext: initialization completed in 1190 ms
+2024-11-02 00:52:56 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:52:56 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:52:56 [restartedMain] - Init DruidDataSource
+2024-11-02 00:52:57 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:52:59 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:52:59 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:52:59 [restartedMain] - 生成school端接口文档
+2024-11-02 00:52:59 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:52:59 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:52:59 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:52:59 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:52:59 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:52:59 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:52:59 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:52:59 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:52:59 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:52:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:52:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:52:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:52:59 [restartedMain] - Started SchoolRoomSysApplication in 4.611 seconds (JVM running for 5.705)
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3c119b0d
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d8689e4
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=2111102112&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 00:55:35 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=2111102112, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:55:38 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:55:39 [http-nio-8080-exec-1] - ==> Parameters: 2111102112(String)
+2024-11-02 00:55:39 [http-nio-8080-exec-1] - <==      Total: 1
+2024-11-02 00:55:40 [http-nio-8080-exec-1] - 学号重复
+2024-11-02 00:55:43 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:55:43 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:55:43 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 00:55:50 [http-nio-8080-exec-3] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:55:50 [http-nio-8080-exec-3] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:55:50 [http-nio-8080-exec-3] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:55:50 [http-nio-8080-exec-3] - 当前登录id:1
+2024-11-02 00:55:50 [http-nio-8080-exec-3] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:55:55 [http-nio-8080-exec-3] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:55:55 [http-nio-8080-exec-3] - ==> Parameters: 21111021121(String)
+2024-11-02 00:55:55 [http-nio-8080-exec-3] - <==      Total: 0
+2024-11-02 00:56:01 [http-nio-8080-exec-3] - 学号重复
+2024-11-02 00:56:04 [http-nio-8080-exec-3] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:56:04 [http-nio-8080-exec-3] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:56:04 [http-nio-8080-exec-3] - Completed 200 OK
+2024-11-02 00:56:39 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:56:39 [http-nio-8080-exec-5] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:56:39 [http-nio-8080-exec-5] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:56:39 [http-nio-8080-exec-5] - 当前登录id:1
+2024-11-02 00:56:39 [http-nio-8080-exec-5] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - ==> Parameters: 21111021121(String)
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - <==      Total: 0
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - 学号重复
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:56:45 [http-nio-8080-exec-5] - Completed 200 OK
+2024-11-02 00:56:56 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:56:56 [http-nio-8080-exec-7] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:56:56 [http-nio-8080-exec-7] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:56:56 [http-nio-8080-exec-7] - 当前登录id:1
+2024-11-02 00:56:56 [http-nio-8080-exec-7] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:57:16 [http-nio-8080-exec-7] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:57:16 [http-nio-8080-exec-7] - ==> Parameters: 21111021121(String)
+2024-11-02 00:57:16 [http-nio-8080-exec-7] - <==      Total: 0
+2024-11-02 00:57:47 [http-nio-8080-exec-7] - 学号重复
+2024-11-02 00:57:47 [http-nio-8080-exec-7] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:57:47 [http-nio-8080-exec-7] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:57:47 [http-nio-8080-exec-7] - Completed 200 OK
+2024-11-02 00:57:50 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 00:57:56 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 13576 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 00:57:56 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 00:57:56 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 00:57:57 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 00:57:57 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:57:57 [restartedMain] - Starting service [Tomcat]
+2024-11-02 00:57:57 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 00:57:57 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 00:57:57 [restartedMain] - Root WebApplicationContext: initialization completed in 1080 ms
+2024-11-02 00:57:57 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 00:57:57 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 00:57:57 [restartedMain] - Init DruidDataSource
+2024-11-02 00:57:58 [restartedMain] - {dataSource-1} inited
+2024-11-02 00:57:59 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 00:57:59 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 00:57:59 [restartedMain] - 生成school端接口文档
+2024-11-02 00:57:59 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 00:57:59 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 00:57:59 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 00:57:59 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 00:57:59 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 00:57:59 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 00:57:59 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 00:57:59 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 00:57:59 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 00:57:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:57:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:57:59 [restartedMain] - Scanning for api listing references
+2024-11-02 00:57:59 [restartedMain] - Started SchoolRoomSysApplication in 4.17 seconds (JVM running for 5.223)
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7c880a65
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@37b158c7
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 00:58:23 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 00:58:26 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id,stu_name,sex,college,profession,class_room,teacher_id,teacher_name,build_id,room_id FROM student_info WHERE stu_id=?
+2024-11-02 00:58:27 [http-nio-8080-exec-1] - ==> Parameters: 21111021121(String)
+2024-11-02 00:58:27 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 00:58:35 [http-nio-8080-exec-1] - 学号重复
+2024-11-02 00:58:37 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 00:58:37 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 00:58:37 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 00:59:26 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:04:50 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 2608 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:04:50 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:04:50 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:04:51 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:04:51 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:04:51 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:04:51 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:04:51 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:04:51 [restartedMain] - Root WebApplicationContext: initialization completed in 1080 ms
+2024-11-02 01:04:51 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:04:51 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:04:51 [restartedMain] - Init DruidDataSource
+2024-11-02 01:04:52 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:04:54 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:04:54 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:04:54 [restartedMain] - 生成school端接口文档
+2024-11-02 01:04:54 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:04:54 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:04:54 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:04:54 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:04:54 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:04:54 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:04:54 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:04:54 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:04:54 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:04:54 [restartedMain] - Scanning for api listing references
+2024-11-02 01:04:54 [restartedMain] - Scanning for api listing references
+2024-11-02 01:04:54 [restartedMain] - Scanning for api listing references
+2024-11-02 01:04:54 [restartedMain] - Started SchoolRoomSysApplication in 4.17 seconds (JVM running for 5.203)
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39ebbd72
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@52e5f52b
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 01:04:57 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:05:03 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:05:03 [http-nio-8080-exec-1] - ==> Parameters: 21111021121(String)
+2024-11-02 01:05:03 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==> Parameters: 21111021121(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - <==    Updates: 1
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - 学生信息插入成功:StudentInfo(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==>  Preparing: SELECT user_id,user_name,pass_word,name,phone FROM student_user WHERE user_id=?
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==> Parameters: 21111021121(String)
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - ==> Parameters: 203(String)
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - <==      Total: 3
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - 新增学生信息失败:nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=nested exception is org.apache.ibatis.exceptions.To (truncated)...]
+2024-11-02 01:05:07 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 01:05:08 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:08:13 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 11256 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:08:13 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:08:13 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:08:14 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:08:14 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:08:14 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:08:14 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:08:14 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:08:14 [restartedMain] - Root WebApplicationContext: initialization completed in 1091 ms
+2024-11-02 01:08:14 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:08:14 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:08:14 [restartedMain] - Init DruidDataSource
+2024-11-02 01:08:15 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:08:17 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:08:17 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:08:17 [restartedMain] - 生成school端接口文档
+2024-11-02 01:08:17 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:08:17 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:08:17 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:08:17 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:08:17 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:08:17 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:08:17 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:08:17 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:08:17 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:08:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:08:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:08:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:08:17 [restartedMain] - Started SchoolRoomSysApplication in 4.143 seconds (JVM running for 5.164)
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@ee93b25
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4ce24ea8
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=21111021121&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 01:08:20 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=21111021121, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:08:27 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:08:27 [http-nio-8080-exec-1] - ==> Parameters: 21111021121(String)
+2024-11-02 01:08:27 [http-nio-8080-exec-1] - <==      Total: 1
+2024-11-02 01:08:31 [http-nio-8080-exec-1] - 学号重复
+2024-11-02 01:08:34 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:08:34 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 01:08:34 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=2111102112&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - 当前登录id:1
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - 新增学生信息:StudentInfoDTO(stuId=2111102112, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - ==> Parameters: 2111102112(String)
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - <==      Total: 1
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - 学号重复
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=学号重复, data=null))]
+2024-11-02 01:09:06 [http-nio-8080-exec-5] - Completed 200 OK
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - 当前登录id:1
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==> Parameters: 9999999999(String)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - <==      Total: 0
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - <==    Updates: 1
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==> Parameters: 9999999999(String)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - <==      Total: 0
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - ==> Parameters: 203(String)
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - <==      Total: 3
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - 新增学生信息失败:nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=nested exception is org.apache.ibatis.exceptions.To (truncated)...]
+2024-11-02 01:09:19 [http-nio-8080-exec-3] - Completed 200 OK
+2024-11-02 01:11:19 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 01:11:19 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:11:19 [Thread-12] - Stopping service [Tomcat]
+2024-11-02 01:11:19 [Thread-12] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-02 01:11:19 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:11:19 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:11:19 [Thread-12] - {dataSource-1} closed
+2024-11-02 01:11:19 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 11256 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:11:19 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:11:20 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:11:20 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:11:20 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:11:20 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:11:20 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:11:20 [restartedMain] - Root WebApplicationContext: initialization completed in 358 ms
+2024-11-02 01:11:20 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:11:20 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:11:20 [restartedMain] - Init DruidDataSource
+2024-11-02 01:11:20 [restartedMain] - {dataSource-2} inited
+2024-11-02 01:11:20 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:11:20 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:11:20 [restartedMain] - 生成school端接口文档
+2024-11-02 01:11:20 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:11:20 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:11:20 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:11:20 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:11:20 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:11:21 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:11:21 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:11:21 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:11:21 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:11:21 [restartedMain] - Scanning for api listing references
+2024-11-02 01:11:21 [restartedMain] - Scanning for api listing references
+2024-11-02 01:11:21 [restartedMain] - Scanning for api listing references
+2024-11-02 01:11:21 [restartedMain] - Started SchoolRoomSysApplication in 1.392 seconds (JVM running for 188.707)
+2024-11-02 01:11:21 [restartedMain] - Condition evaluation unchanged
+2024-11-02 01:13:21 [SpringApplicationShutdownHook] - {dataSource-2} closed
+2024-11-02 01:13:32 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 19224 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:13:32 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:13:32 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:13:33 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:13:33 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:13:33 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:13:33 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:13:33 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:13:33 [restartedMain] - Root WebApplicationContext: initialization completed in 1177 ms
+2024-11-02 01:13:33 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:13:33 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:13:33 [restartedMain] - Init DruidDataSource
+2024-11-02 01:13:34 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:13:35 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:13:35 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:13:35 [restartedMain] - 生成school端接口文档
+2024-11-02 01:13:35 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:13:35 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:13:35 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:13:35 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:13:35 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:13:35 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:13:35 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:13:35 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:13:35 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:13:35 [restartedMain] - Scanning for api listing references
+2024-11-02 01:13:35 [restartedMain] - Scanning for api listing references
+2024-11-02 01:13:35 [restartedMain] - Scanning for api listing references
+2024-11-02 01:13:35 [restartedMain] - Started SchoolRoomSysApplication in 4.255 seconds (JVM running for 5.34)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@ba4d30
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@30478f25
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==    Updates: 1
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 203(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==      Total: 3
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - 新增学生信息失败:nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM student_info WHERE stu_id=?
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==    Updates: 1
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM student_user WHERE user_id=?
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==    Updates: 0
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM room_info WHERE room_id=?
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:13:37 [http-nio-8080-exec-1] - <==    Updates: 0
+2024-11-02 01:13:38 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:13:38 [http-nio-8080-exec-1] - Writing [Result(code=1, msg=null, data=Result(code=0, msg=nested exception is org.apache.ibatis.exceptions.To (truncated)...]
+2024-11-02 01:13:38 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 01:16:31 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:16:41 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15088 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:16:41 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:16:41 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:16:42 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:16:42 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:16:42 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:16:42 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:16:42 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:16:42 [restartedMain] - Root WebApplicationContext: initialization completed in 1077 ms
+2024-11-02 01:16:42 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:16:42 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:16:42 [restartedMain] - Init DruidDataSource
+2024-11-02 01:16:43 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:16:45 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:16:45 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:16:45 [restartedMain] - 生成school端接口文档
+2024-11-02 01:16:45 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:16:45 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:16:45 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:16:45 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:16:45 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:16:45 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:16:45 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:16:45 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:16:45 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:16:45 [restartedMain] - Scanning for api listing references
+2024-11-02 01:16:45 [restartedMain] - Scanning for api listing references
+2024-11-02 01:16:45 [restartedMain] - Scanning for api listing references
+2024-11-02 01:16:45 [restartedMain] - Started SchoolRoomSysApplication in 4.127 seconds (JVM running for 5.126)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Detected StandardServletMultipartResolver
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Detected FixedThemeResolver
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@85ed312
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6d42312
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Completed initialization in 1 ms
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO room_info ( room_id, build_id, stu_id, stu_name ) VALUES ( ?, ?, ?, ? )
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - ==> Parameters: 203(String), 34(String), 9999999999(String), ceshi(String)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - 学生宿舍信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Writing [Result(code=1, msg=null, data=Result(code=1, msg=null, data=null))]
+2024-11-02 01:16:49 [http-nio-8080-exec-2] - Completed 200 OK
+2024-11-02 01:18:02 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 01:18:02 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:18:02 [Thread-12] - Stopping service [Tomcat]
+2024-11-02 01:18:02 [Thread-12] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-02 01:18:02 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:18:02 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:18:02 [Thread-12] - {dataSource-1} closed
+2024-11-02 01:18:02 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15088 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:18:02 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:18:03 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:18:03 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:18:03 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:18:03 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:18:03 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:18:03 [restartedMain] - Root WebApplicationContext: initialization completed in 407 ms
+2024-11-02 01:18:03 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:18:03 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:18:03 [restartedMain] - Init DruidDataSource
+2024-11-02 01:18:03 [restartedMain] - {dataSource-2} inited
+2024-11-02 01:18:04 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:18:04 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:18:04 [restartedMain] - 生成school端接口文档
+2024-11-02 01:18:04 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:18:04 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:18:04 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:18:04 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:18:04 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:18:04 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:18:04 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:18:04 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:18:04 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:18:04 [restartedMain] - Scanning for api listing references
+2024-11-02 01:18:04 [restartedMain] - Scanning for api listing references
+2024-11-02 01:18:04 [restartedMain] - Scanning for api listing references
+2024-11-02 01:18:04 [restartedMain] - Started SchoolRoomSysApplication in 1.509 seconds (JVM running for 83.891)
+2024-11-02 01:18:04 [restartedMain] - Condition evaluation unchanged
+2024-11-02 01:19:05 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 01:19:06 [Thread-19] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:19:06 [Thread-19] - Stopping service [Tomcat]
+2024-11-02 01:19:06 [Thread-19] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:19:06 [Thread-19] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:19:06 [Thread-19] - {dataSource-2} closed
+2024-11-02 01:19:06 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15088 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:19:06 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:19:06 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:19:06 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:19:06 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:19:06 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:19:06 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:19:06 [restartedMain] - Root WebApplicationContext: initialization completed in 348 ms
+2024-11-02 01:19:06 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:19:06 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:19:06 [restartedMain] - Init DruidDataSource
+2024-11-02 01:19:06 [restartedMain] - {dataSource-3} inited
+2024-11-02 01:19:07 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:19:07 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:19:07 [restartedMain] - 生成school端接口文档
+2024-11-02 01:19:07 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:19:07 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:19:07 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:19:07 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:19:07 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:19:07 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:19:07 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:19:07 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:19:07 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:19:07 [restartedMain] - Scanning for api listing references
+2024-11-02 01:19:07 [restartedMain] - Scanning for api listing references
+2024-11-02 01:19:07 [restartedMain] - Scanning for api listing references
+2024-11-02 01:19:07 [restartedMain] - Started SchoolRoomSysApplication in 1.319 seconds (JVM running for 147.086)
+2024-11-02 01:19:07 [restartedMain] - Condition evaluation unchanged
+2024-11-02 01:21:23 [SpringApplicationShutdownHook] - {dataSource-3} closed
+2024-11-02 01:21:33 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 12684 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:21:33 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:21:33 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:21:34 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:21:34 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:21:34 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:21:34 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:21:34 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:21:34 [restartedMain] - Root WebApplicationContext: initialization completed in 1093 ms
+2024-11-02 01:21:34 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:21:34 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:21:35 [restartedMain] - Init DruidDataSource
+2024-11-02 01:21:35 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:21:37 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:21:37 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:21:37 [restartedMain] - 生成school端接口文档
+2024-11-02 01:21:37 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:21:37 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:21:37 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:21:37 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:21:38 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:21:38 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:21:38 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:21:38 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:21:38 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:21:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:21:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:21:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:21:38 [restartedMain] - Started SchoolRoomSysApplication in 4.76 seconds (JVM running for 5.801)
+2024-11-02 01:22:03 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:22:13 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15192 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:22:13 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:22:13 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:22:14 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:22:14 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:22:14 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:22:14 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:22:14 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:22:14 [restartedMain] - Root WebApplicationContext: initialization completed in 1054 ms
+2024-11-02 01:22:14 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:22:14 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:22:14 [restartedMain] - Init DruidDataSource
+2024-11-02 01:22:15 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:22:16 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:22:16 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:22:16 [restartedMain] - 生成school端接口文档
+2024-11-02 01:22:16 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:22:16 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:22:16 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:22:16 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:22:16 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:22:16 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:22:16 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:22:16 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:22:16 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:22:16 [restartedMain] - Scanning for api listing references
+2024-11-02 01:22:16 [restartedMain] - Scanning for api listing references
+2024-11-02 01:22:16 [restartedMain] - Scanning for api listing references
+2024-11-02 01:22:16 [restartedMain] - Started SchoolRoomSysApplication in 4.066 seconds (JVM running for 5.114)
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@48ee1e1
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3af575e7
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - 当前登录id:1
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - <==      Total: 0
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id, bed_no ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:22:18 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String), 4(String)
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - 新增学生信息失败:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'bed_no' in 'field list'
+### The error may exist in com/dl/mapper/SchoolManageStuMapper.java (best guess)
+### The error may involve com.dl.mapper.SchoolManageStuMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO student_info  ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id, bed_no )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'bed_no' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'bed_no' in 'field list'
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM student_info WHERE stu_id=?
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - <==    Updates: 0
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM student_user WHERE user_id=?
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - <==    Updates: 0
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==>  Preparing: DELETE FROM room_info WHERE room_id=?
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - ==> Parameters: 9999999999(String)
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - <==    Updates: 0
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - 新增失败，删除信息
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - Writing [Result(code=0, msg=null, data=Result(code=1, msg=<EOL><EOL>### Error updating database.  Cause: java.sql.SQL (truncated)...]
+2024-11-02 01:22:19 [http-nio-8080-exec-1] - Completed 200 OK
+2024-11-02 01:24:40 [File Watcher] - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-11-02 01:24:40 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:40 [Thread-12] - Stopping service [Tomcat]
+2024-11-02 01:24:40 [Thread-12] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-11-02 01:24:40 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:40 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:40 [Thread-12] - {dataSource-1} closed
+2024-11-02 01:24:40 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 15192 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:24:40 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:24:40 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:24:40 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:40 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:24:40 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:24:40 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:24:40 [restartedMain] - Root WebApplicationContext: initialization completed in 307 ms
+2024-11-02 01:24:40 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:24:40 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:24:40 [restartedMain] - Init DruidDataSource
+2024-11-02 01:24:41 [restartedMain] - {dataSource-2} inited
+2024-11-02 01:24:41 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:24:41 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:24:41 [restartedMain] - 生成school端接口文档
+2024-11-02 01:24:41 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:24:41 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:24:41 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:24:41 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:24:41 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:24:41 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:41 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:24:41 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:24:41 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:24:41 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:41 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:41 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:41 [restartedMain] - Started SchoolRoomSysApplication in 1.294 seconds (JVM running for 150.162)
+2024-11-02 01:24:41 [restartedMain] - Condition evaluation unchanged
+2024-11-02 01:24:44 [SpringApplicationShutdownHook] - {dataSource-2} closed
+2024-11-02 01:24:53 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 12044 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:24:53 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:24:53 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:24:54 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:24:54 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:54 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:24:54 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:24:54 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:24:54 [restartedMain] - Root WebApplicationContext: initialization completed in 1058 ms
+2024-11-02 01:24:54 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:24:54 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:24:54 [restartedMain] - Init DruidDataSource
+2024-11-02 01:24:55 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:24:57 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:24:57 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:24:57 [restartedMain] - 生成school端接口文档
+2024-11-02 01:24:57 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:24:57 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:24:57 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:24:57 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:24:57 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:24:57 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:24:57 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:24:57 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:24:57 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:24:57 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:57 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:57 [restartedMain] - Scanning for api listing references
+2024-11-02 01:24:57 [restartedMain] - Started SchoolRoomSysApplication in 3.997 seconds (JVM running for 4.955)
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Detected StandardServletMultipartResolver
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Detected FixedThemeResolver
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7e93414a
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2e085ffb
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Completed initialization in 1 ms
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:25:01 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_user ( user_id, user_name, pass_word, name ) VALUES ( ?, ?, ?, ? )
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), $2a$10$TUHYz3RZl.dFpKQjqGEjcefseFxVbogpliLjiSc42PdpZci9wmyBa(String), ceshi(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - 新增学生信息失败:
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'pass_word' at row 1
+### The error may exist in com/dl/mapper/StudentUserMapper.java (best guess)
+### The error may involve com.dl.mapper.StudentUserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO student_user  ( user_id, user_name, pass_word, name )  VALUES  ( ?, ?, ?, ? )
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'pass_word' at row 1
+; Data truncation: Data too long for column 'pass_word' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'pass_word' at row 1
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: DELETE FROM student_info WHERE stu_id=?
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: DELETE FROM student_user WHERE user_id=?
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==    Updates: 0
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==>  Preparing: DELETE FROM room_info WHERE room_id=?
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - <==    Updates: 0
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - 新增失败，删除信息
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=Result(code=1, msg=<EOL><EOL>### Error updating database.  Cause: com.mysql.cj (truncated)...]
+2024-11-02 01:25:02 [http-nio-8080-exec-2] - Completed 200 OK
+2024-11-02 01:26:07 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:26:13 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 18596 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:26:13 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:26:13 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:26:14 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:26:14 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:26:14 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:26:14 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:26:14 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:26:14 [restartedMain] - Root WebApplicationContext: initialization completed in 1137 ms
+2024-11-02 01:26:14 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:26:14 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:26:14 [restartedMain] - Init DruidDataSource
+2024-11-02 01:26:15 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:26:16 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:26:16 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:26:16 [restartedMain] - 生成school端接口文档
+2024-11-02 01:26:16 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:26:16 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:26:16 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:26:16 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:26:16 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:26:17 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:26:17 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:26:17 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:26:17 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:26:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:26:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:26:17 [restartedMain] - Scanning for api listing references
+2024-11-02 01:26:17 [restartedMain] - Started SchoolRoomSysApplication in 4.16 seconds (JVM running for 5.217)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Detected StandardServletMultipartResolver
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Detected FixedThemeResolver
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@13cb8e15
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7053eee0
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Completed initialization in 1 ms
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_user ( user_id, user_name, pass_word, name ) VALUES ( ?, ?, ?, ? )
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), $2a$10$SAgllwI1zUdYut/jwe1hgOrfKdxQBkFWbMyDsmbRC.tIL/2F9SVNK(String), ceshi(String)
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:26:29 [http-nio-8080-exec-2] - 学生用户信息插入成功:StudentUser(userId=9999999999, userName=ceshi, passWord=$2a$10$SAgllwI1zUdYut/jwe1hgOrfKdxQBkFWbMyDsmbRC.tIL/2F9SVNK, name=ceshi, phone=null)
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO room_info ( room_id, build_id, stu_id, stu_name ) VALUES ( ?, ?, ?, ? )
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - ==> Parameters: 203(String), 34(String), 9999999999(String), ceshi(String)
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - 学生宿舍信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=Result(code=0, msg=null, data=新增成功))]
+2024-11-02 01:26:30 [http-nio-8080-exec-2] - Completed 200 OK
+2024-11-02 01:28:09 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2024-11-02 01:28:19 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 16428 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:28:19 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:28:19 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:28:20 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:28:20 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:28:20 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:28:20 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:28:20 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:28:20 [restartedMain] - Root WebApplicationContext: initialization completed in 1094 ms
+2024-11-02 01:28:20 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:28:20 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:28:20 [restartedMain] - Init DruidDataSource
+2024-11-02 01:28:21 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:28:23 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:28:23 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:28:23 [restartedMain] - 生成school端接口文档
+2024-11-02 01:28:23 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:28:23 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:28:23 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:28:23 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:28:23 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:28:23 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:28:23 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:28:23 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:28:23 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:28:23 [restartedMain] - Scanning for api listing references
+2024-11-02 01:28:23 [restartedMain] - Scanning for api listing references
+2024-11-02 01:28:23 [restartedMain] - Scanning for api listing references
+2024-11-02 01:28:23 [restartedMain] - Started SchoolRoomSysApplication in 4.132 seconds (JVM running for 5.194)
+2024-11-02 01:30:29 [File Watcher] - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-02 01:30:30 [Thread-12] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:30 [Thread-12] - Stopping service [Tomcat]
+2024-11-02 01:30:30 [Thread-12] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:30 [Thread-12] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:30 [Thread-12] - {dataSource-1} closed
+2024-11-02 01:30:30 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 16428 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:30:30 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:30:30 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:30:30 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:30 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:30:30 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:30:30 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:30:30 [restartedMain] - Root WebApplicationContext: initialization completed in 450 ms
+2024-11-02 01:30:30 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:30:30 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:30:30 [restartedMain] - Init DruidDataSource
+2024-11-02 01:30:30 [restartedMain] - {dataSource-2} inited
+2024-11-02 01:30:31 [restartedMain] - Error while adding the mapper 'interface com.dl.mapper.SchoolLoginMapper' to configuration.
+java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:108)
+	at java.lang.Class.getGenericInterfaces(Class.java:913)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:501)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:449)
+	at org.springframework.core.GenericTypeResolver.resolveTypeArguments(GenericTypeResolver.java:139)
+	at com.baomidou.mybatisplus.core.toolkit.reflect.SpringReflectionHelper.resolveTypeArguments(SpringReflectionHelper.java:30)
+	at com.baomidou.mybatisplus.core.toolkit.reflect.GenericTypeUtils.resolveTypeArguments(GenericTypeUtils.java:34)
+	at com.baomidou.mybatisplus.core.toolkit.ReflectionKit.getSuperClassGenericType(ReflectionKit.java:97)
+	at com.baomidou.mybatisplus.core.injector.AbstractSqlInjector.inspectInject(AbstractSqlInjector.java:43)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parserInjector(MybatisMapperAnnotationBuilder.java:133)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parse(MybatisMapperAnnotationBuilder.java:123)
+	at com.baomidou.mybatisplus.core.MybatisMapperRegistry.addMapper(MybatisMapperRegistry.java:94)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.addMapper(MybatisConfiguration.java:129)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dl.SchoolRoomSysApplication.main(SchoolRoomSysApplication.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.ClassNotFoundException: com.dl.entity.pojo.SchoolUser
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 73 common frames omitted
+2024-11-02 01:30:31 [restartedMain] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginMapper' defined in file [D:\DormitoryManagementSystem\SchoolRoomSys\target\classes\com\dl\mapper\SchoolLoginMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+2024-11-02 01:30:31 [restartedMain] - {dataSource-2} closed
+2024-11-02 01:30:31 [restartedMain] - Stopping service [Tomcat]
+2024-11-02 01:30:31 [restartedMain] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-11-02 01:30:31 [restartedMain] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginMapper' defined in file [D:\DormitoryManagementSystem\SchoolRoomSys\target\classes\com\dl\mapper\SchoolLoginMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.dl.SchoolRoomSysApplication.main(SchoolRoomSysApplication.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginMapper' defined in file [D:\DormitoryManagementSystem\SchoolRoomSys\target\classes\com\dl\mapper\SchoolLoginMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolLoginMapper' defined in file [D:\DormitoryManagementSystem\SchoolRoomSys\target\classes\com\dl\mapper\SchoolLoginMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 38 common frames omitted
+Caused by: java.lang.IllegalArgumentException: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:83)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 51 common frames omitted
+Caused by: java.lang.TypeNotPresentException: Type com.dl.entity.pojo.SchoolUser not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:108)
+	at java.lang.Class.getGenericInterfaces(Class.java:913)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:501)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:449)
+	at org.springframework.core.GenericTypeResolver.resolveTypeArguments(GenericTypeResolver.java:139)
+	at com.baomidou.mybatisplus.core.toolkit.reflect.SpringReflectionHelper.resolveTypeArguments(SpringReflectionHelper.java:30)
+	at com.baomidou.mybatisplus.core.toolkit.reflect.GenericTypeUtils.resolveTypeArguments(GenericTypeUtils.java:34)
+	at com.baomidou.mybatisplus.core.toolkit.ReflectionKit.getSuperClassGenericType(ReflectionKit.java:97)
+	at com.baomidou.mybatisplus.core.injector.AbstractSqlInjector.inspectInject(AbstractSqlInjector.java:43)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parserInjector(MybatisMapperAnnotationBuilder.java:133)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parse(MybatisMapperAnnotationBuilder.java:123)
+	at com.baomidou.mybatisplus.core.MybatisMapperRegistry.addMapper(MybatisMapperRegistry.java:94)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.addMapper(MybatisConfiguration.java:129)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	... 54 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.dl.entity.pojo.SchoolUser
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 73 common frames omitted
+2024-11-02 01:30:33 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 16428 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:30:33 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:30:33 [restartedMain] - No MyBatis mapper was found in '[com.dl.mapper]' package. Please check your configuration.
+2024-11-02 01:30:33 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:30:33 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:33 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:30:33 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:30:33 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:30:33 [restartedMain] - Root WebApplicationContext: initialization completed in 431 ms
+2024-11-02 01:30:33 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-11-02 01:30:33 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:30:33 [restartedMain] - 5 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:30:33 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:30:33 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:30:33 [restartedMain] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-02 01:30:33 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:30:33 [restartedMain] - Init DruidDataSource
+2024-11-02 01:30:34 [restartedMain] - {dataSource-3} inited
+2024-11-02 01:30:34 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:30:34 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:34 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:30:34 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:30:34 [restartedMain] - Found 1 custom documentation plugin(s)
+2024-11-02 01:30:34 [restartedMain] - Scanning for api listing references
+2024-11-02 01:30:34 [restartedMain] - Started SchoolRoomSysApplication in 1.701 seconds (JVM running for 136.494)
+2024-11-02 01:30:34 [restartedMain] - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-02 01:30:36 [File Watcher] - Restarting due to 66 class path changes (66 additions, 0 deletions, 0 modifications)
+2024-11-02 01:30:36 [Thread-19] - Pausing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:36 [Thread-19] - Stopping service [Tomcat]
+2024-11-02 01:30:36 [Thread-19] - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:36 [Thread-19] - Destroying ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:36 [Thread-19] - {dataSource-3} closed
+2024-11-02 01:30:36 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 16428 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:30:36 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:30:37 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:30:37 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:37 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:30:37 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:30:37 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:30:37 [restartedMain] - Root WebApplicationContext: initialization completed in 313 ms
+2024-11-02 01:30:37 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:30:37 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:30:37 [restartedMain] - Init DruidDataSource
+2024-11-02 01:30:37 [restartedMain] - {dataSource-4} inited
+2024-11-02 01:30:38 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:30:38 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:30:38 [restartedMain] - 生成school端接口文档
+2024-11-02 01:30:38 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:30:38 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:30:38 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:30:38 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:30:38 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:30:38 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:30:38 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:30:38 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:30:38 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:30:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:30:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:30:38 [restartedMain] - Scanning for api listing references
+2024-11-02 01:30:38 [restartedMain] - Started SchoolRoomSysApplication in 1.562 seconds (JVM running for 140.047)
+2024-11-02 01:30:38 [restartedMain] - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) found beans of type 'org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration' org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' webConfiguration (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-11-02 01:30:44 [SpringApplicationShutdownHook] - {dataSource-4} closed
+2024-11-02 01:31:42 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 16456 (D:\DormitoryManagementSystem\SchoolRoomSys\target\classes started by 董梁 in D:\DormitoryManagementSystem\SchoolRoomSys)
+2024-11-02 01:31:42 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2024-11-02 01:31:42 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-02 01:31:43 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2024-11-02 01:31:43 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:31:43 [restartedMain] - Starting service [Tomcat]
+2024-11-02 01:31:43 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-11-02 01:31:43 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2024-11-02 01:31:43 [restartedMain] - Root WebApplicationContext: initialization completed in 1091 ms
+2024-11-02 01:31:43 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648
+2024-11-02 01:31:43 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2024-11-02 01:31:43 [restartedMain] - Init DruidDataSource
+2024-11-02 01:31:44 [restartedMain] - {dataSource-1} inited
+2024-11-02 01:31:46 [restartedMain] - 开始注册自定义拦截器
+2024-11-02 01:31:46 [restartedMain] - 10 mappings in 'requestMappingHandlerMapping'
+2024-11-02 01:31:46 [restartedMain] - 生成school端接口文档
+2024-11-02 01:31:46 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2024-11-02 01:31:46 [restartedMain] - LiveReload server is running on port 35729
+2024-11-02 01:31:46 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-02 01:31:46 [restartedMain] - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-02 01:31:46 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-11-02 01:31:46 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-02 01:31:46 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2024-11-02 01:31:46 [restartedMain] - Documentation plugins bootstrapped
+2024-11-02 01:31:46 [restartedMain] - Found 3 custom documentation plugin(s)
+2024-11-02 01:31:46 [restartedMain] - Scanning for api listing references
+2024-11-02 01:31:46 [restartedMain] - Scanning for api listing references
+2024-11-02 01:31:46 [restartedMain] - Scanning for api listing references
+2024-11-02 01:31:46 [restartedMain] - Started SchoolRoomSysApplication in 4.173 seconds (JVM running for 5.29)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Initializing Servlet 'dispatcherServlet'
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Detected StandardServletMultipartResolver
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Detected AcceptHeaderLocaleResolver
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Detected FixedThemeResolver
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3dcdc8e9
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3ef5b886
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Completed initialization in 2 ms
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/school/manageStu/saveOne?college=%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&profession=%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B&teacherId=0500001&stuId=9999999999&teacherName=%E5%BD%AD%E4%BC%9A%E9%94%8B&phone=13256487594&bedNo=4&sex=%E5%A5%B3&classRoom=21-1&buildId=34&stuName=ceshi&roomId=203", parameters={masked}
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - Mapped to com.dl.controller.school.SchoolManageStuController#saveOne(StudentInfoDTO)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzA0ODU0MzYsInVzZXJJZCI6IjAwMDAwMDEifQ.cOvk9x27oV3q3dvgfgAQbUrXjNJMN-K3lAgU5PEUCqE
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - 当前登录id:1
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - 新增学生信息:StudentInfoDTO(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203, bedNo=4, phone=13256487594)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==>  Preparing: SELECT stu_id FROM student_info WHERE (stu_id = ?)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_info ( stu_id, stu_name, sex, college, profession, class_room, teacher_id, teacher_name, build_id, room_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), 女(String), 信息技术学院(String), 软件工程(String), 21-1(String), 0500001(String), 彭会锋(String), 34(String), 203(String)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - 学生信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==>  Preparing: SELECT user_id FROM student_user WHERE (user_id = ?)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:31:47 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO student_user ( user_id, user_name, pass_word, name, phone ) VALUES ( ?, ?, ?, ?, ? )
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String), ceshi(String), $2a$10$fUo2OsLB4CTRIx.rlM0k3uMb1A8gC7JBszrxcSx88gfPWlQim7s0u(String), ceshi(String), 13256487594(String)
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - 学生用户信息插入成功:StudentUser(userId=9999999999, userName=ceshi, passWord=$2a$10$fUo2OsLB4CTRIx.rlM0k3uMb1A8gC7JBszrxcSx88gfPWlQim7s0u, name=ceshi, phone=13256487594)
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==>  Preparing: SELECT room_id,build_id,stu_id,stu_name,bed_no FROM room_info WHERE room_id=?
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==> Parameters: 9999999999(String)
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - <==      Total: 0
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==>  Preparing: INSERT INTO room_info ( room_id, build_id, stu_id, stu_name, bed_no ) VALUES ( ?, ?, ?, ?, ? )
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - ==> Parameters: 203(String), 34(String), 9999999999(String), ceshi(String), 4(String)
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - <==    Updates: 1
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - 学生宿舍信息插入成功:StudentInfo(stuId=9999999999, stuName=ceshi, sex=女, college=信息技术学院, profession=软件工程, classRoom=21-1, teacherId=0500001, teacherName=彭会锋, buildId=34, roomId=203)
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - Using 'application/json', given [text/html, application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=Result(code=0, msg=null, data=新增成功))]
+2024-11-02 01:31:48 [http-nio-8080-exec-2] - Completed 200 OK
+2024-11-02 01:32:30 [SpringApplicationShutdownHook] - {dataSource-1} closed
