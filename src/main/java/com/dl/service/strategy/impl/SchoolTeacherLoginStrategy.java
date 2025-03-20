@@ -12,10 +12,12 @@ import com.dl.utils.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.util.DigestUtils;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @Component
 @Slf4j
@@ -31,52 +33,55 @@ public class SchoolTeacherLoginStrategy implements LoginStrategy<LoginVO> {
 
     @Override
     public LoginVO login(LoginDTO loginDTO) {
-        // 1. 根据用户ID查询用户（包含详细信息）
-        SchoolUser user = schoolLoginMapper.selectUserWithDetails(loginDTO.getUserId());
-        if (user == null) {
-            throw new BusinessException("用户不存在");
+        // 1.根据用户名查询用户
+        SchoolUser schoolUser = schoolLoginMapper.selectUserWithDetails(loginDTO.getUserId());
+        if (Objects.isNull(schoolUser)) {
+            throw new BusinessException("用户名或密码错误");
         }
 
-        // 2. 校验用户类型（区分学校老师和学院老师）
-        String level = user.getLevel();
-        // 学校管理员登录
-        if ("1".equals(loginDTO.getUserType()) && !"0".equals(level)) {
-            throw new BusinessException("非学校管理员账号");
-        }
-        // 学院教师登录
-        if ("2".equals(loginDTO.getUserType()) && "0".equals(level)) {
-            throw new BusinessException("非学院教师账号");
+        // 2.密码校验
+        String password = DigestUtils.md5DigestAsHex(loginDTO.getPassword().getBytes());
+        if (!password.equals(schoolUser.getPassWord())) {
+            throw new BusinessException("用户名或密码错误");
         }
 
-        // 3. 密码校验
-        if (!passwordEncoder.matches(loginDTO.getPassword(), user.getPassWord())) {
-            throw new BusinessException("密码错误");
+        // 3.判断用户类型
+        String level = schoolUser.getLevel();
+        // 如果是普通教师登录，但level是学校管理员
+        if ("2".equals(loginDTO.getUserType()) && !"0".equals(level)) {
+            throw new BusinessException("用户名或密码错误");
+        }
+        // 如果是学校管理员登录，但level是普通教师
+        if ("1".equals(loginDTO.getUserType()) && "0".equals(level)) {
+            throw new BusinessException("用户名或密码错误");
         }
 
-        // 4. 生成JWT令牌
+        // 4.生成token
         Map<String, Object> claims = new HashMap<>();
-        claims.put(JwtClaimsConstant.USER_ID, user.getUserId());
+        claims.put(JwtClaimsConstant.USER_ID, schoolUser.getUserId());
         String token = JwtUtil.createJWT(
                 jwtProperties.getSchoolSecretKey(),
                 jwtProperties.getSchoolTtl(),
                 claims);
 
-        // 5. 构建返回数据
-        return LoginVO.builder()
-                .userId(user.getUserId())
-                .userName(user.getUserName())
-                .name(user.getName())
-                .phone(user.getPhone())
-                .level(user.getLevel())
-                .sex(user.getTeacherSex())
-                .collegeName(user.getCollegeName())
-                .userType(loginDTO.getUserType())
+        // 5.封装返回结果
+        LoginVO loginVO = LoginVO.builder()
+                .userId(schoolUser.getUserId())
+                .userName(schoolUser.getUserName())
+                .name(schoolUser.getName())
+                .phone(schoolUser.getPhone())
+                .level(level)
+                .sex(schoolUser.getTeacherSex())
+                .collegeName(schoolUser.getCollegeName())
                 .token(token)
+                .userType(loginDTO.getUserType())
                 .build();
+
+        return loginVO;
     }
 
     @Override
     public boolean supports(String userType) {
-        return "1".equals(userType) || "2".equals(userType);
+        return "2".equals(userType) || "1".equals(userType);
     }
 } 

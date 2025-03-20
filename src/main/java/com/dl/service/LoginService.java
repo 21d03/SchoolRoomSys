@@ -2,7 +2,6 @@ package com.dl.service;
 
 import com.dl.entity.dto.LoginDTO;
 import com.dl.result.Result;
-import com.dl.entity.vo.LoginVO;
 
 public interface LoginService {
     /**

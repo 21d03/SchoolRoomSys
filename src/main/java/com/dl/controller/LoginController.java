@@ -2,7 +2,6 @@ package com.dl.controller;
 
 import com.dl.common.annotation.OperationLog;
 import com.dl.entity.dto.LoginDTO;
-import com.dl.entity.vo.LoginVO;
 import com.dl.result.Result;
 import com.dl.service.LoginService;
 import io.swagger.annotations.Api;
