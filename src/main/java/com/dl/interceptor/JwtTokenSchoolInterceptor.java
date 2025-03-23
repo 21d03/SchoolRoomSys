@@ -9,6 +9,7 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -46,15 +47,26 @@ public class JwtTokenSchoolInterceptor implements HandlerInterceptor {
 
         // 1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getSchoolTokenName());
+        
+        // 2、检查token是否为空
+        if (!StringUtils.hasText(token)) {
+            response.setStatus(401);
+            return false;
+        }
+        
+        // 3、处理Bearer前缀
+        if (token.startsWith("Bearer ")) {
+            token = token.substring(7);
+        }
 
-        // 2、校验令牌
+        // 4、校验令牌
         try {
             log.info("jwt校验:{}", token);
             Claims claims = JwtUtil.parseJWT(jwtProperties.getSchoolSecretKey(), token);
             Long userId = Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());
             log.info("当前登录id:{}", userId);
             BaseContext.setCurrentId(userId);
-            // 3、通过，放行
+            // 5、通过，放行
             return true;
         } catch (IllegalArgumentException | NullPointerException ex) {
             // 处理空指针或非法参数异常
