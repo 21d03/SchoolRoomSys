@@ -68,3 +68,15 @@
 2025-03-23 18:23:05 [http-nio-8080-exec-1] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2025-03-23 18:23:05 [http-nio-8080-exec-1] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
 2025-03-23 18:23:05 [http-nio-8080-exec-1] - Completed 200 OK
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/api/login", parameters={}
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - Mapped to com.dl.controller.LoginController#login(LoginDTO)
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=1, userId=0000001, password=123456)]
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - 用户登录：LoginDTO(userType=1, userId=0000001, password=123456)
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 118599
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - ==>  Preparing: SELECT su.*, ti.sex as teacher_sex, ci.college_name FROM school_user su LEFT JOIN teacher_info ti ON su.user_id = ti.teacher_id LEFT JOIN college_info ci ON su.level = ci.college_id WHERE su.user_id = ?
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - ==> Parameters: 0000001(String)
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - <==      Total: 1
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - 用户ID：null，操作：用户登录，类型：LOGIN
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - Writing [Result(code=0, msg=null, data=LoginVO(userId=0000001, userName=dongliang, name=董梁, userType=1, token (truncated)...]
+2025-03-23 18:25:04 [http-nio-8080-exec-5] - Completed 200 OK
