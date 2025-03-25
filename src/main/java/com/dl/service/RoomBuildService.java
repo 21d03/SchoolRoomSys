@@ -20,4 +20,12 @@ public interface RoomBuildService {
      * @return 是否成功
      */
     boolean addRoomBuild(RoomBuildAddDTO addDTO);
+
+    /**
+     * 删除宿舍楼
+     * 
+     * @param buildId 宿舍楼ID
+     * @return 是否删除成功
+     */
+    boolean deleteRoomBuild(String buildId);
 } 

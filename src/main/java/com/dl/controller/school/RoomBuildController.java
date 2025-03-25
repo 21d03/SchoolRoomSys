@@ -10,9 +10,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -41,6 +43,17 @@ public class RoomBuildController {
             return Result.success(true);
         } else {
             return Result.error("新增宿舍楼失败");
+        }
+    }
+
+    @DeleteMapping("/delete/{buildId}")
+    @ApiOperation("删除宿舍楼")
+    public Result<Boolean> deleteRoomBuild(@PathVariable("buildId") String buildId) {
+        boolean result = roomBuildService.deleteRoomBuild(buildId);
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("删除宿舍楼失败");
         }
     }
 } 

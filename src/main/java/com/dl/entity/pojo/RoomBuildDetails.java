@@ -48,4 +48,7 @@ public class RoomBuildDetails implements Serializable {
     
     @ApiModelProperty(value = "几人寝")
     private String roomType;
+
+    @ApiModelProperty(value = "使用状态 1正常使用 0暂停使用")
+    private String status;
 }
