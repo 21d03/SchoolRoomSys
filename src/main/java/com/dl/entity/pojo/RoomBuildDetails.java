@@ -1,7 +1,6 @@
 package com.dl.entity.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,7 +26,6 @@ public class RoomBuildDetails implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "宿舍楼id")
-    @TableId
     private String buildId;
 
     @ApiModelProperty(value = "宿舍楼姓名")
@@ -47,6 +45,7 @@ public class RoomBuildDetails implements Serializable {
 
     @ApiModelProperty(value = "所属老师id")
     private String manageTeacherId;
-
-
+    
+    @ApiModelProperty(value = "几人寝")
+    private String roomType;
 }

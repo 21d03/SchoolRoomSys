@@ -1,6 +1,7 @@
 package com.dl.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 
@@ -12,4 +13,11 @@ public interface RoomBuildService {
      * @return 分页结果
      */
     IPage<RoomBuildVO> queryRoomBuildPage(RoomBuildQueryDTO queryDTO);
+    
+    /**
+     * 新增宿舍楼
+     * @param addDTO 新增参数
+     * @return 是否成功
+     */
+    boolean addRoomBuild(RoomBuildAddDTO addDTO);
 } 

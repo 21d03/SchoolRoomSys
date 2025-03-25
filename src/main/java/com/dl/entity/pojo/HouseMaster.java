@@ -42,7 +42,4 @@ public class HouseMaster implements Serializable {
     @ApiModelProperty(value = "所处宿舍楼")
     private String buildId;
 
-    @ApiModelProperty(value = "密码")
-    private String password;
-
 }

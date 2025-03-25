@@ -2,4 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dl.mapper.RoomBuildDetailsMapper">
 
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO room_build_details (
+            build_id, build_name, layer_number, room_id, 
+            is_mixed, college_ids, manage_teacher_id, room_type
+        ) VALUES 
+        <foreach collection="list" item="item" separator=",">
+            (
+                #{item.buildId}, #{item.buildName}, #{item.layerNumber}, #{item.roomId},
+                #{item.isMixed}, #{item.collegeIds}, #{item.manageTeacherId}, #{item.roomType}
+            )
+        </foreach>
+    </insert>
+
 </mapper>

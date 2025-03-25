@@ -2,6 +2,10 @@ package com.dl.mapper;
 
 import com.dl.entity.pojo.HouseMaster;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.dl.entity.vo.UnassignedHouseMasterVO;
+import org.apache.ibatis.annotations.Select;
+import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +15,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author dongliang
  * @since 2024-11-01
  */
+@Mapper
 public interface HouseMasterMapper extends BaseMapper<HouseMaster> {
 
+    /**
+     * 查询未分配宿舍楼的宿管列表
+     */
+    @Select("SELECT hm_id as hmId, hm_name as hmName, hm_sex as hmSex, hm_phone as hmPhone " +
+           "FROM house_master WHERE build_id IS NULL")
+    List<UnassignedHouseMasterVO> selectUnassignedHouseMasters();
 }
