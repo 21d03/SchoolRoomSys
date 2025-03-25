@@ -9,10 +9,13 @@ import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.pojo.HouseMaster;
 import com.dl.entity.pojo.RoomBuild;
 import com.dl.entity.pojo.RoomBuildDetails;
+import com.dl.entity.pojo.StudentInfo;
 import com.dl.entity.vo.RoomBuildVO;
+import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.mapper.HouseMasterMapper;
 import com.dl.mapper.RoomBuildDetailsMapper;
 import com.dl.mapper.RoomBuildMapper;
+import com.dl.mapper.StudentInfoMapper;
 import com.dl.service.RoomBuildService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -36,6 +39,9 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
     
     @Autowired
     private HouseMasterMapper houseMasterMapper;
+    
+    @Autowired
+    private StudentInfoMapper studentInfoMapper;
     
     @Override
     public IPage<RoomBuildVO> queryRoomBuildPage(RoomBuildQueryDTO queryDTO) {
@@ -200,5 +206,47 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
         }
 
         return true;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public RoomBuildStatusResultVO updateRoomBuildStatus(String buildId, String isUsed) {
+        if (buildId == null || buildId.isEmpty()) {
+            return RoomBuildStatusResultVO.fail("宿舍楼ID不能为空");
+        }
+        
+        // 1. 检查宿舍楼是否存在
+        RoomBuild roomBuild = roomBuildMapper.selectById(buildId);
+        if (roomBuild == null) {
+            return RoomBuildStatusResultVO.fail("宿舍楼不存在");
+        }
+        
+        // 2. 如果要停用宿舍楼，检查是否有学生居住
+        if ("0".equals(isUsed)) {
+            // 查询学生信息表中是否有关联到该宿舍楼的学生
+            QueryWrapper<StudentInfo> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("build_id", buildId);
+            Long studentCount = studentInfoMapper.selectCount(queryWrapper);
+            
+            if (studentCount != null && studentCount > 0) {
+                return RoomBuildStatusResultVO.fail("宿舍楼内还有" + studentCount + "名学生居住，无法停用");
+            }
+        }
+        
+        // 3. 更新宿舍楼状态
+        try {
+            roomBuild.setIsUsed(isUsed);
+            int result = roomBuildMapper.updateById(roomBuild);
+            if (result > 0) {
+                String statusText = "1".equals(isUsed) ? "启用" : "停用";
+                log.info("宿舍楼{}状态更新为{}", buildId, statusText);
+                return RoomBuildStatusResultVO.success();
+            } else {
+                return RoomBuildStatusResultVO.fail("更新宿舍楼状态失败");
+            }
+        } catch (Exception e) {
+            log.error("更新宿舍楼状态异常", e);
+            throw new ServiceException("更新宿舍楼状态异常: " + e.getMessage());
+        }
     }
 } 

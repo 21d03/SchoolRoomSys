@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
+import com.dl.entity.vo.RoomBuildStatusResultVO;
 
 public interface RoomBuildService {
     
@@ -28,4 +29,13 @@ public interface RoomBuildService {
      * @return 是否删除成功
      */
     boolean deleteRoomBuild(String buildId);
+
+    /**
+     * 更新宿舍楼状态
+     * 
+     * @param buildId 宿舍楼ID
+     * @param isUsed 使用状态 1使用 0暂停使用
+     * @return 更新结果，包含是否成功及失败原因
+     */
+    RoomBuildStatusResultVO updateRoomBuildStatus(String buildId, String isUsed);
 } 

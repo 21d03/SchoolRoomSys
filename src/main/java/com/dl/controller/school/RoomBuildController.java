@@ -5,9 +5,11 @@ import com.dl.common.Result;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
+import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.service.RoomBuildService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,9 +17,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/school/room/build")
@@ -54,6 +59,31 @@ public class RoomBuildController {
             return Result.success(true);
         } else {
             return Result.error("删除宿舍楼失败");
+        }
+    }
+
+    @PutMapping("/status")
+    @ApiOperation("更新宿舍楼状态")
+    public Result<Boolean> updateRoomBuildStatus(
+            @ApiParam(value = "宿舍楼ID和使用状态", required = true) @RequestBody Map<String, String> requestBody) {
+        
+        String buildId = requestBody.get("buildId");
+        String isUsed = requestBody.get("isUsed");
+        
+        if (buildId == null || buildId.isEmpty()) {
+            return Result.error("宿舍楼ID不能为空");
+        }
+        
+        if (isUsed == null || isUsed.isEmpty()) {
+            return Result.error("使用状态不能为空");
+        }
+        
+        RoomBuildStatusResultVO result = roomBuildService.updateRoomBuildStatus(buildId, isUsed);
+        
+        if (result.isSuccess()) {
+            return Result.success(true);
+        } else {
+            return Result.error(result.getReason());
         }
     }
 } 
