@@ -5,8 +5,10 @@ import com.dl.common.Result;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
+import com.dl.entity.vo.RoomVO;
 import com.dl.service.RoomBuildService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -97,5 +99,12 @@ public class RoomBuildController {
         } else {
             return Result.error("修改宿舍楼信息失败");
         }
+    }
+
+    @PostMapping("/room/page")
+    @ApiOperation("分页查询房间列表")
+    public Result<IPage<RoomVO>> queryRoomPage(@RequestBody RoomQueryDTO queryDTO) {
+        IPage<RoomVO> pageResult = roomBuildService.queryRoomPage(queryDTO);
+        return Result.success(pageResult);
     }
 } 

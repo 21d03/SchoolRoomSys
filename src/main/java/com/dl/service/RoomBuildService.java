@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
+import com.dl.entity.vo.RoomVO;
 
 public interface RoomBuildService {
     
@@ -47,4 +49,11 @@ public interface RoomBuildService {
      * @return 是否更新成功
      */
     boolean updateRoomBuild(RoomBuildUpdateDTO updateDTO);
+
+    /**
+     * 分页查询房间列表
+     * @param queryDTO 查询条件
+     * @return 分页结果
+     */
+    IPage<RoomVO> queryRoomPage(RoomQueryDTO queryDTO);
 } 

@@ -1,7 +1,11 @@
 package com.dl.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.pojo.RoomBuildDetails;
+import com.dl.entity.vo.RoomVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -33,4 +37,21 @@ public interface RoomBuildDetailsMapper extends BaseMapper<RoomBuildDetails> {
             return false;
         }
     }
+
+    /**
+     * 分页查询房间列表
+     * @param page 分页参数
+     * @param queryDTO 查询条件
+     * @return 分页结果
+     */
+    IPage<RoomVO> queryRoomPage(Page<RoomVO> page, 
+                               @Param("buildId") String buildId,
+                               @Param("buildName") String buildName,
+                               @Param("layerNumber") String layerNumber,
+                               @Param("roomId") String roomId,
+                               @Param("isMixed") String isMixed,
+                               @Param("roomType") String roomType,
+                               @Param("status") String status,
+                               @Param("collegeIds") String collegeIds,
+                               @Param("manageTeacherName") String manageTeacherName);
 }

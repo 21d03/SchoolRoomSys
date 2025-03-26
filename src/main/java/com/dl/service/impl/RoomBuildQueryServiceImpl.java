@@ -7,12 +7,14 @@ import com.dl.common.exception.ServiceException;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.pojo.HouseMaster;
 import com.dl.entity.pojo.RoomBuild;
 import com.dl.entity.pojo.RoomBuildDetails;
 import com.dl.entity.pojo.StudentInfo;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
+import com.dl.entity.vo.RoomVO;
 import com.dl.mapper.HouseMasterMapper;
 import com.dl.mapper.RoomBuildDetailsMapper;
 import com.dl.mapper.RoomBuildMapper;
@@ -286,5 +288,22 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
             log.error("更新宿舍楼信息异常", e);
             throw new ServiceException("更新宿舍楼信息异常: " + e.getMessage());
         }
+    }
+
+    @Override
+    public IPage<RoomVO> queryRoomPage(RoomQueryDTO queryDTO) {
+        Page<RoomVO> page = new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize());
+        return roomBuildDetailsMapper.queryRoomPage(
+            page,
+            queryDTO.getBuildId(),
+            queryDTO.getBuildName(),
+            queryDTO.getLayerNumber(),
+            queryDTO.getRoomId(),
+            queryDTO.getIsMixed(),
+            queryDTO.getRoomType(),
+            queryDTO.getStatus(),
+            queryDTO.getCollegeIds(),
+            queryDTO.getManageTeacherName()
+        );
     }
 } 

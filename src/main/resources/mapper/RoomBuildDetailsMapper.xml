@@ -5,14 +5,67 @@
     <insert id="insertBatch" parameterType="java.util.List">
         INSERT INTO room_build_details (
             build_id, build_name, layer_number, room_id, 
-            is_mixed, college_ids, manage_teacher_id, room_type
+            is_mixed, college_ids, manage_teacher_id, room_type, status
         ) VALUES 
         <foreach collection="list" item="item" separator=",">
             (
                 #{item.buildId}, #{item.buildName}, #{item.layerNumber}, #{item.roomId},
-                #{item.isMixed}, #{item.collegeIds}, #{item.manageTeacherId}, #{item.roomType}
+                #{item.isMixed}, #{item.collegeIds}, #{item.manageTeacherId}, #{item.roomType}, #{item.status}
             )
         </foreach>
     </insert>
+
+    <!-- 分页查询房间列表 -->
+    <select id="queryRoomPage" resultType="com.dl.entity.vo.RoomVO">
+        SELECT 
+            d.build_id,
+            d.build_name,
+            d.layer_number,
+            d.room_id,
+            d.is_mixed,
+            d.college_ids,
+            d.manage_teacher_id,
+            t.teacher_name as manage_teacher_name,
+            d.room_type,
+            d.status,
+            (SELECT COUNT(1) FROM student_info s WHERE s.build_id = d.build_id AND s.room_id = d.room_id) as current_student_count
+        FROM room_build_details d
+        LEFT JOIN teacher_info t ON d.manage_teacher_id = t.teacher_id
+        <where>
+            <if test="buildId != null and buildId != ''">
+                AND d.build_id LIKE CONCAT('%', #{buildId}, '%')
+            </if>
+            <if test="buildName != null and buildName != ''">
+                AND d.build_name LIKE CONCAT('%', #{buildName}, '%')
+            </if>
+            <if test="layerNumber != null and layerNumber != ''">
+                AND d.layer_number LIKE CONCAT('%', #{layerNumber}, '%')
+            </if>
+            <if test="roomId != null and roomId != ''">
+                AND d.room_id LIKE CONCAT('%', #{roomId}, '%')
+            </if>
+            <if test="isMixed != null and isMixed != ''">
+                AND d.is_mixed = #{isMixed}
+            </if>
+            <if test="roomType != null and roomType != ''">
+                AND d.room_type = #{roomType}
+            </if>
+            <if test="status != null and status != ''">
+                AND d.status = #{status}
+            </if>
+            <if test="collegeIds != null and collegeIds != ''">
+                AND (
+                    d.college_ids = #{collegeIds}
+                    OR d.college_ids LIKE CONCAT(#{collegeIds}, ',%')
+                    OR d.college_ids LIKE CONCAT('%,', #{collegeIds})
+                    OR d.college_ids LIKE CONCAT('%,', #{collegeIds}, ',%')
+                )
+            </if>
+            <if test="manageTeacherName != null and manageTeacherName != ''">
+                AND t.teacher_name LIKE CONCAT('%', #{manageTeacherName}, '%')
+            </if>
+        </where>
+        ORDER BY d.build_id, d.layer_number, d.room_id
+    </select>
 
 </mapper>
