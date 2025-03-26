@@ -32,6 +32,9 @@ public interface HouseMasterMapper extends BaseMapper<HouseMaster> {
      * @param hmId 宿管ID
      * @return 影响的行数
      */
-    @Update("UPDATE house_master SET build_id = NULL WHERE hm_id = #{hmId}")
+    @Update("UPDATE house_master SET build_id = null WHERE hm_id = #{hmId}")
     int clearBuildId(@Param("hmId") String hmId);
+
+    @Select("SELECT hm_id FROM house_master WHERE build_id = #{buildId}")
+    String getHmId(String buildId);
 }

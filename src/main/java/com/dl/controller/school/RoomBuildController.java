@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.common.Result;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
+import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.service.RoomBuildService;
@@ -84,6 +85,17 @@ public class RoomBuildController {
             return Result.success(true);
         } else {
             return Result.error(result.getReason());
+        }
+    }
+
+    @PutMapping("/update")
+    @ApiOperation("修改宿舍楼信息")
+    public Result<Boolean> updateRoomBuild(@RequestBody @Validated RoomBuildUpdateDTO updateDTO) {
+        boolean result = roomBuildService.updateRoomBuild(updateDTO);
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("修改宿舍楼信息失败");
         }
     }
 } 

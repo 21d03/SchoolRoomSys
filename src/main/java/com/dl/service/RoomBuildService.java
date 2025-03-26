@@ -3,6 +3,7 @@ package com.dl.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
+import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 
@@ -38,4 +39,12 @@ public interface RoomBuildService {
      * @return 更新结果，包含是否成功及失败原因
      */
     RoomBuildStatusResultVO updateRoomBuildStatus(String buildId, String isUsed);
+
+    /**
+     * 更新宿舍楼信息
+     * 
+     * @param updateDTO 更新参数
+     * @return 是否更新成功
+     */
+    boolean updateRoomBuild(RoomBuildUpdateDTO updateDTO);
 } 

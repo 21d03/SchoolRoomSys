@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.common.exception.ServiceException;
 import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
+import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.pojo.HouseMaster;
 import com.dl.entity.pojo.RoomBuild;
 import com.dl.entity.pojo.RoomBuildDetails;
@@ -22,6 +23,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -247,6 +249,42 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
         } catch (Exception e) {
             log.error("更新宿舍楼状态异常", e);
             throw new ServiceException("更新宿舍楼状态异常: " + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateRoomBuild(RoomBuildUpdateDTO updateDTO) {
+        try {
+            // 1. 更新room_build表的build_name和hm_id
+            RoomBuild roomBuild = new RoomBuild();
+            roomBuild.setBuildId(updateDTO.getBuildId());
+            roomBuild.setBuildName(updateDTO.getBuildName());
+            roomBuild.setHmId(updateDTO.getNewHmId());
+            roomBuildMapper.updateById(roomBuild);
+            
+            // 2. 更新room_build_details表的build_name
+            RoomBuildDetails updateDetails = new RoomBuildDetails();
+            updateDetails.setBuildName(updateDTO.getBuildName());
+            QueryWrapper<RoomBuildDetails> detailsWrapper = new QueryWrapper<>();
+            detailsWrapper.eq("build_id", updateDTO.getBuildId());
+            roomBuildDetailsMapper.update(updateDetails, detailsWrapper);
+            
+            // 3. 更新宿管表
+            // 3.1 清除原宿管的build_id
+            String oldHmId = houseMasterMapper.getHmId(updateDTO.getBuildId());
+            houseMasterMapper.clearBuildId(oldHmId);
+            
+            // 3.2 设置新宿管的build_id
+            HouseMaster newHouseMaster = new HouseMaster();
+            newHouseMaster.setHmId(updateDTO.getNewHmId());
+            newHouseMaster.setBuildId(updateDTO.getBuildId());
+            houseMasterMapper.updateById(newHouseMaster);
+
+            return true;
+        } catch (Exception e) {
+            log.error("更新宿舍楼信息异常", e);
+            throw new ServiceException("更新宿舍楼信息异常: " + e.getMessage());
         }
     }
 } 
