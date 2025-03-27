@@ -9,6 +9,7 @@ import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
+import com.dl.entity.vo.RoomDetailVO;
 import com.dl.service.RoomBuildService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -106,5 +108,14 @@ public class RoomBuildController {
     public Result<IPage<RoomVO>> queryRoomPage(@RequestBody RoomQueryDTO queryDTO) {
         IPage<RoomVO> pageResult = roomBuildService.queryRoomPage(queryDTO);
         return Result.success(pageResult);
+    }
+
+    @GetMapping("/room/detail")
+    @ApiOperation("查询房间详情")
+    public Result<RoomDetailVO> getRoomDetail(
+            @ApiParam(value = "宿舍楼ID", required = true) @RequestParam String buildId,
+            @ApiParam(value = "房间号", required = true) @RequestParam String roomId) {
+        RoomDetailVO detail = roomBuildService.getRoomDetail(buildId, roomId);
+        return Result.success(detail);
     }
 } 

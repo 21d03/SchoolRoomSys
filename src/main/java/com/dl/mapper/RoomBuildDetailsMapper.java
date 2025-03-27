@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.pojo.RoomBuildDetails;
 import com.dl.entity.vo.RoomVO;
+import com.dl.entity.vo.RoomDetailVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -54,4 +55,12 @@ public interface RoomBuildDetailsMapper extends BaseMapper<RoomBuildDetails> {
                                @Param("status") String status,
                                @Param("collegeIds") String collegeIds,
                                @Param("manageTeacherName") String manageTeacherName);
+
+    /**
+     * 查询房间详情
+     * @param buildId 宿舍楼ID
+     * @param roomId 房间号
+     * @return 房间详情，包含入住学生信息
+     */
+    RoomDetailVO getRoomDetail(@Param("buildId") String buildId, @Param("roomId") String roomId);
 }

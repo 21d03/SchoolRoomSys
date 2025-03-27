@@ -15,6 +15,7 @@ import com.dl.entity.pojo.StudentInfo;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
+import com.dl.entity.vo.RoomDetailVO;
 import com.dl.mapper.HouseMasterMapper;
 import com.dl.mapper.RoomBuildDetailsMapper;
 import com.dl.mapper.RoomBuildMapper;
@@ -305,5 +306,17 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
             queryDTO.getCollegeIds(),
             queryDTO.getManageTeacherName()
         );
+    }
+
+    @Override
+    public RoomDetailVO getRoomDetail(String buildId, String roomId) {
+        if (buildId == null || buildId.isEmpty()) {
+            throw new ServiceException("宿舍楼ID不能为空");
+        }
+        if (roomId == null || roomId.isEmpty()) {
+            throw new ServiceException("房间号不能为空");
+        }
+        
+        return roomBuildDetailsMapper.getRoomDetail(buildId, roomId);
     }
 } 

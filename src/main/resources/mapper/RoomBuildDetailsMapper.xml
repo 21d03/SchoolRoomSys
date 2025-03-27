@@ -68,4 +68,60 @@
         ORDER BY d.build_id, d.layer_number, d.room_id
     </select>
 
+    <!-- 查询房间详情 -->
+    <select id="getRoomDetail" resultMap="RoomDetailResultMap">
+        SELECT 
+            d.build_id,
+            d.build_name,
+            d.layer_number,
+            d.room_id,
+            d.is_mixed,
+            d.college_ids,
+            d.manage_teacher_id,
+            mt.teacher_name as manage_teacher_name,
+            d.room_type,
+            d.status,
+            s.stu_id as student_id,
+            s.stu_name as student_name,
+            s.sex as student_sex,
+            su.phone as student_phone,
+            c.college_name,
+            s.teacher_id,
+            t.name as teacher_name,
+            sc.phone as teacher_phone
+        FROM room_build_details d
+        LEFT JOIN teacher_info mt ON d.manage_teacher_id = mt.teacher_id
+        LEFT JOIN room_info r ON d.build_id = r.build_id AND d.room_id = r.room_id
+        LEFT JOIN student_info s ON r.stu_id = s.stu_id
+        LEFT JOIN student_user su ON s.stu_id = su.user_id
+        LEFT JOIN college_info c ON s.college = c.college_name
+        LEFT JOIN teacher_info t ON s.teacher_id = t.teacher_id
+        LEFT JOIN school_user sc ON s.teacher_id = sc.user_id
+        WHERE d.build_id = #{buildId} AND d.room_id = #{roomId}
+    </select>
+
+    <!-- 结果映射 -->
+    <resultMap id="RoomDetailResultMap" type="com.dl.entity.vo.RoomDetailVO">
+        <id column="build_id" property="buildId"/>
+        <result column="build_name" property="buildName"/>
+        <result column="layer_number" property="layerNumber"/>
+        <result column="room_id" property="roomId"/>
+        <result column="is_mixed" property="isMixed"/>
+        <result column="college_ids" property="collegeIds"/>
+        <result column="manage_teacher_id" property="manageTeacherId"/>
+        <result column="manage_teacher_name" property="manageTeacherName"/>
+        <result column="room_type" property="roomType"/>
+        <result column="status" property="status"/>
+        <collection property="students" ofType="com.dl.entity.vo.StudentInfoVO">
+            <result column="student_id" property="studentId"/>
+            <result column="student_name" property="studentName"/>
+            <result column="student_sex" property="studentSex"/>
+            <result column="student_phone" property="studentPhone"/>
+            <result column="college_name" property="collegeName"/>
+            <result column="teacher_id" property="teacherId"/>
+            <result column="teacher_name" property="teacherName"/>
+            <result column="teacher_phone" property="teacherPhone"/>
+        </collection>
+    </resultMap>
+
 </mapper>

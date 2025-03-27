@@ -8,6 +8,7 @@ import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
+import com.dl.entity.vo.RoomDetailVO;
 
 public interface RoomBuildService {
     
@@ -56,4 +57,12 @@ public interface RoomBuildService {
      * @return 分页结果
      */
     IPage<RoomVO> queryRoomPage(RoomQueryDTO queryDTO);
+
+    /**
+     * 查询房间详情
+     * @param buildId 宿舍楼ID
+     * @param roomId 房间号
+     * @return 房间详情，包含入住学生信息
+     */
+    RoomDetailVO getRoomDetail(String buildId, String roomId);
 } 
