@@ -6,6 +6,7 @@ import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomBuildUpdateRoomDTO;
 import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
@@ -172,6 +173,26 @@ public class RoomBuildController {
             // 其他异常使用通用错误消息
             log.error("新增房间出现未知异常", e);
             return Result.error("新增房间失败：系统异常");
+        }
+    }
+
+    @PutMapping("/room/update")
+    @ApiOperation("修改房间信息")
+    public Result<Boolean> updateRoom(@RequestBody @Validated RoomBuildUpdateRoomDTO updateRoomDTO) {
+        try {
+            boolean result = roomBuildService.updateRoom(updateRoomDTO);
+            if (result) {
+                return Result.success(true);
+            } else {
+                return Result.error("修改房间信息失败");
+            }
+        } catch (com.dl.common.exception.ServiceException e) {
+            // 将具体的服务异常信息返回给前端
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            // 其他异常使用通用错误消息
+            log.error("修改房间出现未知异常", e);
+            return Result.error("修改房间信息失败：系统异常");
         }
     }
 } 

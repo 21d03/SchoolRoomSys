@@ -8,6 +8,7 @@ import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomBuildUpdateRoomDTO;
 import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.pojo.HouseMaster;
 import com.dl.entity.pojo.RoomBuild;
@@ -460,6 +461,76 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
         } catch (Exception e) {
             log.error("新增房间错误", e);
             throw new ServiceException("新增房间失败：" + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateRoom(RoomBuildUpdateRoomDTO updateRoomDTO) {
+        try {
+            // 1. 校验参数
+            if (updateRoomDTO.getBuildId() == null || updateRoomDTO.getBuildId().isEmpty()) {
+                throw new ServiceException("宿舍楼ID不能为空");
+            }
+            
+            if (updateRoomDTO.getRoomId() == null || updateRoomDTO.getRoomId().isEmpty()) {
+                throw new ServiceException("房间号不能为空");
+            }
+            
+            // 2. 检查宿舍楼是否存在
+            RoomBuild roomBuild = roomBuildMapper.selectById(updateRoomDTO.getBuildId());
+            if (roomBuild == null) {
+                throw new ServiceException("宿舍楼不存在");
+            }
+            
+            // 3. 检查宿舍楼状态
+            if (!"1".equals(roomBuild.getIsUsed())) {
+                throw new ServiceException("宿舍楼当前处于非使用状态，无法修改房间");
+            }
+            
+            // 4. 检查房间是否存在
+            QueryWrapper<RoomBuildDetails> roomWrapper = new QueryWrapper<>();
+            roomWrapper.eq("build_id", updateRoomDTO.getBuildId())
+                      .eq("room_id", updateRoomDTO.getRoomId());
+            
+            RoomBuildDetails roomDetails = roomBuildDetailsMapper.selectOne(roomWrapper);
+            
+            if (roomDetails == null) {
+                throw new ServiceException("房间不存在");
+            }
+            
+            // 5. 检查房间是否有学生居住
+            QueryWrapper<StudentInfo> studentWrapper = new QueryWrapper<>();
+            studentWrapper.eq("build_id", updateRoomDTO.getBuildId())
+                         .eq("room_id", updateRoomDTO.getRoomId());
+            
+            Long studentCount = studentInfoMapper.selectCount(studentWrapper);
+            
+            if (studentCount > 0 && !roomDetails.getRoomType().equals(updateRoomDTO.getRoomType())) {
+                throw new ServiceException("房间内已有学生居住，不能修改房间类型");
+            }
+            
+            // 6. 更新房间信息（只更新roomType和isMixed字段）
+            RoomBuildDetails updateDetails = new RoomBuildDetails();
+            updateDetails.setRoomType(updateRoomDTO.getRoomType());
+            updateDetails.setIsMixed(updateRoomDTO.getIsMixed());
+            
+            int result = roomBuildDetailsMapper.update(updateDetails, roomWrapper);
+            
+            if (result <= 0) {
+                throw new ServiceException("修改房间信息失败");
+            }
+            
+            log.info("修改房间成功：buildId={}, roomId={}, roomType={}, isMixed={}", 
+                updateRoomDTO.getBuildId(), updateRoomDTO.getRoomId(), 
+                updateRoomDTO.getRoomType(), updateRoomDTO.getIsMixed());
+            
+            return true;
+        } catch (ServiceException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("修改房间错误", e);
+            throw new ServiceException("修改房间失败：" + e.getMessage());
         }
     }
 } 

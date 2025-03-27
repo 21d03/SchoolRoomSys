@@ -5,6 +5,7 @@ import com.dl.entity.dto.RoomBuildAddDTO;
 import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
+import com.dl.entity.dto.RoomBuildUpdateRoomDTO;
 import com.dl.entity.dto.RoomQueryDTO;
 import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
@@ -82,4 +83,11 @@ public interface RoomBuildService {
      * @return 是否新增成功
      */
     boolean addRoom(RoomBuildAddRoomDTO addRoomDTO);
+
+    /**
+     * 修改房间信息
+     * @param updateRoomDTO 修改房间参数
+     * @return 是否修改成功
+     */
+    boolean updateRoom(RoomBuildUpdateRoomDTO updateRoomDTO);
 } 
