@@ -118,4 +118,39 @@ public class RoomBuildController {
         RoomDetailVO detail = roomBuildService.getRoomDetail(buildId, roomId);
         return Result.success(detail);
     }
+    
+    @PutMapping("/room/status")
+    @ApiOperation("更新房间使用状态")
+    public Result<Boolean> updateRoomStatus(
+            @ApiParam(value = "宿舍楼ID", required = true) @RequestParam String buildId,
+            @ApiParam(value = "房间号", required = true) @RequestParam String roomId,
+            @ApiParam(value = "使用状态：1-正常使用，0-暂停使用", required = true) @RequestParam String status) {
+        if (buildId == null || buildId.isEmpty()) {
+            return Result.error("宿舍楼ID不能为空");
+        }
+        
+        if (roomId == null || roomId.isEmpty()) {
+            return Result.error("房间号不能为空");
+        }
+        
+        if (status == null || status.isEmpty()) {
+            return Result.error("使用状态不能为空");
+        }
+        
+        try {
+            boolean result = roomBuildService.updateRoomStatus(buildId, roomId, status);
+            if (result) {
+                return Result.success(true);
+            } else {
+                return Result.error("更新房间状态失败");
+            }
+        } catch (com.dl.common.exception.ServiceException e) {
+            // 将具体的服务异常信息返回给前端
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            // 其他异常使用通用错误消息
+            log.error("更新房间状态出现未知异常", e);
+            return Result.error("更新房间状态失败：系统异常");
+        }
+    }
 } 

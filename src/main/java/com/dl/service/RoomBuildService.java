@@ -65,4 +65,13 @@ public interface RoomBuildService {
      * @return 房间详情，包含入住学生信息
      */
     RoomDetailVO getRoomDetail(String buildId, String roomId);
+    
+    /**
+     * 更新房间使用状态
+     * @param buildId 宿舍楼ID
+     * @param roomId 房间号
+     * @param status 使用状态：1-正常使用，0-暂停使用
+     * @return 是否更新成功
+     */
+    boolean updateRoomStatus(String buildId, String roomId, String status);
 } 

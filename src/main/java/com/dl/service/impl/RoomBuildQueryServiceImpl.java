@@ -310,13 +310,81 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
 
     @Override
     public RoomDetailVO getRoomDetail(String buildId, String roomId) {
-        if (buildId == null || buildId.isEmpty()) {
-            throw new ServiceException("宿舍楼ID不能为空");
-        }
-        if (roomId == null || roomId.isEmpty()) {
-            throw new ServiceException("房间号不能为空");
+        if (buildId == null || buildId.isEmpty() || roomId == null || roomId.isEmpty()) {
+            log.error("查询房间详情参数错误：buildId={}, roomId={}", buildId, roomId);
+            throw new ServiceException("查询房间详情参数错误");
         }
         
         return roomBuildDetailsMapper.getRoomDetail(buildId, roomId);
+    }
+    
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateRoomStatus(String buildId, String roomId, String status) {
+        if (buildId == null || buildId.isEmpty()) {
+            log.error("更新房间状态错误：宿舍楼ID不能为空");
+            throw new ServiceException("宿舍楼ID不能为空");
+        }
+        
+        if (roomId == null || roomId.isEmpty()) {
+            log.error("更新房间状态错误：房间号不能为空");
+            throw new ServiceException("房间号不能为空");
+        }
+        
+        if (status == null || status.isEmpty() || (!status.equals("0") && !status.equals("1"))) {
+            log.error("更新房间状态错误：状态值不正确，必须为0或1");
+            throw new ServiceException("状态值不正确，必须为0或1");
+        }
+        
+        try {
+            // 查询宿舍楼是否存在且正常使用
+            QueryWrapper<RoomBuild> buildWrapper = new QueryWrapper<>();
+            buildWrapper.eq("build_id", buildId).eq("is_used", "1");
+            RoomBuild roomBuild = roomBuildMapper.selectOne(buildWrapper);
+            
+            if (roomBuild == null) {
+                log.error("更新房间状态错误：宿舍楼不存在或已停用，buildId={}", buildId);
+                throw new ServiceException("宿舍楼不存在或已停用");
+            }
+            
+            // 查询房间是否存在
+            QueryWrapper<RoomBuildDetails> roomWrapper = new QueryWrapper<>();
+            roomWrapper.eq("build_id", buildId).eq("room_id", roomId);
+            RoomBuildDetails roomDetails = roomBuildDetailsMapper.selectOne(roomWrapper);
+            
+            if (roomDetails == null) {
+                log.error("更新房间状态错误：房间不存在，buildId={}, roomId={}", buildId, roomId);
+                throw new ServiceException("房间不存在");
+            }
+            
+            // 如果要停用房间，检查房间是否有人居住
+            if (status.equals("0")) {
+                QueryWrapper<StudentInfo> studentWrapper = new QueryWrapper<>();
+                studentWrapper.eq("build_id", buildId).eq("room_id", roomId);
+                Long studentCount = studentInfoMapper.selectCount(studentWrapper);
+                
+                if (studentCount > 0) {
+                    log.error("更新房间状态错误：房间内还有学生居住，不能停用，buildId={}, roomId={}, studentCount={}", buildId, roomId, studentCount);
+                    throw new ServiceException("房间内还有" + studentCount + "名学生居住，不能停用");
+                }
+            }
+            
+            // 更新房间状态
+            RoomBuildDetails updateDetails = new RoomBuildDetails();
+            updateDetails.setStatus(status);
+            
+            QueryWrapper<RoomBuildDetails> updateWrapper = new QueryWrapper<>();
+            updateWrapper.eq("build_id", buildId).eq("room_id", roomId);
+            
+            int result = roomBuildDetailsMapper.update(updateDetails, updateWrapper);
+            
+            log.info("更新房间状态成功：buildId={}, roomId={}, status={}", buildId, roomId, status);
+            return result > 0;
+        } catch (ServiceException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("更新房间状态错误", e);
+            throw new ServiceException("更新房间状态失败：" + e.getMessage());
+        }
     }
 } 

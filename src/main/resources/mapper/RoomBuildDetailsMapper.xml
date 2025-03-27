@@ -31,7 +31,9 @@
             (SELECT COUNT(1) FROM student_info s WHERE s.build_id = d.build_id AND s.room_id = d.room_id) as current_student_count
         FROM room_build_details d
         LEFT JOIN teacher_info t ON d.manage_teacher_id = t.teacher_id
+        INNER JOIN room_build rb ON d.build_id = rb.build_id
         <where>
+            rb.is_used = '1'
             <if test="buildId != null and buildId != ''">
                 AND d.build_id LIKE CONCAT('%', #{buildId}, '%')
             </if>
@@ -90,6 +92,7 @@
             t.name as teacher_name,
             sc.phone as teacher_phone
         FROM room_build_details d
+        INNER JOIN room_build rb ON d.build_id = rb.build_id
         LEFT JOIN teacher_info mt ON d.manage_teacher_id = mt.teacher_id
         LEFT JOIN room_info r ON d.build_id = r.build_id AND d.room_id = r.room_id
         LEFT JOIN student_info s ON r.stu_id = s.stu_id
@@ -97,7 +100,7 @@
         LEFT JOIN college_info c ON s.college = c.college_name
         LEFT JOIN teacher_info t ON s.teacher_id = t.teacher_id
         LEFT JOIN school_user sc ON s.teacher_id = sc.user_id
-        WHERE d.build_id = #{buildId} AND d.room_id = #{roomId}
+        WHERE rb.is_used = '1' AND d.build_id = #{buildId} AND d.room_id = #{roomId}
     </select>
 
     <!-- 结果映射 -->
