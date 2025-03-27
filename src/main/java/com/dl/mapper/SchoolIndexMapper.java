@@ -18,10 +18,10 @@ public interface SchoolIndexMapper {
     @Select("SELECT COUNT(*) FROM room_build_details")
     Integer getRoomTotal();
     
-    @Select("SELECT COUNT(*) FROM room_build_details WHERE status = '1'")
+    @Select("SELECT COUNT(*) FROM room_build_details a left join room_build b on a.build_id = b.build_id WHERE status = '1' and b.is_used = '1'")
     Integer getRoomNormal();
     
-    @Select("SELECT COUNT(*) FROM room_build_details WHERE status = '0'")
+    @Select("SELECT COUNT(*) FROM room_build_details a left join room_build b on a.build_id = b.build_id WHERE status = '0' or b.is_used = '0'")
     Integer getRoomStopped();
     
     @Select("SELECT COUNT(*) FROM repair_approval")
