@@ -87,6 +87,7 @@
             s.stu_name as student_name,
             s.sex as student_sex,
             su.phone as student_phone,
+            r.bed_no,
             c.college_name,
             s.teacher_id,
             t.name as teacher_name,
@@ -101,6 +102,7 @@
         LEFT JOIN teacher_info t ON s.teacher_id = t.teacher_id
         LEFT JOIN school_user sc ON s.teacher_id = sc.user_id
         WHERE rb.is_used = '1' AND d.build_id = #{buildId} AND d.room_id = #{roomId}
+        order by r.bed_no asc
     </select>
 
     <!-- 结果映射 -->
@@ -120,6 +122,7 @@
             <result column="student_name" property="studentName"/>
             <result column="student_sex" property="studentSex"/>
             <result column="student_phone" property="studentPhone"/>
+            <result column="bed_no" property="bedNo"/>
             <result column="college_name" property="collegeName"/>
             <result column="teacher_id" property="teacherId"/>
             <result column="teacher_name" property="teacherName"/>

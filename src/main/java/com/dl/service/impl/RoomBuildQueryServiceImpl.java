@@ -533,4 +533,77 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
             throw new ServiceException("修改房间失败：" + e.getMessage());
         }
     }
+    
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean deleteRoom(String buildId, String roomId) {
+        try {
+            // 1. 校验参数
+            if (buildId == null || buildId.isEmpty()) {
+                throw new ServiceException("宿舍楼ID不能为空");
+            }
+            
+            if (roomId == null || roomId.isEmpty()) {
+                throw new ServiceException("房间号不能为空");
+            }
+            
+            // 2. 检查宿舍楼是否存在
+            RoomBuild roomBuild = roomBuildMapper.selectById(buildId);
+            if (roomBuild == null) {
+                throw new ServiceException("宿舍楼不存在");
+            }
+            
+            // 3. 检查宿舍楼状态
+            if (!"1".equals(roomBuild.getIsUsed())) {
+                throw new ServiceException("宿舍楼当前处于非使用状态，无法删除房间");
+            }
+            
+            // 4. 检查房间是否存在
+            QueryWrapper<RoomBuildDetails> roomWrapper = new QueryWrapper<>();
+            roomWrapper.eq("build_id", buildId)
+                      .eq("room_id", roomId);
+            
+            RoomBuildDetails roomDetails = roomBuildDetailsMapper.selectOne(roomWrapper);
+            
+            if (roomDetails == null) {
+                throw new ServiceException("房间不存在");
+            }
+            
+            // 5. 检查房间是否有学生居住
+            QueryWrapper<StudentInfo> studentWrapper = new QueryWrapper<>();
+            studentWrapper.eq("build_id", buildId)
+                         .eq("room_id", roomId);
+            
+            Long studentCount = studentInfoMapper.selectCount(studentWrapper);
+            
+            if (studentCount > 0) {
+                throw new ServiceException("房间内还有" + studentCount + "名学生居住，无法删除");
+            }
+            
+            // 6. 删除room_build_details表中的房间记录
+            int deleteResult = roomBuildDetailsMapper.delete(roomWrapper);
+            
+            if (deleteResult <= 0) {
+                throw new ServiceException("删除房间记录失败");
+            }
+            
+            // 7. 更新宿舍楼的房间总数
+            int totalRooms = Integer.parseInt(roomBuild.getTotalRoomNum());
+            roomBuild.setTotalRoomNum(String.valueOf(totalRooms - 1));
+            
+            int updateResult = roomBuildMapper.updateById(roomBuild);
+            
+            if (updateResult <= 0) {
+                throw new ServiceException("更新宿舍楼房间总数失败");
+            }
+            
+            log.info("删除房间成功：buildId={}, roomId={}", buildId, roomId);
+            return true;
+        } catch (ServiceException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("删除房间错误", e);
+            throw new ServiceException("删除房间失败：" + e.getMessage());
+        }
+    }
 } 

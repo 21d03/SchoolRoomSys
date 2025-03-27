@@ -90,4 +90,12 @@ public interface RoomBuildService {
      * @return 是否修改成功
      */
     boolean updateRoom(RoomBuildUpdateRoomDTO updateRoomDTO);
+    
+    /**
+     * 删除房间
+     * @param buildId 宿舍楼ID
+     * @param roomId 房间号
+     * @return 是否删除成功
+     */
+    boolean deleteRoom(String buildId, String roomId);
 } 

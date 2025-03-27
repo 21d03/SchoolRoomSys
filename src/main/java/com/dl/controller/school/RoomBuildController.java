@@ -195,4 +195,26 @@ public class RoomBuildController {
             return Result.error("修改房间信息失败：系统异常");
         }
     }
+    
+    @DeleteMapping("/room/delete")
+    @ApiOperation("删除房间")
+    public Result<Boolean> deleteRoom(
+            @ApiParam(value = "宿舍楼ID", required = true) @RequestParam String buildId,
+            @ApiParam(value = "房间号", required = true) @RequestParam String roomId) {
+        try {
+            boolean result = roomBuildService.deleteRoom(buildId, roomId);
+            if (result) {
+                return Result.success(true);
+            } else {
+                return Result.error("删除房间失败");
+            }
+        } catch (com.dl.common.exception.ServiceException e) {
+            // 将具体的服务异常信息返回给前端
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            // 其他异常使用通用错误消息
+            log.error("删除房间出现未知异常", e);
+            return Result.error("删除房间失败：系统异常");
+        }
+    }
 } 
