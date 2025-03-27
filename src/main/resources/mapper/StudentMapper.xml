@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.StudentMapper">
+
+    <!-- 分页查询学生列表 -->
+    <select id="queryStudentPage" resultType="com.dl.entity.vo.StudentVO">
+        SELECT 
+            si.stu_id as stuId,
+            si.stu_name as stuName,
+            si.sex,
+            su.phone,
+            si.college,
+            si.profession,
+            si.class_room as classRoom,
+            si.teacher_id as teacherId,
+            si.teacher_name as teacherName,
+            si.build_id as buildId,
+            si.room_id as roomId
+        FROM student_info si
+        LEFT JOIN student_user su ON si.stu_id = su.user_id
+        <where>
+            <if test="stuId != null and stuId != ''">
+                AND si.stu_id LIKE CONCAT('%', #{stuId}, '%')
+            </if>
+            <if test="stuName != null and stuName != ''">
+                AND si.stu_name LIKE CONCAT('%', #{stuName}, '%')
+            </if>
+            <if test="college != null and college != ''">
+                AND si.college LIKE CONCAT('%', #{college}, '%')
+            </if>
+            <if test="sex != null and sex != ''">
+                AND si.sex = #{sex}
+            </if>
+        </where>
+        ORDER BY si.stu_id
+    </select>
+
+</mapper> 
