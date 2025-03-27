@@ -121,16 +121,26 @@ public class SchoolManageStuServiceImpl implements SchoolManageStuService {
                 }
             }
 
-            if (roomInfoMapper.selectById(studentInfo.getStuId()) != null
-                    && roomInfoMapper.selectOne(new LambdaQueryWrapper<RoomInfo>()
+            // 检查指定宿舍楼的指定房间的指定床位是否已经有人
+            RoomInfo existingRoomInfo = roomInfoMapper.selectOne(new LambdaQueryWrapper<RoomInfo>()
                     .eq(RoomInfo::getBuildId, studentInfo.getBuildId())
                     .eq(RoomInfo::getRoomId, studentInfo.getRoomId())
-                    .eq(RoomInfo::getBedNo, studentInfoDto.getBedNo())) != null) {
-                log.info("宿舍信息重复");
+                    .eq(RoomInfo::getBedNo, studentInfoDto.getBedNo()));
+            
+            if (existingRoomInfo != null) {
+                log.info("该床位已经被占用: 宿舍楼{}, 房间号{}, 床位号{}", studentInfo.getBuildId(), studentInfo.getRoomId(), studentInfoDto.getBedNo());
                 //删除上边执行过的插入操作
                 schoolManageStuMapper.deleteById(studentInfo.getStuId());
                 studentUserMapper.deleteById(studentInfo.getStuId());
-                return Result.error("宿舍信息重复");
+                return Result.error("该床位已经被占用，请选择其他床位");
+            }
+
+            if (roomInfoMapper.selectById(studentInfo.getStuId()) != null) {
+                log.info("该学生已经分配了宿舍");
+                //删除上边执行过的插入操作
+                schoolManageStuMapper.deleteById(studentInfo.getStuId());
+                studentUserMapper.deleteById(studentInfo.getStuId());
+                return Result.error("该学生已经分配了宿舍");
             } else {
                 //保存信息到room_info表
                 roomInfoInsert = roomInfoMapper.insert(BeanUtil.copyProperties(studentInfoDto, RoomInfo.class));

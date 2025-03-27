@@ -12,6 +12,7 @@ import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
 import com.dl.entity.vo.RoomDetailVO;
+import com.dl.entity.vo.RoomTypeVO;
 import com.dl.service.RoomBuildService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -216,5 +217,15 @@ public class RoomBuildController {
             log.error("删除房间出现未知异常", e);
             return Result.error("删除房间失败：系统异常");
         }
+    }
+
+    @GetMapping("/room/type")
+    @ApiOperation("查询宿舍类型（几人间）")
+    public Result<RoomTypeVO> getRoomType(
+            @ApiParam(value = "宿舍楼ID", required = true) @RequestParam String buildId,
+            @ApiParam(value = "房间号", required = true) @RequestParam String roomId) {
+        log.info("查询宿舍类型: buildId={}, roomId={}", buildId, roomId);
+        RoomTypeVO roomType = roomBuildService.getRoomType(buildId, roomId);
+        return Result.success(roomType);
     }
 } 

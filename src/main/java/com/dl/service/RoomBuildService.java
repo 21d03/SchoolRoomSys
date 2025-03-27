@@ -11,6 +11,7 @@ import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
 import com.dl.entity.vo.RoomDetailVO;
+import com.dl.entity.vo.RoomTypeVO;
 
 public interface RoomBuildService {
     
@@ -98,4 +99,12 @@ public interface RoomBuildService {
      * @return 是否删除成功
      */
     boolean deleteRoom(String buildId, String roomId);
+    
+    /**
+     * 查询宿舍类型（几人间）
+     * @param buildId 宿舍楼ID
+     * @param roomId 房间号
+     * @return 宿舍类型信息
+     */
+    RoomTypeVO getRoomType(String buildId, String roomId);
 } 

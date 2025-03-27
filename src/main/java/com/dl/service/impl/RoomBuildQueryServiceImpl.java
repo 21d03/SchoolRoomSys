@@ -18,6 +18,7 @@ import com.dl.entity.vo.RoomBuildVO;
 import com.dl.entity.vo.RoomBuildStatusResultVO;
 import com.dl.entity.vo.RoomVO;
 import com.dl.entity.vo.RoomDetailVO;
+import com.dl.entity.vo.RoomTypeVO;
 import com.dl.mapper.HouseMasterMapper;
 import com.dl.mapper.RoomBuildDetailsMapper;
 import com.dl.mapper.RoomBuildMapper;
@@ -605,5 +606,37 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
             log.error("删除房间错误", e);
             throw new ServiceException("删除房间失败：" + e.getMessage());
         }
+    }
+
+    @Override
+    public RoomTypeVO getRoomType(String buildId, String roomId) {
+        log.info("查询宿舍类型: buildId={}, roomId={}", buildId, roomId);
+        
+        if (buildId == null || buildId.isEmpty()) {
+            throw new ServiceException("宿舍楼ID不能为空");
+        }
+        
+        if (roomId == null || roomId.isEmpty()) {
+            throw new ServiceException("房间号不能为空");
+        }
+        
+        // 从room_build_details表查询宿舍类型
+        QueryWrapper<RoomBuildDetails> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("room_type")
+                  .eq("build_id", buildId)
+                  .eq("room_id", roomId);
+        
+        RoomBuildDetails roomDetails = roomBuildDetailsMapper.selectOne(queryWrapper);
+        
+        if (roomDetails == null) {
+            throw new ServiceException("未找到该宿舍信息");
+        }
+        
+        RoomTypeVO roomTypeVO = new RoomTypeVO();
+        roomTypeVO.setBuildId(buildId);
+        roomTypeVO.setRoomId(roomId);
+        roomTypeVO.setRoomType(roomDetails.getRoomType());
+        
+        return roomTypeVO;
     }
 } 

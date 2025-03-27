@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dl.mapper.TeacherMapper">
+
+    <!-- 辅导员查询结果映射 -->
+    <resultMap id="TeacherResultMap" type="com.dl.entity.vo.TeacherVO">
+        <result column="teacher_id" property="teacherId"/>
+        <result column="teacher_name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="phone" property="phone"/>
+        <result column="college" property="college"/>
+    </resultMap>
+
+    <!-- 查询辅导员列表 -->
+    <select id="queryTeacherList" resultMap="TeacherResultMap">
+        SELECT 
+            t.teacher_id, 
+            t.name as teacher_name, 
+            t.sex, 
+            u.phone, 
+            t.college
+        FROM 
+            teacher_info t
+        LEFT JOIN
+            school_user u ON t.teacher_id = u.user_id
+        WHERE 
+            1=1
+            <if test="teacherName != null and teacherName != ''">
+                AND t.teacher_name LIKE CONCAT('%', #{teacherName}, '%')
+            </if>
+            <if test="college != null and college != ''">
+                AND t.college = #{college}
+            </if>
+        ORDER BY 
+            t.college
+    </select>
+</mapper> 
