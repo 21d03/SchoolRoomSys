@@ -3,6 +3,7 @@ package com.dl.controller.school;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.common.Result;
 import com.dl.entity.dto.RoomBuildAddDTO;
+import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.dto.RoomQueryDTO;
@@ -151,6 +152,26 @@ public class RoomBuildController {
             // 其他异常使用通用错误消息
             log.error("更新房间状态出现未知异常", e);
             return Result.error("更新房间状态失败：系统异常");
+        }
+    }
+
+    @PostMapping("/room/add")
+    @ApiOperation("新增房间")
+    public Result<Boolean> addRoom(@RequestBody @Validated RoomBuildAddRoomDTO addRoomDTO) {
+        try {
+            boolean result = roomBuildService.addRoom(addRoomDTO);
+            if (result) {
+                return Result.success(true);
+            } else {
+                return Result.error("新增房间失败");
+            }
+        } catch (com.dl.common.exception.ServiceException e) {
+            // 将具体的服务异常信息返回给前端
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            // 其他异常使用通用错误消息
+            log.error("新增房间出现未知异常", e);
+            return Result.error("新增房间失败：系统异常");
         }
     }
 } 

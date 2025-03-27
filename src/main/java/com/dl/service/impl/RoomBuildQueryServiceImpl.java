@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.common.exception.ServiceException;
 import com.dl.entity.dto.RoomBuildAddDTO;
+import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.dto.RoomQueryDTO;
@@ -385,6 +386,80 @@ public class RoomBuildQueryServiceImpl implements RoomBuildService {
         } catch (Exception e) {
             log.error("更新房间状态错误", e);
             throw new ServiceException("更新房间状态失败：" + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean addRoom(RoomBuildAddRoomDTO addRoomDTO) {
+        try {
+            // 1. 校验参数
+            if (addRoomDTO.getBuildId() == null || addRoomDTO.getBuildId().isEmpty()) {
+                throw new ServiceException("宿舍楼ID不能为空");
+            }
+            
+            if (addRoomDTO.getRoomId() == null || addRoomDTO.getRoomId().isEmpty()) {
+                throw new ServiceException("房间号不能为空");
+            }
+            
+            // 2. 检查宿舍楼是否存在
+            RoomBuild roomBuild = roomBuildMapper.selectById(addRoomDTO.getBuildId());
+            if (roomBuild == null) {
+                throw new ServiceException("宿舍楼不存在");
+            }
+            
+            // 3. 检查宿舍楼状态
+            if (!"1".equals(roomBuild.getIsUsed())) {
+                throw new ServiceException("宿舍楼当前处于非使用状态，无法添加房间");
+            }
+            
+            // 4. 检查房间是否已存在
+            QueryWrapper<RoomBuildDetails> existCheckWrapper = new QueryWrapper<>();
+            existCheckWrapper.eq("build_id", addRoomDTO.getBuildId())
+                            .eq("room_id", addRoomDTO.getRoomId());
+            
+            Long countLong = roomBuildDetailsMapper.selectCount(existCheckWrapper);
+            if (countLong > 0) {
+                throw new ServiceException("该房间号已存在，请使用其他房间号");
+            }
+            
+            // 5. 创建房间
+            RoomBuildDetails roomDetails = new RoomBuildDetails();
+            BeanUtils.copyProperties(addRoomDTO, roomDetails);
+            roomDetails.setBuildName(roomBuild.getBuildName());
+            
+            // 设置默认值，确保为空的字段有默认值
+            if (roomDetails.getCollegeIds() == null) {
+                roomDetails.setCollegeIds("");
+            }
+            if (roomDetails.getManageTeacherId() == null) {
+                roomDetails.setManageTeacherId("");
+            }
+            
+            int result = roomBuildDetailsMapper.insert(roomDetails);
+            
+            if (result <= 0) {
+                throw new ServiceException("保存房间信息失败");
+            }
+            
+            // 6. 更新宿舍楼的房间总数
+            int totalRooms = Integer.parseInt(roomBuild.getTotalRoomNum());
+            
+            roomBuild.setTotalRoomNum(String.valueOf(totalRooms + 1));
+            
+            int updateResult = roomBuildMapper.updateById(roomBuild);
+            
+            if (updateResult <= 0) {
+                throw new ServiceException("更新宿舍楼房间总数失败");
+            }
+            
+            log.info("新增房间成功：buildId={}, roomId={}", addRoomDTO.getBuildId(), addRoomDTO.getRoomId());
+            return true;
+        } catch (ServiceException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("新增房间错误", e);
+            throw new ServiceException("新增房间失败：" + e.getMessage());
         }
     }
 } 

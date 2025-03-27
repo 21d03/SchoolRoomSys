@@ -2,6 +2,7 @@ package com.dl.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RoomBuildAddDTO;
+import com.dl.entity.dto.RoomBuildAddRoomDTO;
 import com.dl.entity.dto.RoomBuildQueryDTO;
 import com.dl.entity.dto.RoomBuildUpdateDTO;
 import com.dl.entity.dto.RoomQueryDTO;
@@ -74,4 +75,11 @@ public interface RoomBuildService {
      * @return 是否更新成功
      */
     boolean updateRoomStatus(String buildId, String roomId, String status);
+    
+    /**
+     * 新增房间
+     * @param addRoomDTO 新增房间参数
+     * @return 是否新增成功
+     */
+    boolean addRoom(RoomBuildAddRoomDTO addRoomDTO);
 } 
