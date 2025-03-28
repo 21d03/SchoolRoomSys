@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.ClassInfoMapper">
+
+    <!-- 查询班级信息 -->
+    <select id="queryClassInfoPage" resultType="com.dl.entity.vo.ClassInfoVO">
+        SELECT 
+            college_id,
+            college_name,
+            profession,
+            class_name,
+            teacher_id,
+            teacher_name
+        FROM 
+            class_info
+        <where>
+            <if test="collegeName != null and collegeName != ''">
+                AND college_name LIKE CONCAT('%', #{collegeName}, '%')
+            </if>
+            <if test="profession != null and profession != ''">
+                AND profession LIKE CONCAT('%', #{profession}, '%')
+            </if>
+            <if test="className != null and className != ''">
+                AND class_name LIKE CONCAT('%', #{className}, '%')
+            </if>
+        </where>
+        ORDER BY college_id, profession, class_name
+    </select>
+
+</mapper> 

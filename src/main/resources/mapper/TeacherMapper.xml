@@ -11,27 +11,43 @@
         <result column="college" property="college"/>
     </resultMap>
 
-    <!-- 查询辅导员列表 -->
-    <select id="queryTeacherList" resultMap="TeacherResultMap">
+    <!-- 查询教师列表 -->
+    <select id="queryTeacherPage" resultType="com.dl.entity.vo.TeacherVO">
         SELECT 
             t.teacher_id, 
-            t.name as teacher_name, 
+            t.name,
             t.sex, 
-            u.phone, 
-            t.college
+            u.phone,
+            t.college,
+            c.profession,
+            c.class_name as className
         FROM 
             teacher_info t
         LEFT JOIN
-            school_user u ON t.teacher_id = u.user_id
-        WHERE 
-            1=1
+            school_user u on t.teacher_id = u.user_id
+        left join
+            class_info c on t.teacher_id = c.teacher_id
+        <where>
+            t.teacher_id in (
+                SELECT teacher_id FROM class_info
+            )
+            <if test="teacherId != null and teacherId != ''">
+                AND t.teacher_id LIKE CONCAT('%', #{teacherId}, '%')
+            </if>
             <if test="teacherName != null and teacherName != ''">
                 AND t.teacher_name LIKE CONCAT('%', #{teacherName}, '%')
             </if>
             <if test="college != null and college != ''">
-                AND t.college = #{college}
+                AND t.college LIKE CONCAT('%', #{college}, '%')
             </if>
-        ORDER BY 
-            t.college
+            <if test="profession != null and profession != ''">
+                AND c.profession LIKE CONCAT('%', #{profession}, '%')
+            </if>
+            <if test="className != null and className != ''">
+                AND c.class_name LIKE CONCAT('%', #{className}, '%')
+            </if>
+        </where>
+        GROUP BY t.teacher_id, t.name, t.sex, u.phone, t.college, c.profession, c.class_name
+        order by t.college
     </select>
 </mapper> 

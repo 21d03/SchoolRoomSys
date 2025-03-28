@@ -1,23 +1,33 @@
 package com.dl.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.dl.entity.TeacherInfo;
 import com.dl.entity.vo.TeacherVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 /**
  * 辅导员信息Mapper接口
  */
 @Mapper
-public interface TeacherMapper {
+public interface TeacherMapper extends BaseMapper<TeacherInfo> {
     
     /**
-     * 查询辅导员列表
-     * @param teacherName 辅导员姓名，支持模糊查询
-     * @param college 所属学院
-     * @return 辅导员列表
+     * 分页查询教师列表
+     * @param page 分页参数
+     * @param teacherId 教师ID
+     * @param teacherName 教师姓名
+     * @param college 学院
+     * @param profession 专业
+     * @param className 班级
+     * @return 教师列表
      */
-    List<TeacherVO> queryTeacherList(@Param("teacherName") String teacherName, 
-                                     @Param("college") String college);
+    IPage<TeacherVO> queryTeacherPage(Page<TeacherVO> page,
+                                      @Param("teacherId") String teacherId,
+                                      @Param("teacherName") String teacherName,
+                                      @Param("college") String college,
+                                      @Param("profession") String profession,
+                                      @Param("className") String className);
 } 

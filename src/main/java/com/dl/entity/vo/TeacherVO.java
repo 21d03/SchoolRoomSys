@@ -22,4 +22,10 @@ public class TeacherVO {
 
     @ApiModelProperty(value = "所属学院")
     private String college;
+
+    @ApiModelProperty(value = "专业")
+    private String profession;
+
+    @ApiModelProperty(value = "班级")
+    private String className;
 } 
