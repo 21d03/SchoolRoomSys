@@ -36,4 +36,10 @@ public class StudentController {
         return Result.success(pageResult);
     }
     
+    @DeleteMapping("/{stuId}")
+    @ApiOperation("删除学生")
+    public Result<Boolean> deleteStudent(@PathVariable String stuId) {
+        return Result.success(studentService.deleteStudent(stuId));
+    }
+    
 } 

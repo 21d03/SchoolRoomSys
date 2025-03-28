@@ -2,4 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dl.mapper.RoomInfoMapper">
 
+    <!-- 删除学生的房间信息 -->
+    <delete id="deleteRoomInfoByStuId">
+        DELETE FROM room_info WHERE stu_id = #{stuId}
+    </delete>
+
 </mapper>

@@ -13,4 +13,11 @@ public interface StudentService {
      */
     IPage<StudentVO> queryStudentPage(StudentQueryDTO queryDTO);
     
+    /**
+     * 删除学生
+     * @param stuId 学生ID
+     * @return 是否删除成功
+     */
+    boolean deleteStudent(String stuId);
+    
 } 
