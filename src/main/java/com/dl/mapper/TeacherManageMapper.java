@@ -23,4 +23,6 @@ public interface TeacherManageMapper {
                                                  @Param("name") String name,
                                                  @Param("sex") String sex,
                                                  @Param("college") String college);
+
+    String getCollegeNameByLevel(String level);
 } 

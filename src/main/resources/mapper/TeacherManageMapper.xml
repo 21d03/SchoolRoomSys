@@ -35,4 +35,10 @@
         ORDER BY t.teacher_id
     </select>
 
+    <select id="getCollegeNameByLevel" resultType="java.lang.String">
+        SELECT college_name 
+        FROM college_info 
+        WHERE college_id = #{level}
+    </select>
+
 </mapper> 
