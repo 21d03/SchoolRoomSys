@@ -23,9 +23,6 @@ public class TeacherManageVO {
     @ApiModelProperty(value = "所属学院")
     private String college;
 
-    @ApiModelProperty(value = "专业")
-    private String profession;
-
-    @ApiModelProperty(value = "班级")
-    private String className;
+    @ApiModelProperty(value = "负责班级（格式：专业+班级，多个班级用逗号分隔）")
+    private String classes;
 } 

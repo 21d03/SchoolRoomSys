@@ -10,14 +10,13 @@
             t.sex,
             u.phone,
             t.college,
-            c.profession,
-            c.class_name as className
+            GROUP_CONCAT(CONCAT(c.profession, c.class_name) SEPARATOR ',') as classes
         FROM 
             teacher_info t
         LEFT JOIN 
+            school_user u ON t.teacher_id = u.user_id
+        LEFT JOIN 
             class_info c ON t.teacher_id = c.teacher_id
-        left join
-            school_user u on t.teacher_id = u.user_id
         <where>
             <if test="teacherId != null and teacherId != ''">
                 AND t.teacher_id LIKE CONCAT('%', #{teacherId}, '%')
@@ -32,6 +31,7 @@
                 AND t.college LIKE CONCAT('%', #{college}, '%')
             </if>
         </where>
+        GROUP BY t.teacher_id, t.name, t.sex, u.phone, t.college
         ORDER BY t.teacher_id
     </select>
 
