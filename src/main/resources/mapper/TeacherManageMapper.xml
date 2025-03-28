@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.TeacherManageMapper">
+
+    <!-- 查询教师管理信息 -->
+    <select id="queryTeacherManagePage" resultType="com.dl.entity.vo.TeacherManageVO">
+        SELECT 
+            t.teacher_id as teacherId,
+            t.name,
+            t.sex,
+            u.phone,
+            t.college,
+            c.profession,
+            c.class_name as className
+        FROM 
+            teacher_info t
+        LEFT JOIN 
+            class_info c ON t.teacher_id = c.teacher_id
+        left join
+            school_user u on t.teacher_id = u.user_id
+        <where>
+            <if test="teacherId != null and teacherId != ''">
+                AND t.teacher_id LIKE CONCAT('%', #{teacherId}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                AND t.name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="sex != null and sex != ''">
+                AND t.sex = #{sex}
+            </if>
+            <if test="college != null and college != ''">
+                AND t.college LIKE CONCAT('%', #{college}, '%')
+            </if>
+        </where>
+        ORDER BY t.teacher_id
+    </select>
+
+</mapper> 
