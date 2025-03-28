@@ -3,6 +3,7 @@ package com.dl.controller.school;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.TeacherAddDTO;
 import com.dl.entity.dto.TeacherManageQueryDTO;
+import com.dl.entity.dto.TeacherUpdateDTO;
 import com.dl.entity.vo.TeacherManageVO;
 import com.dl.result.Result;
 import com.dl.service.TeacherManageService;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 /**
  * 教师管理控制器
@@ -50,5 +52,16 @@ public class TeacherManageController {
     public Result<String> getCollegeNameByTeacherId(@PathVariable String teacherId) {
         String collegeName = teacherManageService.getCollegeNameByLevel(teacherId);
         return Result.success(collegeName);
+    }
+
+    @PutMapping("/update")
+    @ApiOperation("修改教师信息")
+    public Result<Boolean> updateTeacher(@RequestBody TeacherUpdateDTO updateDTO) {
+        boolean result = teacherManageService.updateTeacher(updateDTO);
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("修改失败");
+        }
     }
 } 

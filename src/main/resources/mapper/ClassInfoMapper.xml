@@ -27,4 +27,42 @@
         ORDER BY college_id, profession, class_name
     </select>
 
+    <select id="queryUnassignedClasses" resultType="com.dl.entity.vo.UnassignedClassVO">
+        SELECT 
+            college_id as collegeId,
+            college_name as collegeName,
+            profession,
+            class_name as className
+        FROM 
+            class_info
+        WHERE 
+            (teacher_id IS NULL 
+            OR teacher_id = '' 
+            OR teacher_name IS NULL 
+            OR teacher_name = '')
+            <if test="collegeName != null and collegeName != ''">
+                AND college_name = #{collegeName}
+            </if>
+        ORDER BY 
+            college_id, profession, class_name
+    </select>
+
+    <update id="assignClass">
+        UPDATE class_info
+        SET teacher_id = #{teacherId},
+            teacher_name = #{teacherName}
+        WHERE college_name = #{collegeName}
+        AND profession = #{profession}
+        AND class_name = #{className}
+    </update>
+
+    <update id="unassignClass">
+        UPDATE class_info
+        SET teacher_id = NULL,
+            teacher_name = NULL
+        WHERE college_name = #{collegeName}
+        AND profession = #{profession}
+        AND class_name = #{className}
+    </update>
+
 </mapper> 

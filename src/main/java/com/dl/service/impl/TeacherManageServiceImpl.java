@@ -6,6 +6,7 @@ import com.dl.entity.SchoolUser;
 import com.dl.entity.TeacherInfo;
 import com.dl.entity.dto.TeacherAddDTO;
 import com.dl.entity.dto.TeacherManageQueryDTO;
+import com.dl.entity.dto.TeacherUpdateDTO;
 import com.dl.entity.vo.TeacherManageVO;
 import com.dl.mapper.*;
 import com.dl.service.TeacherManageService;
@@ -94,5 +95,25 @@ public class TeacherManageServiceImpl implements TeacherManageService {
         // 获取前两位并转为整数，自动去掉前导零
         String level = String.valueOf(Integer.parseInt(teacherId.substring(0, 2)));
         return teacherManageMapper.getCollegeNameByLevel(level);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateTeacher(TeacherUpdateDTO updateDTO) {
+        // 检查教师是否存在
+        SchoolUser existUser = schoolUserTeacherMapper.selectByIdToAdd(updateDTO.getTeacherId());
+        if (existUser == null) {
+            return false;
+        }
+        
+        // 更新学校用户表信息
+        SchoolUser schoolUser = new SchoolUser();
+        schoolUser.setUserId(updateDTO.getTeacherId());
+        schoolUser.setPhone(updateDTO.getPhone());
+        schoolUser.setIsUsed(updateDTO.getIsUsed());
+
+
+        int rows = schoolUserTeacherMapper.updateByIdTo(schoolUser.getUserId(),schoolUser.getPhone(),schoolUser.getIsUsed());
+        return rows > 0;
     }
 } 

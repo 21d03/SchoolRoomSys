@@ -3,6 +3,7 @@ package com.dl.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.TeacherAddDTO;
 import com.dl.entity.dto.TeacherManageQueryDTO;
+import com.dl.entity.dto.TeacherUpdateDTO;
 import com.dl.entity.vo.TeacherManageVO;
 
 /**
@@ -30,4 +31,11 @@ public interface TeacherManageService {
      * @return 学院名称
      */
     String getCollegeNameByLevel(String teacherId);
+
+    /**
+     * 修改教师信息
+     * @param updateDTO 修改信息DTO
+     * @return 是否修改成功
+     */
+    boolean updateTeacher(TeacherUpdateDTO updateDTO);
 } 
