@@ -48,6 +48,7 @@ public class ClassInfoServiceImpl implements ClassInfoService {
                 assignClassDTO.getTeacherId(),
                 assignClassDTO.getTeacherName()
         );
+        classInfoMapper.updateStudentInfo(assignClassDTO.getTeacherName(),assignClassDTO.getTeacherId(),assignClassDTO.getCollegeName(),assignClassDTO.getProfession(),assignClassDTO.getClassName());
         return rows > 0;
     }
 
@@ -58,6 +59,11 @@ public boolean unassignClass(UnassignClassDTO unassignClassDTO) {
             unassignClassDTO.getProfession(),
             unassignClassDTO.getClassName()
     );
+
+    String teacherId = "";
+    String teacherName = "";
+    classInfoMapper.updateStudentInfo(teacherName, teacherId, unassignClassDTO.getCollegeName(), unassignClassDTO.getProfession(), unassignClassDTO.getClassName());
+
     return rows > 0;
 }
 } 

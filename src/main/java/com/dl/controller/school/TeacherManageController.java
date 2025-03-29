@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 /**
  * 教师管理控制器
@@ -62,6 +63,22 @@ public class TeacherManageController {
             return Result.success(true);
         } else {
             return Result.error("修改失败");
+        }
+    }
+
+    @DeleteMapping("/{teacherId}")
+    @ApiOperation("删除教师")
+    public Result<Boolean> deleteTeacher(@PathVariable String teacherId) {
+        int result = teacherManageService.deleteTeacher(teacherId);
+        switch (result) {
+            case 0:
+                return Result.success(true);
+            case 1:
+                return Result.error("该教师有分管班级，无法删除");
+            case 2:
+                return Result.error("教师不存在");
+            default:
+                return Result.error("删除失败");
         }
     }
 } 

@@ -2,4 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dl.mapper.HouseMasterMapper">
 
+    <select id="queryHouseMasterPage" resultType="com.dl.entity.vo.HouseMasterVO">
+        SELECT 
+            hm.hm_id AS masterId,
+            hm.hm_name AS masterName,
+            hm.hm_sex AS sex,
+            hm.hm_phone AS phone,
+            GROUP_CONCAT(rb.build_name SEPARATOR ',') AS buildingNames
+        FROM 
+            house_master hm
+        LEFT JOIN 
+            room_build rb ON rb.hm_id = hm.hm_id
+        <where>
+            <if test="masterId != null and masterId != ''">
+                AND hm.hm_id LIKE CONCAT('%', #{masterId}, '%')
+            </if>
+            <if test="masterName != null and masterName != ''">
+                AND hm.hm_name LIKE CONCAT('%', #{masterName}, '%')
+            </if>
+            <if test="phone != null and phone != ''">
+                AND hm.hm_phone LIKE CONCAT('%', #{phone}, '%')
+            </if>
+            <if test="sex != null and sex != ''">
+                AND hm.hm_sex = #{sex}
+            </if>
+        </where>
+        GROUP BY hm.hm_id, hm.hm_name, hm.hm_sex, hm.hm_phone
+        ORDER BY hm.hm_id
+    </select>
+
+    <update id="updateRoomBuildHmId">
+        UPDATE room_build
+        SET hm_id = #{hmId}
+        WHERE build_id = #{buildId}
+    </update>
+
 </mapper>

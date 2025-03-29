@@ -8,6 +8,7 @@ import com.dl.entity.vo.ClassInfoVO;
 import com.dl.entity.vo.UnassignedClassVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -59,4 +60,8 @@ public interface ClassInfoMapper extends BaseMapper<ClassInfo> {
     int unassignClass(@Param("collegeName") String collegeName,
                      @Param("profession") String profession,
                      @Param("className") String className);
-} 
+
+    @Update("update student_info set teacher_id = #{teacherId},teacher_name = #{teacherName} " +
+            "where college = #{collegeName} and profession = #{profession} and class_room = #{className}")
+    void updateStudentInfo(String teacherName, String teacherId, String collegeName, String profession, String className);
+}

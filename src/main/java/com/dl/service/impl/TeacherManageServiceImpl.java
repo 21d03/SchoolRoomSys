@@ -1,7 +1,9 @@
 package com.dl.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.dl.entity.ClassInfo;
 import com.dl.entity.SchoolUser;
 import com.dl.entity.TeacherInfo;
 import com.dl.entity.dto.TeacherAddDTO;
@@ -36,6 +38,9 @@ public class TeacherManageServiceImpl implements TeacherManageService {
 
     @Autowired
     private TeacherInfoManageMapper teacherInfoManageMapper;
+
+    @Autowired
+    private ClassInfoMapper classInfoMapper;
 
     @Override
     public IPage<TeacherManageVO> queryTeacherManagePage(TeacherManageQueryDTO queryDTO) {
@@ -115,5 +120,31 @@ public class TeacherManageServiceImpl implements TeacherManageService {
 
         int rows = schoolUserTeacherMapper.updateByIdTo(schoolUser.getUserId(),schoolUser.getPhone(),schoolUser.getIsUsed());
         return rows > 0;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public int deleteTeacher(String teacherId) {
+        // 1. 检查教师是否存在
+        TeacherInfo teacherInfo = teacherInfoManageMapper.selectByIdtoAdd(teacherId);
+        if (teacherInfo == null) {
+            return 2; // 教师不存在
+        }
+        
+        // 2. 检查教师是否有分管班级
+        QueryWrapper<ClassInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("teacher_id", teacherId);
+        long count = classInfoMapper.selectCount(queryWrapper);
+        if (count > 0) {
+            return 1; // 有分管班级，不能删除
+        }
+        
+        // 3. 删除教师信息
+        teacherInfoMapper.deleteById(teacherId);
+        
+        // 4. 删除用户信息
+        schoolUserMapper.deleteById(teacherId);
+        
+        return 0; // 删除成功
     }
 } 

@@ -38,4 +38,11 @@ public interface TeacherManageService {
      * @return 是否修改成功
      */
     boolean updateTeacher(TeacherUpdateDTO updateDTO);
+
+    /**
+     * 删除教师
+     * @param teacherId 教师ID
+     * @return 删除结果：0-成功，1-失败(有关联班级)，2-教师不存在
+     */
+    int deleteTeacher(String teacherId);
 } 
