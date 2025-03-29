@@ -1,8 +1,12 @@
 package com.dl.service.impl;
 
+import com.dl.entity.dto.LeaveApprovalQueryDTO;
 import com.dl.entity.vo.ApprovalCountVO;
+import com.dl.entity.vo.LeaveApprovalVO;
 import com.dl.mapper.ApprovalManageMapper;
 import com.dl.service.ApprovalManageService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,5 +39,16 @@ public class ApprovalManageServiceImpl implements ApprovalManageService {
         countVO.setRejectedCount(leaveRejectedCount + repairRejectedCount);
         
         return countVO;
+    }
+
+    @Override
+    public IPage<LeaveApprovalVO> queryLeaveApprovalPage(LeaveApprovalQueryDTO queryDTO) {
+        Page<LeaveApprovalVO> page = new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize());
+        return approvalManageMapper.queryLeaveApprovalPage(
+            page,
+            queryDTO.getStudentId(),
+            queryDTO.getStudentName(),
+            queryDTO.getStatus()
+        );
     }
 }

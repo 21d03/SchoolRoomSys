@@ -2,6 +2,10 @@ package com.dl.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Param;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.dl.entity.vo.LeaveApprovalVO;
 
 @Mapper
 public interface ApprovalManageMapper {
@@ -53,4 +57,12 @@ public interface ApprovalManageMapper {
      */
     @Select("SELECT COUNT(*) FROM repair_approval WHERE (repair_approval.hm_status = '1' and rp_status = '2') or hm_status = '2'")
     Integer getRepairApprovalRejectedCount();
+
+    /**
+     * 分页查询请假审批列表
+     */
+    IPage<LeaveApprovalVO> queryLeaveApprovalPage(Page<LeaveApprovalVO> page,
+                                                 @Param("studentId") String studentId,
+                                                 @Param("studentName") String studentName,
+                                                 @Param("status") String status);
 }
