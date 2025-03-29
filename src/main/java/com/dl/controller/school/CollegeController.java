@@ -3,6 +3,7 @@ package com.dl.controller.school;
 import com.dl.common.Result;
 import com.dl.entity.pojo.CollegeInfo;
 import com.dl.entity.vo.CollegeVO;
+import com.dl.entity.vo.CollegeStudentDistributionVO;
 import com.dl.service.CollegeService;
 import com.dl.service.ICollegeInfoService;
 import io.swagger.annotations.Api;
@@ -49,5 +50,10 @@ public class CollegeController {
     public Result<List<CollegeVO>> getAllColleges() {
         return Result.success(collegeService.getAllColleges());
     }
-    
+
+    @GetMapping("/student-distribution")
+    @ApiOperation("获取各学院学生分布")
+    public Result<List<CollegeStudentDistributionVO>> getCollegeStudentDistribution() {
+        return Result.success(collegeService.getCollegeStudentDistribution());
+    }
 } 

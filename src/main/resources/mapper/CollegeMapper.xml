@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.CollegeMapper">
+
+    <select id="getCollegeStudentDistribution" resultType="com.dl.entity.vo.CollegeStudentDistributionVO">
+        SELECT 
+            college_id as collegeId,
+            college_name as collegeName
+        FROM 
+            college_info
+    </select>
+    
+</mapper>
