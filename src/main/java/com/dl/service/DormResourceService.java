@@ -4,6 +4,7 @@ import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
 import com.dl.entity.vo.RoomTypeDistributionVO;
+import com.dl.entity.vo.GenderDormRatioVO;
 
 import java.util.List;
 
@@ -32,4 +33,10 @@ public interface DormResourceService {
      * @return 房间类型分布情况
      */
     List<RoomTypeDistributionVO> getRoomTypeDistribution();
+
+    /**
+     * 获取男女宿舍比例
+     * @return 男女宿舍比例数据
+     */
+    GenderDormRatioVO getGenderDormRatio();
 }

@@ -4,6 +4,7 @@ import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
 import com.dl.entity.vo.RoomTypeDistributionVO;
+import com.dl.entity.vo.GenderDormRatioVO;
 import com.dl.mapper.DormResourceMapper;
 import com.dl.service.DormResourceService;
 import com.dl.utils.ReflectionUtils;
@@ -127,5 +128,20 @@ public class DormResourceServiceImpl implements DormResourceService {
         }
         
         return resultList;
+    }
+
+    @Override
+    public GenderDormRatioVO getGenderDormRatio() {
+        GenderDormRatioVO ratioVO = new GenderDormRatioVO();
+        
+        // 获取男生宿舍数量
+        Integer maleCount = dormResourceMapper.getMaleDormCount();
+        ratioVO.setMaleCount(maleCount);
+        
+        // 获取女生宿舍数量
+        Integer femaleCount = dormResourceMapper.getFemaleDormCount();
+        ratioVO.setFemaleCount(femaleCount);
+        
+        return ratioVO;
     }
 }

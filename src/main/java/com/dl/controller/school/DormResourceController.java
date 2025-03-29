@@ -4,6 +4,7 @@ import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
 import com.dl.entity.vo.RoomTypeDistributionVO;
+import com.dl.entity.vo.GenderDormRatioVO;
 import com.dl.result.Result;
 import com.dl.service.DormResourceService;
 import io.swagger.annotations.Api;
@@ -45,5 +46,11 @@ public class DormResourceController {
     @ApiOperation("获取房间类型分布情况")
     public Result<List<RoomTypeDistributionVO>> getRoomTypeDistribution() {
         return Result.success(dormResourceService.getRoomTypeDistribution());
+    }
+
+    @GetMapping("/gender-ratio")
+    @ApiOperation("获取男女宿舍比例")
+    public Result<GenderDormRatioVO> getGenderDormRatio() {
+        return Result.success(dormResourceService.getGenderDormRatio());
     }
 }

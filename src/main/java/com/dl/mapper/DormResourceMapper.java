@@ -71,4 +71,16 @@ public interface DormResourceMapper {
      */
     @Select("SELECT COUNT(*) FROM room_build_details WHERE room_type = #{roomType}")
     Integer getRoomCountByType(Integer roomType);
+
+    /**
+     * 获取男生宿舍数量
+     */
+    @Select("SELECT sum(total_room_num) FROM room_build WHERE build_type = '1'")
+    Integer getMaleDormCount();
+
+    /**
+     * 获取女生宿舍数量
+     */
+    @Select("SELECT sum(total_room_num) FROM room_build WHERE build_type = '2'")
+    Integer getFemaleDormCount();
 }
