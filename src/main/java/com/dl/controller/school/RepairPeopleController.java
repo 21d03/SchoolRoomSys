@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,6 +51,22 @@ public class RepairPeopleController {
             return Result.success(true);
         } else {
             return Result.error("修改失败，维修人员不存在");
+        }
+    }
+
+    @DeleteMapping("/{rpId}")
+    @ApiOperation("删除维修人员")
+    public Result<Boolean> deleteRepairPeople(@PathVariable String rpId) {
+        int result = repairPeopleService.deleteRepairPeople(rpId);
+        switch (result) {
+            case 0:
+                return Result.success(true);
+            case 1:
+                return Result.error("删除失败");
+            case 2:
+                return Result.error("维修人员不存在");
+            default:
+                return Result.error("删除失败");
         }
     }
 }

@@ -116,4 +116,26 @@ public class RepairPeopleServiceImpl implements RepairPeopleService {
         
         return true;
     }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public int deleteRepairPeople(String rpId) {
+        // 1. 检查维修人员是否存在
+        RepairPeople repairPeople = repairPeopleMapper.selectByIdToAdd(rpId);
+        if (repairPeople == null) {
+            return 2; // 维修人员不存在
+        }
+        
+        // 2. 删除维修人员信息
+        int result1 = repairPeopleMapper.deleteById(rpId);
+        
+        // 3. 删除用户信息
+        int result2 = masterUserMapper.deleteById(rpId);
+        
+        if (result1 > 0 && result2 > 0) {
+            return 0; // 删除成功
+        } else {
+            return 1; // 删除失败
+        }
+    }
 }

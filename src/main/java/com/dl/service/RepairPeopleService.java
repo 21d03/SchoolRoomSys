@@ -28,4 +28,11 @@ public interface RepairPeopleService {
      * @return 是否修改成功
      */
     boolean updateRepairPeople(RepairPeopleUpdateDTO updateDTO);
+
+    /**
+     * 删除维修人员
+     * @param rpId 维修人员ID
+     * @return 删除结果：0-成功，1-删除失败，2-维修人员不存在
+     */
+    int deleteRepairPeople(String rpId);
 }
