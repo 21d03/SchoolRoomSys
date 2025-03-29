@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.DormResourceMapper">
+
+    <select id="getBuildingRoomDistribution" resultType="com.dl.entity.vo.BuildingRoomDistributionVO">
+        SELECT 
+            build_name as buildingName,
+            total_room_num as totalRooms,
+            CASE WHEN is_used = '0' THEN total_room_num ELSE 0 END as underMaintenanceRooms,
+            build_id as buildId
+        FROM 
+            room_build
+    </select>
+    
+    <select id="getBuildingUsageRate" resultType="com.dl.entity.vo.BuildingUsageRateVO">
+        SELECT 
+            rb.build_name as buildingName,
+            rb.build_id as buildId,
+            rb.total_room_num as totalRooms
+        FROM 
+            room_build rb
+    </select>
+    
+</mapper>

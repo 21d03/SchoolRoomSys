@@ -1,7 +1,11 @@
 package com.dl.mapper;
 
+import com.dl.entity.vo.BuildingRoomDistributionVO;
+import com.dl.entity.vo.BuildingUsageRateVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 @Mapper
 public interface DormResourceMapper {
@@ -29,4 +33,28 @@ public interface DormResourceMapper {
      */
     @Select("SELECT COUNT(*) FROM room_info WHERE stu_id IS NOT NULL AND stu_id != ''")
     Integer getUsedBedCount();
+
+    /**
+     * 获取各宿舍楼房间分布情况
+     */
+    List<BuildingRoomDistributionVO> getBuildingRoomDistribution();
+
+    /**
+     * 获取宿舍楼的已使用房间数
+     * @param buildId 宿舍楼ID
+     * @return 已使用房间数
+     */
+    @Select("SELECT COUNT(DISTINCT room_id) FROM room_info WHERE build_id = #{buildId}")
+    Integer getUsedRoomCount(String buildId);
+
+    /**
+     * 获取各宿舍楼使用率
+     */
+    List<BuildingUsageRateVO> getBuildingUsageRate();
+
+    @Select("select build_id from room_build where build_name = #{buildingName}")
+    String getBuildIdByName(String buildingName);
+
+    @Select("select total_room_num from room_build where build_id = #{buildId}")
+    Integer getTotalRoomsById(String buildId);
 }
