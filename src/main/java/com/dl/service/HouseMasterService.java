@@ -3,6 +3,7 @@ package com.dl.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.HouseMasterQueryDTO;
 import com.dl.entity.dto.HouseMasterAddDTO;
+import com.dl.entity.dto.HouseMasterUpdateDTO;
 import com.dl.entity.vo.HouseMasterVO;
 import com.dl.entity.vo.UnassignedHouseMasterVO;
 
@@ -25,4 +26,18 @@ public interface HouseMasterService {
     boolean addHouseMaster(HouseMasterAddDTO addDTO);
 
     List<UnassignedHouseMasterVO> getUnassignedHouseMasters();
+
+    /**
+     * 修改宿管信息
+     * @param updateDTO 修改信息DTO
+     * @return 是否修改成功
+     */
+    boolean updateHouseMaster(HouseMasterUpdateDTO updateDTO);
+
+    /**
+     * 删除宿管
+     * @param hmId 宿管ID
+     * @return 删除结果：0-成功，1-失败(有关联宿舍楼)，2-宿管不存在
+     */
+    int deleteHouseMaster(String hmId);
 }
