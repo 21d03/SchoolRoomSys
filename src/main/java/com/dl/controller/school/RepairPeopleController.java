@@ -2,6 +2,7 @@ package com.dl.controller.school;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RepairPeopleQueryDTO;
+import com.dl.entity.dto.RepairPeopleAddDTO;
 import com.dl.entity.vo.RepairPeopleVO;
 import com.dl.result.Result;
 import com.dl.service.RepairPeopleService;
@@ -25,5 +26,16 @@ public class RepairPeopleController {
     @ApiOperation("分页查询维修人员信息")
     public Result<IPage<RepairPeopleVO>> queryRepairPeoplePage(@RequestBody RepairPeopleQueryDTO queryDTO) {
         return Result.success(repairPeopleService.queryRepairPeoplePage(queryDTO));
+    }
+
+    @PostMapping("/add")
+    @ApiOperation("新增维修人员")
+    public Result<Boolean> addRepairPeople(@RequestBody RepairPeopleAddDTO addDTO) {
+        boolean result = repairPeopleService.addRepairPeople(addDTO);
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("新增维修人员失败");
+        }
     }
 }

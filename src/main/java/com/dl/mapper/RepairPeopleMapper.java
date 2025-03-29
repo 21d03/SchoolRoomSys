@@ -7,6 +7,7 @@ import com.dl.entity.pojo.RepairPeople;
 import com.dl.entity.vo.RepairPeopleVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * <p>
@@ -28,4 +29,7 @@ public interface RepairPeopleMapper extends BaseMapper<RepairPeople> {
                                                 @Param("rpSex") String rpSex,
                                                 @Param("rpPhone") String rpPhone,
                                                 @Param("campus") String campus);
+
+    @Select("select * from repair_people where rp_id = #{rpId}")
+    RepairPeople selectByIdToAdd(String rpId);
 }
