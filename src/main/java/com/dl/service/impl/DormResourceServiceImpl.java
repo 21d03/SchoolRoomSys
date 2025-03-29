@@ -3,6 +3,7 @@ package com.dl.service.impl;
 import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
+import com.dl.entity.vo.RoomTypeDistributionVO;
 import com.dl.mapper.DormResourceMapper;
 import com.dl.service.DormResourceService;
 import com.dl.utils.ReflectionUtils;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class DormResourceServiceImpl implements DormResourceService {
@@ -106,5 +108,24 @@ public class DormResourceServiceImpl implements DormResourceService {
         }
         
         return usageRateList;
+    }
+
+    @Override
+    public List<RoomTypeDistributionVO> getRoomTypeDistribution() {
+        // 获取所有不同的房间类型
+        List<Integer> roomTypes = dormResourceMapper.getDistinctRoomTypes();
+        
+        // 创建结果集
+        List<RoomTypeDistributionVO> resultList = new ArrayList<>();
+        
+        // 遍历每种房间类型，获取数量
+        for (Integer roomType : roomTypes) {
+            RoomTypeDistributionVO vo = new RoomTypeDistributionVO();
+            vo.setTypeName(roomType + "人间");
+            vo.setCount(dormResourceMapper.getRoomCountByType(roomType));
+            resultList.add(vo);
+        }
+        
+        return resultList;
     }
 }

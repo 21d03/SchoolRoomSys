@@ -3,6 +3,7 @@ package com.dl.controller.school;
 import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
+import com.dl.entity.vo.RoomTypeDistributionVO;
 import com.dl.result.Result;
 import com.dl.service.DormResourceService;
 import io.swagger.annotations.Api;
@@ -38,5 +39,11 @@ public class DormResourceController {
     @ApiOperation("获取各宿舍楼使用率")
     public Result<List<BuildingUsageRateVO>> getBuildingUsageRate() {
         return Result.success(dormResourceService.getBuildingUsageRate());
+    }
+
+    @GetMapping("/room-type-distribution")
+    @ApiOperation("获取房间类型分布情况")
+    public Result<List<RoomTypeDistributionVO>> getRoomTypeDistribution() {
+        return Result.success(dormResourceService.getRoomTypeDistribution());
     }
 }

@@ -57,4 +57,18 @@ public interface DormResourceMapper {
 
     @Select("select total_room_num from room_build where build_id = #{buildId}")
     Integer getTotalRoomsById(String buildId);
+
+    /**
+     * 获取不同的房间类型
+     */
+    @Select("SELECT DISTINCT room_type FROM room_build_details")
+    List<Integer> getDistinctRoomTypes();
+
+    /**
+     * 根据房间类型获取数量
+     * @param roomType 房间类型
+     * @return 该类型的房间数量
+     */
+    @Select("SELECT COUNT(*) FROM room_build_details WHERE room_type = #{roomType}")
+    Integer getRoomCountByType(Integer roomType);
 }

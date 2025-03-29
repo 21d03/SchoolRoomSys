@@ -3,6 +3,7 @@ package com.dl.service;
 import com.dl.entity.vo.BuildingRoomDistributionVO;
 import com.dl.entity.vo.DormResourceOverviewVO;
 import com.dl.entity.vo.BuildingUsageRateVO;
+import com.dl.entity.vo.RoomTypeDistributionVO;
 
 import java.util.List;
 
@@ -25,4 +26,10 @@ public interface DormResourceService {
      * @return 各宿舍楼使用率
      */
     List<BuildingUsageRateVO> getBuildingUsageRate();
+
+    /**
+     * 获取房间类型分布
+     * @return 房间类型分布情况
+     */
+    List<RoomTypeDistributionVO> getRoomTypeDistribution();
 }
