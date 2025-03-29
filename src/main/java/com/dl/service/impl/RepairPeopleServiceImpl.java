@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.entity.dto.RepairPeopleAddDTO;
 import com.dl.entity.dto.RepairPeopleQueryDTO;
+import com.dl.entity.dto.RepairPeopleUpdateDTO;
 import com.dl.entity.pojo.MasterUser;
 import com.dl.entity.pojo.RepairPeople;
 import com.dl.entity.vo.RepairPeopleVO;
@@ -88,5 +89,31 @@ public class RepairPeopleServiceImpl implements RepairPeopleService {
         masterUser.setIsUsed(addDTO.getIsUsed());
         
         return masterUserMapper.insert(masterUser) > 0;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateRepairPeople(RepairPeopleUpdateDTO updateDTO) {
+        // 1. 检查维修人员是否存在
+        RepairPeople existRepairPeople = repairPeopleMapper.selectByIdToAdd(updateDTO.getRpId());
+        if (existRepairPeople == null) {
+            return false;
+        }
+        
+        // 2. 修改维修人员表信息
+        RepairPeople repairPeople = new RepairPeople();
+        repairPeople.setRpId(updateDTO.getRpId());
+        repairPeople.setRpPhone(updateDTO.getRpPhone());
+        repairPeopleMapper.updateById(repairPeople);
+        
+        // 3. 修改用户表信息
+        MasterUser masterUser = masterUserMapper.selectById(updateDTO.getRpId());
+        if (masterUser != null) {
+            masterUser.setPhone(updateDTO.getRpPhone());
+            masterUser.setIsUsed(updateDTO.getIsUsed());
+            masterUserMapper.updateById(masterUser);
+        }
+        
+        return true;
     }
 }

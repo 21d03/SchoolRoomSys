@@ -3,6 +3,7 @@ package com.dl.controller.school;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RepairPeopleQueryDTO;
 import com.dl.entity.dto.RepairPeopleAddDTO;
+import com.dl.entity.dto.RepairPeopleUpdateDTO;
 import com.dl.entity.vo.RepairPeopleVO;
 import com.dl.result.Result;
 import com.dl.service.RepairPeopleService;
@@ -11,6 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,6 +38,17 @@ public class RepairPeopleController {
             return Result.success(true);
         } else {
             return Result.error("新增维修人员失败");
+        }
+    }
+
+    @PutMapping("/update")
+    @ApiOperation("修改维修人员信息")
+    public Result<Boolean> updateRepairPeople(@RequestBody RepairPeopleUpdateDTO updateDTO) {
+        boolean result = repairPeopleService.updateRepairPeople(updateDTO);
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("修改失败，维修人员不存在");
         }
     }
 }

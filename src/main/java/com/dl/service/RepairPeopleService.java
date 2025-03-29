@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.RepairPeopleQueryDTO;
 import com.dl.entity.vo.RepairPeopleVO;
 import com.dl.entity.dto.RepairPeopleAddDTO;
+import com.dl.entity.dto.RepairPeopleUpdateDTO;
 
 public interface RepairPeopleService {
 
@@ -20,4 +21,11 @@ public interface RepairPeopleService {
      * @return 是否成功
      */
     boolean addRepairPeople(RepairPeopleAddDTO addDTO);
+
+    /**
+     * 修改维修人员信息
+     * @param updateDTO 修改信息DTO
+     * @return 是否修改成功
+     */
+    boolean updateRepairPeople(RepairPeopleUpdateDTO updateDTO);
 }
