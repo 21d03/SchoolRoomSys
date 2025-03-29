@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.CollegeManageMapper">
+
+    <select id="queryCollegePage" resultType="com.dl.entity.vo.CollegeVO">
+        SELECT 
+            college_id as collegeId,
+            college_name as collegeName
+        FROM 
+            college_info
+        <where>
+            <if test="collegeId != null and collegeId != ''">
+                AND college_id LIKE CONCAT('%', #{collegeId}, '%')
+            </if>
+            <if test="collegeName != null and collegeName != ''">
+                AND college_name LIKE CONCAT('%', #{collegeName}, '%')
+            </if>
+        </where>
+        ORDER BY cast(college_id as unsigned ) asc
+    </select>
+
+</mapper>
