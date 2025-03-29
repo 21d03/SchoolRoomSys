@@ -21,4 +21,13 @@ public interface CollegeManageService {
      * @return 0-成功，1-有学生，2-有教师
      */
     int deleteCollege(String collegeId, String collegeName);
+
+    /**
+     * 编辑学院名称
+     * @param collegeId 学院ID
+     * @param oldCollegeName 原学院名称
+     * @param newCollegeName 新学院名称
+     * @return 是否成功
+     */
+    boolean updateCollege(String collegeId, String oldCollegeName, String newCollegeName);
 }

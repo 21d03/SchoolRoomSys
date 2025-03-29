@@ -2,6 +2,7 @@ package com.dl.controller.school;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.CollegeQueryDTO;
+import com.dl.entity.dto.CollegeUpdateDTO;
 import com.dl.entity.vo.CollegeVO;
 import com.dl.result.Result;
 import com.dl.service.CollegeManageService;
@@ -53,6 +54,21 @@ public class CollegeManageController {
                 return Result.error("当前学院有辅导员，不能删除");
             default:
                 return Result.error("删除失败");
+        }
+    }
+
+    @PutMapping("/update")
+    @ApiOperation("编辑学院名称")
+    public Result<Boolean> updateCollege(@RequestBody CollegeUpdateDTO updateDTO) {
+        boolean result = collegeManageService.updateCollege(
+            updateDTO.getCollegeId(),
+            updateDTO.getOldCollegeName(),
+            updateDTO.getNewCollegeName()
+        );
+        if (result) {
+            return Result.success(true);
+        } else {
+            return Result.error("新学院名称已存在");
         }
     }
 }

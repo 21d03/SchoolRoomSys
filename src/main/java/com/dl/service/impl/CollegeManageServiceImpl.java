@@ -57,4 +57,28 @@ public class CollegeManageServiceImpl implements CollegeManageService {
         collegeManageMapper.deleteCollege(collegeId, collegeName);
         return 0;
     }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean updateCollege(String collegeId, String oldCollegeName, String newCollegeName) {
+        // 检查新名称是否已存在（排除自己）
+        if (collegeManageMapper.checkCollegeNameExists(newCollegeName) > 0 
+                && !oldCollegeName.equals(newCollegeName)) {
+            return false;
+        }
+        
+        // 更新college_info表
+        collegeManageMapper.updateCollegeName(collegeId, oldCollegeName, newCollegeName);
+        
+        // 更新class_info表
+        collegeManageMapper.updateClassInfoCollegeName(collegeId, newCollegeName);
+        
+        // 更新student_info表
+        collegeManageMapper.updateStudentInfoCollegeName(oldCollegeName, newCollegeName);
+        
+        // 更新teacher_info表
+        collegeManageMapper.updateTeacherInfoCollegeName(oldCollegeName, newCollegeName);
+        
+        return true;
+    }
 }
