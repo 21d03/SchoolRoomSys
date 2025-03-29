@@ -30,4 +30,40 @@
         </where>
         ORDER BY la.create_time DESC
     </select>
+
+    <select id="queryRepairApprovalPage" resultType="com.dl.entity.vo.RepairApprovalVO">
+        SELECT
+        ra.id as approvalId,
+        ra.student_id as studentId,
+        si.stu_name as studentName,
+        concat_ws('',public_area,item_name,description) as repairContent,
+        rb.build_name as buildName,
+        ra.room_id as roomId,
+        ra.hm_status as hmStatus,
+        ra.hm_opinion as hmOpinion,
+        ra.rp_status as rpStatus,
+        ra.rp_opinion as rpOpinion,
+        date_format(ra.create_time, '%Y-%m-%d %H:%i:%s') as createTime
+        FROM
+        repair_approval ra
+        LEFT JOIN
+        student_info si ON ra.student_id = si.stu_id
+        LEFT JOIN
+        room_build rb ON si.build_id = rb.build_id
+        <where>
+            <if test="studentId != null and studentId != ''">
+                AND ra.student_id LIKE CONCAT('%', #{studentId}, '%')
+            </if>
+            <if test="studentName != null and studentName != ''">
+                AND si.stu_name LIKE CONCAT('%', #{studentName}, '%')
+            </if>
+            <if test="hmStatus != null and hmStatus != ''">
+                AND ra.hm_status = #{hmStatus}
+            </if>
+            <if test="rpStatus != null and rpStatus != ''">
+                AND ra.rp_status = #{rpStatus}
+            </if>
+        </where>
+        ORDER BY ra.create_time DESC
+    </select>
 </mapper>

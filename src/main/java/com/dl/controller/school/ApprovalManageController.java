@@ -2,8 +2,10 @@ package com.dl.controller.school;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.dl.entity.dto.LeaveApprovalQueryDTO;
+import com.dl.entity.dto.RepairApprovalQueryDTO;
 import com.dl.entity.vo.ApprovalCountVO;
 import com.dl.entity.vo.LeaveApprovalVO;
+import com.dl.entity.vo.RepairApprovalVO;
 import com.dl.result.Result;
 import com.dl.service.ApprovalManageService;
 import io.swagger.annotations.Api;
@@ -29,5 +31,11 @@ public class ApprovalManageController {
     @ApiOperation("分页查询请假审批列表")
     public Result<IPage<LeaveApprovalVO>> queryLeaveApprovalPage(@RequestBody LeaveApprovalQueryDTO queryDTO) {
         return Result.success(approvalManageService.queryLeaveApprovalPage(queryDTO));
+    }
+
+    @PostMapping("/repair/page")
+    @ApiOperation("分页查询报修审批列表")
+    public Result<IPage<RepairApprovalVO>> queryRepairApprovalPage(@RequestBody RepairApprovalQueryDTO queryDTO) {
+        return Result.success(approvalManageService.queryRepairApprovalPage(queryDTO));
     }
 }

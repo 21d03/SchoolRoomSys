@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.entity.vo.LeaveApprovalVO;
+import com.dl.entity.vo.RepairApprovalVO;
 
 @Mapper
 public interface ApprovalManageMapper {
@@ -65,4 +66,13 @@ public interface ApprovalManageMapper {
                                                  @Param("studentId") String studentId,
                                                  @Param("studentName") String studentName,
                                                  @Param("status") String status);
+
+    /**
+     * 分页查询报修审批列表
+     */
+    IPage<RepairApprovalVO> queryRepairApprovalPage(Page<RepairApprovalVO> page,
+                                               @Param("studentId") String studentId,
+                                               @Param("studentName") String studentName,
+                                               @Param("hmStatus") String hmStatus,
+                                               @Param("rpStatus") String rpStatus);
 }

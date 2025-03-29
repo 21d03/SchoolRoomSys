@@ -1,8 +1,10 @@
 package com.dl.service.impl;
 
 import com.dl.entity.dto.LeaveApprovalQueryDTO;
+import com.dl.entity.dto.RepairApprovalQueryDTO;
 import com.dl.entity.vo.ApprovalCountVO;
 import com.dl.entity.vo.LeaveApprovalVO;
+import com.dl.entity.vo.RepairApprovalVO;
 import com.dl.mapper.ApprovalManageMapper;
 import com.dl.service.ApprovalManageService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -49,6 +51,18 @@ public class ApprovalManageServiceImpl implements ApprovalManageService {
             queryDTO.getStudentId(),
             queryDTO.getStudentName(),
             queryDTO.getStatus()
+        );
+    }
+
+    @Override
+    public IPage<RepairApprovalVO> queryRepairApprovalPage(RepairApprovalQueryDTO queryDTO) {
+        Page<RepairApprovalVO> page = new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize());
+        return approvalManageMapper.queryRepairApprovalPage(
+            page,
+            queryDTO.getStudentId(),
+            queryDTO.getStudentName(),
+            queryDTO.getHmStatus(),
+            queryDTO.getRpStatus()
         );
     }
 }
