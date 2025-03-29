@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.ClassStatMapper">
+
+    <select id="getClassStudentDistribution" resultType="com.dl.entity.vo.ClassStudentDistributionVO">
+        SELECT 
+            CONCAT(profession, class_name) as className,
+            college_id as collegeId,
+            college_name as collegeName,
+            profession,
+            class_name as classNameOnly
+        FROM 
+            class_info
+        <where>
+            <if test="collegeId != null and collegeId != ''">
+                AND college_id = #{collegeId}
+            </if>
+        </where>
+        ORDER BY college_id, profession, class_name
+    </select>
+    
+    <select id="getStudentCountByClass" resultType="java.lang.Integer">
+        SELECT 
+            COUNT(*)
+        FROM 
+            student_info
+        WHERE 
+            profession = #{profession}
+            AND class_room = #{className}
+    </select>
+    
+</mapper>
