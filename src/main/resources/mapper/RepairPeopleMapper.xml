@@ -2,4 +2,36 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dl.mapper.RepairPeopleMapper">
 
+    <select id="queryRepairPeoplePage" resultType="com.dl.entity.vo.RepairPeopleVO">
+        SELECT 
+            rp.rp_id AS rpId,
+            rp.rp_name AS rpName,
+            rp.rp_sex AS rpSex,
+            rp.rp_phone AS rpPhone,
+            rp.campus,
+            mu.is_used AS isUsed
+        FROM 
+            repair_people rp
+        LEFT JOIN 
+            master_user mu ON rp.rp_id = mu.user_id
+        <where>
+            <if test="rpId != null and rpId != ''">
+                AND rp.rp_id LIKE CONCAT('%', #{rpId}, '%')
+            </if>
+            <if test="rpName != null and rpName != ''">
+                AND rp.rp_name LIKE CONCAT('%', #{rpName}, '%')
+            </if>
+            <if test="rpSex != null and rpSex != ''">
+                AND rp.rp_sex = #{rpSex}
+            </if>
+            <if test="rpPhone != null and rpPhone != ''">
+                AND rp.rp_phone LIKE CONCAT('%', #{rpPhone}, '%')
+            </if>
+            <if test="campus != null and campus != ''">
+                AND rp.campus LIKE CONCAT('%', #{campus}, '%')
+            </if>
+        </where>
+        ORDER BY rp.rp_id
+    </select>
+
 </mapper>

@@ -1,9 +1,12 @@
 package com.dl.service.impl;
 
-import com.dl.entity.pojo.RepairPeople;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.dl.entity.dto.RepairPeopleQueryDTO;
+import com.dl.entity.vo.RepairPeopleVO;
 import com.dl.mapper.RepairPeopleMapper;
-import com.dl.service.IRepairPeopleService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.dl.service.RepairPeopleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +18,21 @@ import org.springframework.stereotype.Service;
  * @since 2024-11-01
  */
 @Service
-public class RepairPeopleServiceImpl extends ServiceImpl<RepairPeopleMapper, RepairPeople> implements IRepairPeopleService {
+public class RepairPeopleServiceImpl implements RepairPeopleService {
 
+    @Autowired
+    private RepairPeopleMapper repairPeopleMapper;
+
+    @Override
+    public IPage<RepairPeopleVO> queryRepairPeoplePage(RepairPeopleQueryDTO queryDTO) {
+        Page<RepairPeopleVO> page = new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize());
+        return repairPeopleMapper.queryRepairPeoplePage(
+            page,
+            queryDTO.getRpId(),
+            queryDTO.getRpName(),
+            queryDTO.getRpSex(),
+            queryDTO.getRpPhone(),
+            queryDTO.getCampus()
+        );
+    }
 }
