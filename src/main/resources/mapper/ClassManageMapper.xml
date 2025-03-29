@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.ClassManageMapper">
+
+    <select id="queryClassPage" resultType="com.dl.entity.vo.ClassVO">
+        SELECT 
+            ci.college_id as collegeId,
+            ci.college_name as collegeName,
+            ci.profession,
+            ci.class_name as className,
+            ci.teacher_id as teacherId,
+            ci.teacher_name as teacherName,
+            (SELECT COUNT(*) FROM student_info si 
+             WHERE si.profession = ci.profession 
+             AND si.class_room = ci.class_name) as studentCount
+        FROM 
+            class_info ci
+        <where>
+            <if test="collegeName != null and collegeName != ''">
+                AND ci.college_name LIKE CONCAT('%', #{collegeName}, '%')
+            </if>
+            <if test="className != null and className != ''">
+                AND ci.class_name LIKE CONCAT('%', #{className}, '%')
+            </if>
+        </where>
+        ORDER BY ci.college_id, ci.profession, ci.class_name
+    </select>
+
+    <insert id="addClass">
+        INSERT INTO class_info (
+            college_id,
+            college_name,
+            profession,
+            class_name,
+            create_time,
+            update_time
+        ) VALUES (
+            #{collegeId},
+            #{collegeName},
+            #{profession},
+            #{className},
+            NOW(),
+            NOW()
+        )
+    </insert>
+
+    <update id="updateClass">
+        UPDATE class_info 
+        SET 
+            profession = #{newProfession},
+            class_name = #{newClassName},
+            update_time = NOW()
+        WHERE 
+            college_name = #{collegeName}
+            AND profession = #{oldProfession}
+            AND class_name = #{oldClassName}
+    </update>
+
+    <update id="updateStudentInfo">
+        UPDATE student_info 
+        SET 
+            profession = #{newProfession},
+            class_room = #{newClassName}
+        WHERE 
+            profession = #{oldProfession}
+            AND class_room = #{oldClassName}
+    </update>
+</mapper>
