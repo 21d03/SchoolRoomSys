@@ -5,13 +5,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel("请假审批查询DTO")
+@ApiModel(value = "请假记录查询参数")
 public class LeaveApprovalQueryDTO {
 
-    @ApiModelProperty(value = "页码", example = "1")
+    @ApiModelProperty(value = "页码", required = true)
     private Integer pageNum = 1;
 
-    @ApiModelProperty(value = "每页数量", example = "10")
+    @ApiModelProperty(value = "每页大小", required = true)
     private Integer pageSize = 10;
 
     @ApiModelProperty(value = "学生ID")

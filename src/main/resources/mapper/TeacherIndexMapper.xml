@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.TeacherIndexMapper">
+
+    <select id="getRecentLeaveApprovals" resultType="com.dl.entity.vo.LeaveApprovalVO">
+        SELECT
+            la.id as approvalId,
+            si.stu_name as studentName,
+            la.student_id as studentId,
+            date_format(la.start_time, '%Y-%m-%d %H:%i:%s') as startTime,
+            date_format(la.end_time, '%Y-%m-%d %H:%i:%s') as endTime,
+            la.reason as leaveReason,
+            CASE
+                WHEN la.status = '0' THEN '待审批'
+                WHEN la.status = '1' THEN '已通过'
+                WHEN la.status = '2' THEN '已拒绝'
+                ELSE '未知'
+            END as status,
+            date_format(la.create_time, '%Y-%m-%d %H:%i:%s') as createTime
+        FROM
+            leave_approval la
+        LEFT JOIN
+            student_info si ON la.student_id = si.stu_id
+        WHERE
+            la.teacher_id = #{teacherId}
+        ORDER BY
+            la.create_time DESC
+    </select>
+</mapper> 
