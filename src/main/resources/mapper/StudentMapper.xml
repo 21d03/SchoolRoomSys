@@ -34,5 +34,39 @@
         </where>
         ORDER BY si.stu_id
     </select>
+    
+    <!-- 教师查询所管理的学生列表 -->
+    <select id="queryTeacherStudentPage" resultType="com.dl.entity.vo.StudentListVO">
+        SELECT 
+            si.stu_id as studentId,
+            si.stu_name as name,
+            si.sex as gender,
+            si.profession,
+            si.class_room as className,
+            CONCAT(rb.build_name, si.room_id) as dormitory,
+            su.phone
+        FROM 
+            student_info si
+        LEFT JOIN 
+            student_user su ON si.stu_id = su.user_id
+        LEFT JOIN 
+            room_build rb ON si.build_id = rb.build_id
+        <where>
+            si.teacher_id = #{teacherId}
+            <if test="studentId != null and studentId != ''">
+                AND si.stu_id LIKE CONCAT('%',#{studentId}, '%')
+            </if>
+            <if test="name != null and name != ''">
+                AND si.stu_name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="profession != null and profession != ''">
+                AND si.profession LIKE CONCAT('%', #{profession}, '%')
+            </if>
+            <if test="className != null and className != ''">
+                AND si.class_room LIKE CONCAT('%', #{className}, '%')
+            </if>
+        </where>
+        ORDER BY si.stu_id
+    </select>
 
 </mapper> 
