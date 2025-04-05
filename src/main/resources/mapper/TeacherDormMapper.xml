@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.TeacherDormMapper">
+
+    <!-- 查询教师管理的学生所住的宿舍 -->
+    <select id="queryTeacherDorms" resultType="com.dl.entity.vo.TeacherDormVO">
+        SELECT DISTINCT 
+            si.build_id as buildId,
+            si.room_id as roomId,
+            CONCAT(rb.build_name, si.room_id) as dormitory
+        FROM 
+            student_info si
+        LEFT JOIN
+            room_build rb ON si.build_id = rb.build_id
+        WHERE 
+            si.teacher_id = #{teacherId}
+            AND si.build_id IS NOT NULL 
+            AND si.build_id != ''
+            AND si.room_id IS NOT NULL 
+            AND si.room_id != ''
+        ORDER BY 
+            si.build_id, si.room_id
+    </select>
+    
+    <!-- 查询宿舍学生信息 -->
+    <select id="queryDormStudents" resultType="com.dl.entity.vo.DormStudentVO">
+        SELECT 
+            si.stu_id as studentId,
+            si.stu_name as studentName,
+            si.sex as gender,
+            ri.bed_no as bedNo,
+            su.phone,
+            si.profession,
+            si.class_room as className
+        FROM 
+            student_info si
+        LEFT JOIN 
+            student_user su ON si.stu_id = su.user_id
+        LEFT JOIN 
+            room_info ri ON si.stu_id = ri.stu_id
+        WHERE 
+            si.build_id = #{buildId}
+            AND si.room_id = #{roomId}
+        ORDER BY 
+            ri.bed_no
+    </select>
+    
+    <!-- 查询宿舍类型（几人间） -->
+    <select id="queryRoomType" resultType="String">
+        SELECT 
+            room_type as roomType
+        FROM 
+            room_build_details
+        WHERE 
+            build_id = #{buildId}
+            AND room_id = #{roomId}
+        LIMIT 1
+    </select>
+    
+</mapper> 
