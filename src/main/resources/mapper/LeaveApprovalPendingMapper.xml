@@ -25,9 +25,9 @@
             <if test="status != null and status != ''">
                 AND la.status = #{status}
             </if>
-            <if test="status == null or status == ''">
-                AND la.status = '0'
-            </if>
+            <!--<if test="status == null or status == ''">-->
+            <!--    AND la.status = '0'-->
+            <!--</if>-->
             <if test="studentId != null and studentId != ''">
                 AND la.student_id LIKE CONCAT('%', #{studentId}, '%')
             </if>

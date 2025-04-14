@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.LeaveApprovalHistoryMapper">
+
+    <!-- 分页查询教师已审批的请假记录 -->
+    <select id="queryApprovalHistory" resultType="com.dl.entity.vo.LeaveApprovalHistoryVO">
+        SELECT 
+            la.id as leaveId,
+            la.student_id as studentId,
+            si.stu_name as studentName,
+            date_format(la.start_time, '%Y-%m-%d %H:%i:%s') as startTime,
+            date_format(la.end_time, '%Y-%m-%d %H:%i:%s') as endTime,
+            DATEDIFF(la.end_time, la.start_time) + 1 as days,
+            la.reason,
+            la.destination,
+            la.status,
+            CASE 
+                WHEN la.status = '1' THEN '已通过'
+                WHEN la.status = '2' THEN '已拒绝'
+                ELSE '未知'
+            END as statusName,
+            la.opinion,
+            date_format(la.approve_time, '%Y-%m-%d %H:%i:%s') as approveTime,
+            date_format(la.create_time, '%Y-%m-%d %H:%i:%s') as submitTime
+        FROM 
+            leave_approval la
+        LEFT JOIN 
+            student_info si ON la.student_id = si.stu_id
+        <where>
+            la.teacher_id = #{teacherId}
+            AND la.status != '0'
+            <if test="studentId != null and studentId != ''">
+                AND la.student_id LIKE CONCAT('%', #{studentId}, '%')
+            </if>
+            <if test="studentName != null and studentName != ''">
+                AND si.stu_name LIKE CONCAT('%', #{studentName}, '%')
+            </if>
+            <if test="status != null and status != ''">
+                AND la.status = #{status}
+            </if>
+            <if test="submitStartDate != null and submitStartDate != ''">
+                AND la.approve_time IS NOT NULL 
+                AND DATE_FORMAT(la.approve_time, '%Y-%m-%d') &gt;= #{submitStartDate}
+            </if>
+            <if test="submitEndDate != null and submitEndDate != ''">
+                AND la.approve_time IS NOT NULL 
+                AND DATE_FORMAT(la.approve_time, '%Y-%m-%d') &lt;= #{submitEndDate}
+            </if>
+        </where>
+        ORDER BY 
+            la.approve_time DESC
+    </select>
+    
+</mapper> 
