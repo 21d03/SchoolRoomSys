@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.TeacherRepairApprovalMapper">
+
+    <select id="queryTeacherRepairApprovalPage" resultType="com.dl.entity.vo.TeacherRepairApprovalVO">
+        SELECT
+            ra.id,
+            ra.student_id as studentId,
+            si.stu_name as stuName,
+            CONCAT(si.profession, '', si.class_room) as className,
+            ra.repair_type as repairType,
+            CASE
+                WHEN ra.repair_type = '1' THEN CONCAT_WS(' ', ra.room_id, ra.item_name,ra.description)
+                WHEN ra.repair_type = '2' THEN CONCAT_WS(' ', ra.public_area, ra.item_name,ra.description)
+                ELSE ra.item_name
+            END as repairItem,
+            date_format(ra.create_time, '%Y-%m-%d %H:%i:%s') as createTime
+        FROM
+            repair_approval ra
+        INNER JOIN
+            student_info si ON ra.student_id = si.stu_id
+        <where>
+            si.teacher_id = #{teacherId}
+            <if test="stuName != null and stuName != ''">
+                AND si.stu_name LIKE CONCAT('%', #{stuName}, '%')
+            </if>
+            <if test="repairType != null and repairType != ''">
+                AND ra.repair_type = #{repairType}
+            </if>
+            <if test="roomId != null and roomId != ''">
+                AND ra.room_id LIKE CONCAT('%', #{roomId}, '%')
+            </if>
+            <if test="itemName != null and itemName != ''">
+                AND ra.item_name LIKE CONCAT('%', #{itemName}, '%')
+            </if>
+        </where>
+        ORDER BY ra.create_time DESC
+    </select>
+</mapper> 
