@@ -85,3 +85,10 @@ logging:
   config: classpath:logback.xml
 #  file:
 #    name: ../logs/SchoolRoomSys.log
+
+upload:
+  # 图片保存路径
+  # imagePath: /data/upload/images
+  imagePath: D:\code\dl\SchoolRoomSys\src\main\resources\images
+  # 图片访问URL前缀
+  imageUrlPrefix: http://localhost:8080/images
