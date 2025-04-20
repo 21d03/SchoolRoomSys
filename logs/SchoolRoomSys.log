@@ -1550,3 +1550,513 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-04-21T00:27:17Z. Curren
 2025-04-21 00:37:12 [http-nio-8080-exec-27] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2025-04-21 00:37:12 [http-nio-8080-exec-27] - Writing [Result(code=0, msg=null, data=true)]
 2025-04-21 00:37:12 [http-nio-8080-exec-27] - Completed 200 OK
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - 当前登录id:2111102112
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 236418
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@6728bedd)]
+2025-04-21 00:41:08 [http-nio-8080-exec-29] - Completed 200 OK
+2025-04-21 00:52:49 [File Watcher] - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-04-21 00:52:50 [Thread-247] - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2025-04-21 00:52:50 [http-nio-8080-Acceptor] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:257)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:748)
+2025-04-21 00:52:50 [Thread-247] - Stopping service [Tomcat]
+2025-04-21 00:52:50 [Thread-247] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-04-21 00:52:50 [Thread-247] - {dataSource-61} closing ...
+2025-04-21 00:52:50 [Thread-247] - {dataSource-61} closed
+2025-04-21 00:52:51 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24420 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-21 00:52:51 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 00:52:51 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 00:52:51 [restartedMain] - Starting service [Tomcat]
+2025-04-21 00:52:51 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-21 00:52:51 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-21 00:52:51 [restartedMain] - Root WebApplicationContext: initialization completed in 598 ms
+2025-04-21 00:52:51 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-21 00:52:51 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-21 00:52:51 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-21 00:52:51 [restartedMain] - Init DruidDataSource
+2025-04-21 00:52:52 [restartedMain] - {dataSource-62} inited
+2025-04-21 00:52:52 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-21 00:52:52 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-21 00:52:52 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-21 00:52:53 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-21 00:52:53 [restartedMain] - 开始注册自定义拦截器
+2025-04-21 00:52:53 [restartedMain] - 89 mappings in 'requestMappingHandlerMapping'
+2025-04-21 00:52:53 [restartedMain] - 生成school端接口文档
+2025-04-21 00:52:53 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-21 00:52:53 [restartedMain] - LiveReload server is running on port 35729
+2025-04-21 00:52:53 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-21 00:52:53 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-21 00:52:53 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-21 00:52:53 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-21 00:52:53 [restartedMain] - Documentation plugins bootstrapped
+2025-04-21 00:52:53 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-21 00:52:53 [restartedMain] - Scanning for api listing references
+2025-04-21 00:52:53 [restartedMain] - Scanning for api listing references
+2025-04-21 00:52:53 [restartedMain] - Scanning for api listing references
+2025-04-21 00:52:54 [restartedMain] - Started SchoolRoomSysApplication in 2.856 seconds (JVM running for 5876.386)
+2025-04-21 00:52:54 [restartedMain] - Condition evaluation unchanged
+2025-04-21 00:53:09 [File Watcher] - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-04-21 00:53:10 [Thread-251] - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2025-04-21 00:53:10 [http-nio-8080-Acceptor] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:257)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:748)
+2025-04-21 00:53:10 [Thread-251] - Stopping service [Tomcat]
+2025-04-21 00:53:10 [Thread-251] - {dataSource-62} closing ...
+2025-04-21 00:53:10 [Thread-251] - {dataSource-62} closed
+2025-04-21 00:53:11 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24420 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-21 00:53:11 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 00:53:12 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 00:53:12 [restartedMain] - Starting service [Tomcat]
+2025-04-21 00:53:12 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-21 00:53:12 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-21 00:53:12 [restartedMain] - Root WebApplicationContext: initialization completed in 487 ms
+2025-04-21 00:53:12 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-21 00:53:12 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-21 00:53:12 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-21 00:53:12 [restartedMain] - Init DruidDataSource
+2025-04-21 00:53:12 [restartedMain] - {dataSource-63} inited
+2025-04-21 00:53:12 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-21 00:53:12 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-21 00:53:12 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-21 00:53:13 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-21 00:53:13 [restartedMain] - 开始注册自定义拦截器
+2025-04-21 00:53:13 [restartedMain] - 89 mappings in 'requestMappingHandlerMapping'
+2025-04-21 00:53:13 [restartedMain] - 生成school端接口文档
+2025-04-21 00:53:13 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-21 00:53:13 [restartedMain] - LiveReload server is running on port 35729
+2025-04-21 00:53:13 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-21 00:53:13 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-21 00:53:13 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-21 00:53:13 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-21 00:53:13 [restartedMain] - Documentation plugins bootstrapped
+2025-04-21 00:53:13 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-21 00:53:13 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:13 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:13 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:13 [restartedMain] - Started SchoolRoomSysApplication in 2.098 seconds (JVM running for 5896.16)
+2025-04-21 00:53:13 [restartedMain] - Condition evaluation unchanged
+2025-04-21 00:53:41 [File Watcher] - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-04-21 00:53:42 [Thread-255] - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2025-04-21 00:53:42 [http-nio-8080-Acceptor] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:257)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:748)
+2025-04-21 00:53:42 [Thread-255] - Stopping service [Tomcat]
+2025-04-21 00:53:42 [Thread-255] - {dataSource-63} closing ...
+2025-04-21 00:53:42 [Thread-255] - {dataSource-63} closed
+2025-04-21 00:53:42 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24420 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-21 00:53:42 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 00:53:43 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 00:53:43 [restartedMain] - Starting service [Tomcat]
+2025-04-21 00:53:43 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-21 00:53:43 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-21 00:53:43 [restartedMain] - Root WebApplicationContext: initialization completed in 502 ms
+2025-04-21 00:53:43 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-21 00:53:43 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-21 00:53:43 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-21 00:53:43 [restartedMain] - Init DruidDataSource
+2025-04-21 00:53:43 [restartedMain] - {dataSource-64} inited
+2025-04-21 00:53:43 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-21 00:53:43 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-21 00:53:43 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-21 00:53:44 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-21 00:53:44 [restartedMain] - 开始注册自定义拦截器
+2025-04-21 00:53:44 [restartedMain] - 89 mappings in 'requestMappingHandlerMapping'
+2025-04-21 00:53:44 [restartedMain] - 生成school端接口文档
+2025-04-21 00:53:44 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-21 00:53:44 [restartedMain] - LiveReload server is running on port 35729
+2025-04-21 00:53:44 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-21 00:53:44 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-21 00:53:44 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-21 00:53:44 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-21 00:53:44 [restartedMain] - Documentation plugins bootstrapped
+2025-04-21 00:53:44 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-21 00:53:44 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:44 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:44 [restartedMain] - Scanning for api listing references
+2025-04-21 00:53:45 [restartedMain] - Started SchoolRoomSysApplication in 2.155 seconds (JVM running for 5927.297)
+2025-04-21 00:53:45 [restartedMain] - Condition evaluation unchanged
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@14469087
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1a817c7f
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-21 00:57:31 [http-nio-8080-exec-1] - Completed initialization in 5 ms
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/student/repair/upload", parameters={multipart}
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - Mapped to com.dl.controller.student.StudentRepairController#uploadImage(MultipartFile)
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - 当前登录id:2111102112
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - 上传报修图片, 文件名: Snipaste_2025-04-20_23-03-48.png
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/ca393f0b-b (truncated)...]
+2025-04-21 00:57:31 [http-nio-8080-exec-2] - Completed 200 OK
+2025-04-21 00:57:33 [File Watcher] - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-04-21 00:57:34 [http-nio-8080-Acceptor] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:257)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:748)
+2025-04-21 00:57:34 [Thread-259] - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2025-04-21 00:57:34 [Thread-259] - Stopping service [Tomcat]
+2025-04-21 00:57:34 [Thread-259] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-04-21 00:57:34 [Thread-259] - {dataSource-64} closing ...
+2025-04-21 00:57:34 [Thread-259] - {dataSource-64} closed
+2025-04-21 00:57:35 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24420 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-21 00:57:35 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 00:57:36 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 00:57:36 [restartedMain] - Starting service [Tomcat]
+2025-04-21 00:57:36 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-21 00:57:36 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-21 00:57:36 [restartedMain] - Root WebApplicationContext: initialization completed in 674 ms
+2025-04-21 00:57:36 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-21 00:57:36 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-21 00:57:36 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-21 00:57:36 [restartedMain] - Init DruidDataSource
+2025-04-21 00:57:36 [restartedMain] - {dataSource-65} inited
+2025-04-21 00:57:36 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-21 00:57:36 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-21 00:57:36 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-21 00:57:37 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-21 00:57:37 [restartedMain] - 开始注册自定义拦截器
+2025-04-21 00:57:37 [restartedMain] - 89 mappings in 'requestMappingHandlerMapping'
+2025-04-21 00:57:37 [restartedMain] - 生成school端接口文档
+2025-04-21 00:57:37 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-21 00:57:37 [restartedMain] - LiveReload server is running on port 35729
+2025-04-21 00:57:37 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-21 00:57:37 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-21 00:57:37 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-21 00:57:37 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-21 00:57:37 [restartedMain] - Documentation plugins bootstrapped
+2025-04-21 00:57:37 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-21 00:57:37 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:37 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:37 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2550f07
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@c92f13d
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-21 00:57:38 [http-nio-8080-exec-1] - Completed initialization in 5 ms
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/student/repair/upload", parameters={multipart}
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - Mapped to com.dl.controller.student.StudentRepairController#uploadImage(MultipartFile)
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - 当前登录id:2111102112
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - 上传报修图片, 文件名: Snipaste_2025-04-20_23-03-48.png
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/9e61931c-6 (truncated)...]
+2025-04-21 00:57:38 [http-nio-8080-exec-2] - Completed 200 OK
+2025-04-21 00:57:38 [restartedMain] - Started SchoolRoomSysApplication in 2.969 seconds (JVM running for 6160.594)
+2025-04-21 00:57:38 [restartedMain] - Condition evaluation unchanged
+2025-04-21 00:57:40 [File Watcher] - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-04-21 00:57:41 [Thread-263] - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2025-04-21 00:57:41 [http-nio-8080-Acceptor] - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:257)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:547)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.lang.Thread.run(Thread.java:748)
+2025-04-21 00:57:41 [Thread-263] - Stopping service [Tomcat]
+2025-04-21 00:57:41 [Thread-263] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-04-21 00:57:41 [Thread-263] - {dataSource-65} closing ...
+2025-04-21 00:57:41 [Thread-263] - {dataSource-65} closed
+2025-04-21 00:57:41 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 24420 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-21 00:57:41 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 00:57:42 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 00:57:42 [restartedMain] - Starting service [Tomcat]
+2025-04-21 00:57:42 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-21 00:57:42 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-21 00:57:42 [restartedMain] - Root WebApplicationContext: initialization completed in 457 ms
+2025-04-21 00:57:42 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-21 00:57:42 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-21 00:57:42 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-21 00:57:42 [restartedMain] - Init DruidDataSource
+2025-04-21 00:57:42 [restartedMain] - {dataSource-66} inited
+2025-04-21 00:57:42 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-21 00:57:42 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-21 00:57:42 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-21 00:57:43 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-21 00:57:43 [restartedMain] - 开始注册自定义拦截器
+2025-04-21 00:57:43 [restartedMain] - 89 mappings in 'requestMappingHandlerMapping'
+2025-04-21 00:57:43 [restartedMain] - 生成school端接口文档
+2025-04-21 00:57:43 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-21 00:57:43 [restartedMain] - LiveReload server is running on port 35729
+2025-04-21 00:57:43 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-21 00:57:43 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-21 00:57:43 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-21 00:57:43 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-21 00:57:43 [restartedMain] - Documentation plugins bootstrapped
+2025-04-21 00:57:43 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-21 00:57:43 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:43 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:43 [restartedMain] - Scanning for api listing references
+2025-04-21 00:57:43 [restartedMain] - Started SchoolRoomSysApplication in 2.01 seconds (JVM running for 6166.194)
+2025-04-21 00:57:43 [restartedMain] - Condition evaluation unchanged
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Initializing Servlet 'dispatcherServlet'
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Detected StandardServletMultipartResolver
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Detected AcceptHeaderLocaleResolver
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Detected FixedThemeResolver
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6f4a5756
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@618da4cf
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-21 00:58:35 [http-nio-8080-exec-3] - Completed initialization in 2 ms
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - POST "/SchoolRoomSys/student/repair/apply", parameters={}
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - Mapped to com.dl.controller.student.StudentRepairController#submitRepairApplication(RepairApplicationDTO)
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - 当前登录id:2111102112
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - Read "application/json;charset=UTF-8" to [RepairApplicationDTO(studentId=2111102112, repairType=2, roomId=null, publicArea=走廊, itemName=测试, de (truncated)...]
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - 提交报修申请, 申请信息: RepairApplicationDTO(studentId=2111102112, repairType=2, roomId=null, publicArea=走廊, itemName=测试, description=测试测试测试测试测试测试测试测试测试, images=D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/ca393f0b-b4b9-4ea2-9d5c-815a68b680ad.png,D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/9e61931c-61a3-4dfc-ab0e-591ded1752fd.png)
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - 提交报修申请, 申请信息: RepairApplicationDTO(studentId=2111102112, repairType=2, roomId=null, publicArea=走廊, itemName=测试, description=测试测试测试测试测试测试测试测试测试, images=D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/ca393f0b-b4b9-4ea2-9d5c-815a68b680ad.png,D:\code\dl\SchoolRoomSys\src\main\resources\images/20250421/9e61931c-61a3-4dfc-ab0e-591ded1752fd.png)
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - 生成报修申请ID: RP20250421001
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - 报修申请提交成功, ID: RP20250421001
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - Writing [Result(code=0, msg=null, data=RP20250421001)]
+2025-04-21 00:58:35 [http-nio-8080-exec-1] - Completed 200 OK
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - 当前登录id:2111102112
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@6896b7a1)]
+2025-04-21 00:58:43 [http-nio-8080-exec-11] - Completed 200 OK
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - 当前登录id:2111102112
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 231424
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292314
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292323
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292334
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292342
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292352
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292360
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 292370
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@74660fbe)]
+2025-04-21 01:02:34 [http-nio-8080-exec-14] - Completed 200 OK
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - 当前登录id:2111102112
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@48a4474)]
+2025-04-21 01:02:38 [http-nio-8080-exec-15] - Completed 200 OK
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - 当前登录id:2111102112
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@5d4602d2)]
+2025-04-21 01:02:51 [http-nio-8080-exec-19] - Completed 200 OK
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - 当前登录id:2111102112
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@677e498d)]
+2025-04-21 01:02:55 [http-nio-8080-exec-20] - Completed 200 OK
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - 当前登录id:2111102112
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 63356
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@5b300374)]
+2025-04-21 01:03:59 [http-nio-8080-exec-23] - Completed 200 OK
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - 当前登录id:2111102112
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@1af4657b)]
+2025-04-21 01:04:22 [http-nio-8080-exec-25] - Completed 200 OK
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - 当前登录id:2111102112
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 187482
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@3d38c521)]
+2025-04-21 01:07:29 [http-nio-8080-exec-29] - Completed 200 OK
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - 当前登录id:2111102112
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 209740
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@e4e9a3)]
+2025-04-21 01:10:59 [http-nio-8080-exec-6] - Completed 200 OK
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - 当前登录id:2111102112
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 313343
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@398e68d)]
+2025-04-21 01:16:12 [http-nio-8080-exec-7] - Completed 200 OK
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - 当前登录id:2111102112
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 109494
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@20ff517e)]
+2025-04-21 01:18:02 [http-nio-8080-exec-10] - Completed 200 OK
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - 当前登录id:2111102112
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 79380
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@58bbc966)]
+2025-04-21 01:19:21 [http-nio-8080-exec-13] - Completed 200 OK
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - 当前登录id:2111102112
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 114560
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@1c7618cf)]
+2025-04-21 01:21:16 [http-nio-8080-exec-16] - Completed 200 OK
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - 当前登录id:2111102112
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@41c4d208)]
+2025-04-21 01:21:57 [http-nio-8080-exec-18] - Completed 200 OK
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - 当前登录id:2111102112
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@46dc9ba7)]
+2025-04-21 01:22:13 [http-nio-8080-exec-22] - Completed 200 OK
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - 当前登录id:2111102112
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 62880
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@29a6874a)]
+2025-04-21 01:23:16 [http-nio-8080-exec-26] - Completed 200 OK
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - 当前登录id:2111102112
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@1357da74)]
+2025-04-21 01:23:40 [http-nio-8080-exec-28] - Completed 200 OK
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - 当前登录id:2111102112
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@115ac9ef)]
+2025-04-21 01:23:57 [http-nio-8080-exec-3] - Completed 200 OK
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - 当前登录id:2111102112
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@6412b112)]
+2025-04-21 01:24:26 [http-nio-8080-exec-6] - Completed 200 OK
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - POST "/SchoolRoomSys/student/repair/records", parameters={}
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - Mapped to com.dl.controller.student.StudentRepairRecordController#queryRepairRecords(RepairRecordQueryDTO)
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDUxNzQwOTgsInVzZXJJZCI6IjIxMTExMDIxMTIifQ.yT0GyQvE1VWr0hc-E82d-ijyalJhwxZPMwkxWepQID4
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - 当前登录id:2111102112
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - Read "application/json;charset=UTF-8" to [RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus= (truncated)...]
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - 查询报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - 查询学生报修记录, 查询条件: RepairRecordQueryDTO(studentId=2111102112, pageNum=1, pageSize=10, repairType=, hmStatus=, rpStatus=, itemName=)
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - Writing [Result(code=0, msg=null, data=com.baomidou.mybatisplus.extension.plugins.pagination.Page@4f14bda8)]
+2025-04-21 01:24:44 [http-nio-8080-exec-7] - Completed 200 OK

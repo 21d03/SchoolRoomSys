@@ -49,16 +49,19 @@ public class RepairApplicationServiceImpl implements RepairApplicationService {
             dir.mkdirs();
         }
         
+        // 文件完整路径
+        String fullPath = dirPath + "/" + fileName;
+        
         // 保存文件
         try {
-            file.transferTo(new File(dirPath + "/" + fileName));
+            file.transferTo(new File(fullPath));
         } catch (IOException e) {
             log.error("文件上传失败", e);
             throw new RuntimeException("文件上传失败");
         }
         
-        // 返回文件访问URL
-        return uploadConfig.getImageUrlPrefix() + "/" + datePath + "/" + fileName;
+        // 返回文件存储的绝对路径，而不是访问URL
+        return fullPath;
     }
 
     @Override
