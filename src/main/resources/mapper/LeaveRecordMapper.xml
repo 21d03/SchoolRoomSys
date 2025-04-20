@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mapper.LeaveRecordMapper">
+
+    <select id="queryLeaveRecordPage" resultType="com.dl.entity.vo.LeaveRecordVO">
+        SELECT
+            id,
+            student_id as studentId,
+            date_format(start_time, '%Y-%m-%d %H:%i:%s') as startTime,
+            date_format(end_time, '%Y-%m-%d %H:%i:%s') as endTime,
+            reason,
+            destination,
+            contact_phone as contactPhone,
+            teacher_id as teacherId,
+            status,
+            opinion,
+            date_format(approve_time, '%Y-%m-%d %H:%i:%s') as approveTime,
+            date_format(create_time, '%Y-%m-%d %H:%i:%s') as createTime,
+            date_format(update_time, '%Y-%m-%d %H:%i:%s') as updateTime
+        FROM
+            leave_approval
+        <where>
+            student_id = #{studentId}
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="startTimeBegin != null and startTimeBegin != ''">
+                AND start_time >= #{startTimeBegin}
+            </if>
+            <if test="startTimeEnd != null and startTimeEnd != ''">
+                AND start_time &lt;= #{startTimeEnd}
+            </if>
+            <if test="reason != null and reason != ''">
+                AND reason LIKE CONCAT('%', #{reason}, '%')
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+</mapper> 
