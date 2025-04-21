@@ -11,9 +11,11 @@ import com.dl.mapper.StudentLoginMapper;
 import com.dl.properties.JwtProperties;
 import com.dl.result.Result;
 import com.dl.service.LoginService;
+import com.dl.service.strategy.LoginStrategy;
 import com.dl.utils.JwtUtil;
 import com.dl.utils.PasswordEncoder;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -36,6 +38,10 @@ public class LoginServiceImpl implements LoginService {
     
     @Resource
     private PasswordEncoder passwordEncoder;
+    
+    @Resource
+    @Qualifier("houseMasterLoginStrategy")
+    private LoginStrategy<LoginVO> houseMasterLoginStrategy;
 
     @Override
     public Result<?> login(LoginDTO loginDTO) {
@@ -49,6 +55,8 @@ public class LoginServiceImpl implements LoginService {
                 return handleTeacherLogin(userId, password, userType);
             case "3": // 学生
                 return handleStudentLogin(userId, password);
+            case "4": // 宿管
+                return handleHouseMasterLogin(loginDTO);
             default:
                 return Result.error("无效的用户类型");
         }
@@ -127,5 +135,35 @@ public class LoginServiceImpl implements LoginService {
         student.setPassword(null); // 清除密码
 
         return Result.success(student);
+    }
+    
+    /**
+     * 处理宿管登录
+     * @param loginDTO 登录信息
+     * @return 登录结果
+     */
+    private Result<?> handleHouseMasterLogin(LoginDTO loginDTO) {
+        try {
+            // 使用宿管登录策略处理登录
+            LoginVO loginVO = houseMasterLoginStrategy.login(loginDTO);
+            
+            // 生成token
+            Map<String, Object> claims = new HashMap<>();
+            claims.put(JwtClaimsConstant.USER_ID, loginVO.getUserId());
+            String token = JwtUtil.createJWT(
+                    jwtProperties.getSchoolSecretKey(),
+                    jwtProperties.getSchoolTtl(),
+                    claims);
+            
+            // 设置token
+            loginVO.setToken(token);
+            
+            return Result.success(loginVO);
+        } catch (BusinessException e) {
+            return Result.error(e.getMessage());
+        } catch (Exception e) {
+            log.error("宿管登录失败", e);
+            return Result.error("系统错误，请稍后重试");
+        }
     }
 } 
