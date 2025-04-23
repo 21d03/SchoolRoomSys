@@ -4,6 +4,7 @@ import com.dl.common.exception.BusinessException;
 import com.dl.constant.JwtClaimsConstant;
 import com.dl.entity.dto.LoginDTO;
 import com.dl.entity.pojo.SchoolUser;
+import com.dl.entity.vo.HouseMasterLoginVO;
 import com.dl.entity.vo.LoginVO;
 import com.dl.entity.vo.StudentLoginVO;
 import com.dl.mapper.SchoolLoginMapper;
@@ -41,7 +42,7 @@ public class LoginServiceImpl implements LoginService {
     
     @Resource
     @Qualifier("houseMasterLoginStrategy")
-    private LoginStrategy<LoginVO> houseMasterLoginStrategy;
+    private LoginStrategy<HouseMasterLoginVO> houseMasterLoginStrategy;
 
     @Override
     public Result<?> login(LoginDTO loginDTO) {
@@ -145,7 +146,7 @@ public class LoginServiceImpl implements LoginService {
     private Result<?> handleHouseMasterLogin(LoginDTO loginDTO) {
         try {
             // 使用宿管登录策略处理登录
-            LoginVO loginVO = houseMasterLoginStrategy.login(loginDTO);
+            HouseMasterLoginVO loginVO = houseMasterLoginStrategy.login(loginDTO);
             
             // 生成token
             Map<String, Object> claims = new HashMap<>();

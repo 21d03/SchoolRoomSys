@@ -40,6 +40,7 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
         registry.addInterceptor(jwtTokenSchoolInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/api/login")
+                .excludePathPatterns("/master/login")
                 .excludePathPatterns("/swagger-resources/**")
                 .excludePathPatterns("/doc.html");
     }
@@ -51,8 +52,7 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         // 设置允许的域名
-        config.addAllowedOriginPattern("http://localhost:*");
-        config.addAllowedOriginPattern("http://127.0.0.1:*");
+        config.addAllowedOriginPattern("*");
         // 允许携带cookie等认证信息
         config.setAllowCredentials(true);
         // 允许所有请求方法

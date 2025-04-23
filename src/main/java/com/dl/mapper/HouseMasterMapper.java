@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dl.entity.pojo.HouseMaster;
+import com.dl.entity.pojo.MasterUser;
 import com.dl.entity.vo.HouseMasterVO;
 import com.dl.entity.vo.UnassignedHouseMasterVO;
 import org.apache.ibatis.annotations.*;
@@ -59,4 +60,28 @@ public interface HouseMasterMapper extends BaseMapper<HouseMaster> {
     @Insert("insert into master_user(user_id,name,password,phone,type,is_used)  " +
             "values (#{hmId},#{hmName},#{password},#{hmPhone},#{type},#{isUsed})")
     void saveMasterUser(String hmId, String hmName, String password, String hmPhone, String type, String isUsed);
+    
+    /**
+     * 根据用户ID查询宿管用户信息
+     * @param userId 用户ID
+     * @return 宿管用户信息
+     */
+    @Select("SELECT user_id, name, password, phone, type, is_used FROM master_user WHERE user_id = #{userId}")
+    MasterUser selectMasterUserById(@Param("userId") String userId);
+    
+    /**
+     * 根据宿管ID查询管理的宿舍楼ID
+     * @param masterId 宿管ID
+     * @return 宿舍楼ID
+     */
+    @Select("SELECT build_id FROM house_master WHERE hm_id = #{masterId}")
+    String selectBuildIdByMasterId(@Param("masterId") String masterId);
+
+    /**
+     * 根据宿管ID查询宿管详细信息
+     * @param hmId 宿管ID
+     * @return 宿管详细信息
+     */
+    @Select("SELECT hm_id, hm_name, hm_sex, hm_phone, build_id FROM house_master WHERE hm_id = #{hmId}")
+    HouseMaster selectHouseMasterById(@Param("hmId") String hmId);
 }

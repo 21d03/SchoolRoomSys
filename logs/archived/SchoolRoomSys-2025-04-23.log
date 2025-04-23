@@ -1,0 +1,40 @@
+2025-04-23 23:26:56 [background-preinit] - HV000001: Hibernate Validator 6.2.5.Final
+2025-04-23 23:26:56 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 19276 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
+2025-04-23 23:26:56 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-23 23:26:56 [restartedMain] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-23 23:27:00 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-23 23:27:00 [restartedMain] - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-23 23:27:00 [restartedMain] - Starting service [Tomcat]
+2025-04-23 23:27:00 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-23 23:27:00 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-23 23:27:00 [restartedMain] - Root WebApplicationContext: initialization completed in 3722 ms
+2025-04-23 23:27:00 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-23 23:27:00 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-23 23:27:00 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-23 23:27:00 [restartedMain] - Init DruidDataSource
+2025-04-23 23:27:02 [restartedMain] - {dataSource-1} inited
+2025-04-23 23:27:02 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-23 23:27:02 [restartedMain] - class com.dl.entity.ClassInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-04-23 23:27:03 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-23 23:27:03 [restartedMain] - class com.dl.entity.pojo.RoomBuildDetails ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-04-23 23:27:03 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-23 23:27:03 [restartedMain] - class com.dl.entity.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-04-23 23:27:06 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-23 23:27:06 [restartedMain] - class com.dl.entity.SchoolUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-04-23 23:27:06 [restartedMain] - class com.dl.entity.TeacherInfo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-04-23 23:27:06 [restartedMain] - 开始注册自定义拦截器
+2025-04-23 23:27:06 [restartedMain] - 90 mappings in 'requestMappingHandlerMapping'
+2025-04-23 23:27:06 [restartedMain] - 生成school端接口文档
+2025-04-23 23:27:06 [restartedMain] - Patterns [/doc.html, /webjars/**] in 'resourceHandlerMapping'
+2025-04-23 23:27:07 [restartedMain] - LiveReload server is running on port 35729
+2025-04-23 23:27:07 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-23 23:27:07 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-23 23:27:07 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-23 23:27:08 [restartedMain] - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-23 23:27:08 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-23 23:27:08 [restartedMain] - Documentation plugins bootstrapped
+2025-04-23 23:27:08 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-23 23:27:08 [restartedMain] - Scanning for api listing references
+2025-04-23 23:27:08 [restartedMain] - Scanning for api listing references
+2025-04-23 23:27:08 [restartedMain] - Scanning for api listing references
+2025-04-23 23:27:09 [restartedMain] - Started SchoolRoomSysApplication in 14.035 seconds (JVM running for 15.083)
