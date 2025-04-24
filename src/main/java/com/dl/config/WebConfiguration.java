@@ -41,6 +41,7 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
                 .addPathPatterns("/**")
                 .excludePathPatterns("/api/login")
                 .excludePathPatterns("/master/login")
+                .excludePathPatterns("/hm/**")
                 .excludePathPatterns("/swagger-resources/**")
                 .excludePathPatterns("/doc.html");
     }
