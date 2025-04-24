@@ -4,9 +4,18 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
-@ApiModel(value = "房间查询参数")
+@ApiModel(description = "宿舍查询参数")
 public class RoomQueryDTO {
+
+    @NotBlank(message = "宿舍楼ID不能为空")
+    @ApiModelProperty(value = "宿舍楼ID", required = true)
+    private String buildId;
+
+    @ApiModelProperty("宿舍号，可选参数")
+    private String roomId;
 
     @ApiModelProperty(value = "页码", required = true)
     private Integer pageNum = 1;
@@ -14,17 +23,11 @@ public class RoomQueryDTO {
     @ApiModelProperty(value = "每页大小", required = true)
     private Integer pageSize = 10;
 
-    @ApiModelProperty(value = "宿舍楼ID")
-    private String buildId;
-
     @ApiModelProperty(value = "宿舍楼名称")
     private String buildName;
 
     @ApiModelProperty(value = "楼层号")
     private String layerNumber;
-
-    @ApiModelProperty(value = "房间号")
-    private String roomId;
 
     @ApiModelProperty(value = "是否混寝 1混寝 2不混")
     private String isMixed;
