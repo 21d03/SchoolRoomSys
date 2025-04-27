@@ -2,42 +2,47 @@ package com.dl.entity.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
-@ApiModel("报修审批VO")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ApiModel(description = "报修单查询结果")
 public class RepairApprovalVO {
-
-    @ApiModelProperty(value = "审批ID")
-    private String approvalId;
-
-    @ApiModelProperty(value = "学生ID")
+    
+    @ApiModelProperty("报修单号")
+    private String id;
+    
+    @ApiModelProperty("学生ID")
     private String studentId;
-
-    @ApiModelProperty(value = "学生姓名")
+    
+    @ApiModelProperty("学生姓名")
     private String studentName;
-
-    @ApiModelProperty(value = "报修内容")
-    private String repairContent;
-
-    @ApiModelProperty(value = "宿舍楼")
-    private String buildName;
-
-    @ApiModelProperty(value = "房间号")
-    private String roomId;
-
-    @ApiModelProperty(value = "宿管审批状态（0-待审批，1-已通过，2-已拒绝）")
+    
+    @ApiModelProperty("报修描述，来自repair_approval表的description字段")
+    private String content;
+    
+    @ApiModelProperty("报修时间")
+    private LocalDateTime createTime;
+    
+    @ApiModelProperty("宿管审批状态：0-待审批 1-已通过 2-已拒绝")
     private String hmStatus;
-
-    @ApiModelProperty(value = "宿管审批意见")
-    private String hmOpinion;
-
-    @ApiModelProperty(value = "维修人员审批状态（0-待审批，1-已完成，2-已拒绝）")
+    
+    @ApiModelProperty("维修人员审批状态：0-待审批 1-已完成 2-拒绝")
     private String rpStatus;
-
-    @ApiModelProperty(value = "维修人员审批意见")
-    private String rpOpinion;
-
-    @ApiModelProperty(value = "创建时间")
-    private String createTime;
+    
+    @ApiModelProperty("当前审批人ID")
+    private String approverId;
+    
+    @ApiModelProperty("当前审批人姓名")
+    private String approverName;
+    
+    @ApiModelProperty("是否有催单")
+    private Boolean hasUrge;
 }
