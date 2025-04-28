@@ -6,17 +6,25 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 /**
  * 图片处理工具类
  */
 @Slf4j
+@Component
 public class ImageUtil {
 
+    @Value("${upload.imagePath}")
+    private String imagePath;
+    
     /**
      * 将图片文件转换为Base64编码
      * @param imagePath 图片完整路径
@@ -81,6 +89,85 @@ public class ImageUtil {
                 return "image/webp";
             }
             return null;
+        }
+    }
+
+    /**
+     * 将图片路径字符串转换为Base64编码列表
+     * @param imagePathsStr 图片路径字符串，多个路径用逗号分隔
+     * @return Base64编码列表
+     */
+    public List<String> getBase64Images(String imagePathsStr) {
+        List<String> base64Images = new ArrayList<>();
+        
+        if (imagePathsStr == null || imagePathsStr.trim().isEmpty()) {
+            return base64Images;
+        }
+        
+        String[] imagePaths = imagePathsStr.split(",");
+        for (String path : imagePaths) {
+            if (path.trim().isEmpty()) {
+                continue;
+            }
+            
+            try {
+                String base64 = convertImageToBase64(path.trim());
+                if (base64 != null) {
+                    base64Images.add(base64);
+                }
+            } catch (Exception e) {
+                log.error("转换图片到Base64失败: {}", path, e);
+            }
+        }
+        
+        return base64Images;
+    }
+    
+    /**
+     * 将单个图片路径转换为Base64编码
+     * @param relativePath 图片相对路径
+     * @return Base64编码的图片字符串
+     */
+    private String convertImageToBase64(String relativePath) {
+        try {
+            File file = new File(imagePath, relativePath);
+            if (!file.exists() || !file.isFile()) {
+                log.warn("图片文件不存在: {}", file.getAbsolutePath());
+                return null;
+            }
+            
+            byte[] fileContent = Files.readAllBytes(file.toPath());
+            String mimeType = determineMimeType(relativePath);
+            
+            return "data:" + mimeType + ";base64," + Base64.getEncoder().encodeToString(fileContent);
+        } catch (IOException e) {
+            log.error("读取图片文件失败: {}", relativePath, e);
+            return null;
+        }
+    }
+    
+    /**
+     * 根据文件扩展名确定MIME类型
+     * @param filePath 文件路径
+     * @return MIME类型
+     */
+    private String determineMimeType(String filePath) {
+        String extension = filePath.substring(filePath.lastIndexOf(".") + 1).toLowerCase();
+        
+        switch (extension) {
+            case "jpg":
+            case "jpeg":
+                return "image/jpeg";
+            case "png":
+                return "image/png";
+            case "gif":
+                return "image/gif";
+            case "webp":
+                return "image/webp";
+            case "bmp":
+                return "image/bmp";
+            default:
+                return "application/octet-stream";
         }
     }
 } 

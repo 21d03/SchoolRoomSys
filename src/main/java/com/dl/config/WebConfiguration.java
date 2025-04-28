@@ -53,7 +53,8 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         // 设置允许的域名
-        config.addAllowedOriginPattern("*");
+        config.addAllowedOrigin("http://localhost:8000");
+        config.addAllowedOrigin("http://127.0.0.1:8000");
         // 允许携带cookie等认证信息
         config.setAllowCredentials(true);
         // 允许所有请求方法
