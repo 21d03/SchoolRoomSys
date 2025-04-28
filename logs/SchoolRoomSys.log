@@ -7317,3 +7317,108 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2025-04-28 22:37:20 [Thread-184] - {dataSource-48} closed
 2025-04-28 22:37:21 [restartedMain] - Starting SchoolRoomSysApplication using Java 1.8.0_144 on DESKTOP-9U7NROF with PID 19696 (D:\code\dl\SchoolRoomSys\target\classes started by 董梁 in D:\code\dl\SchoolRoomSys)
 2025-04-28 22:37:21 [restartedMain] - No active profile set, falling back to 1 default profile: "default"
+2025-04-28 22:37:21 [restartedMain] - Tomcat initialized with port(s): 8080 (http)
+2025-04-28 22:37:21 [restartedMain] - Starting service [Tomcat]
+2025-04-28 22:37:21 [restartedMain] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2025-04-28 22:37:21 [restartedMain] - Initializing Spring embedded WebApplicationContext
+2025-04-28 22:37:21 [restartedMain] - Root WebApplicationContext: initialization completed in 653 ms
+2025-04-28 22:37:21 [restartedMain] - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, corsFilter urls=[/*] order=2147483647
+2025-04-28 22:37:21 [restartedMain] - Mapping servlets: dispatcherServlet urls=[/]
+2025-04-28 22:37:21 [restartedMain] - Filter 'corsFilter' configured for use
+2025-04-28 22:37:21 [restartedMain] - Init DruidDataSource
+2025-04-28 22:37:21 [restartedMain] - {dataSource-49} inited
+2025-04-28 22:37:21 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.ClassInfo".
+2025-04-28 22:37:22 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.pojo.RoomBuildDetails".
+2025-04-28 22:37:22 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.TeacherInfo".
+2025-04-28 22:37:23 [restartedMain] - Can not find table primary key in Class: "com.dl.entity.SchoolUser".
+2025-04-28 22:37:23 [restartedMain] - 开始注册自定义拦截器
+2025-04-28 22:37:23 [restartedMain] - 97 mappings in 'requestMappingHandlerMapping'
+2025-04-28 22:37:23 [restartedMain] - 生成school端接口文档
+2025-04-28 22:37:23 [restartedMain] - Patterns [/doc.html, /webjars/**, /images/**] in 'resourceHandlerMapping'
+2025-04-28 22:37:23 [restartedMain] - LiveReload server is running on port 35729
+2025-04-28 22:37:23 [restartedMain] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-28 22:37:23 [restartedMain] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-28 22:37:23 [restartedMain] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2025-04-28 22:37:23 [restartedMain] - Tomcat started on port(s): 8080 (http) with context path '/SchoolRoomSys'
+2025-04-28 22:37:23 [restartedMain] - Documentation plugins bootstrapped
+2025-04-28 22:37:23 [restartedMain] - Found 3 custom documentation plugin(s)
+2025-04-28 22:37:23 [restartedMain] - Scanning for api listing references
+2025-04-28 22:37:23 [restartedMain] - Scanning for api listing references
+2025-04-28 22:37:23 [restartedMain] - Scanning for api listing references
+2025-04-28 22:37:23 [restartedMain] - Generating unique operation named: getRoomDetailUsingGET_1
+2025-04-28 22:37:23 [restartedMain] - Generating unique operation named: getIndexDataUsingGET_1
+2025-04-28 22:37:23 [restartedMain] - Started SchoolRoomSysApplication in 2.618 seconds (JVM running for 6843.712)
+2025-04-28 22:37:23 [restartedMain] - Condition evaluation unchanged
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Detected StandardServletMultipartResolver
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Detected AcceptHeaderLocaleResolver
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Detected FixedThemeResolver
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@f5dea2e
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Detected org.springframework.web.servlet.support.SessionFlashMapManager@19a15b5
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-28 22:37:33 [http-nio-8080-exec-1] - Completed initialization in 3 ms
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - POST "/SchoolRoomSys/hm/repair/urge", parameters={}
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - Mapped to com.dl.controller.housemaster.RepairUrgeController#urgeRepairWorker(RepairUrgeRequest)
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - Read "application/json;charset=UTF-8" to [RepairUrgeRequest{repairId='RP20250421001', hmId='999034001', workerId='999001110', urgeContent='111 (truncated)...]
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - 宿管催办维修人员，参数：RepairUrgeRequest{repairId='RP20250421001', hmId='999034001', workerId='999001110', urgeContent='111'}
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - 创建催促记录, 参数: UrgeRecordDTO(fromId=999034001, toId=999001110, approvalId=RP20250421001, approvalType=1, urgeType=3, urgeContent=111)
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - 催促记录创建成功, id: a0a3d4bff30440f79927c4e0ab53c716
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - Writing [Result(code=0, msg=null, data=null)]
+2025-04-28 22:37:33 [http-nio-8080-exec-5] - Completed 200 OK
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - GET "/SchoolRoomSys/hm/repair/detail?repairId=RP20250421001", parameters={masked}
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - Mapped to com.dl.controller.housemaster.RepairDetailController#getRepairDetail(String)
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - 查询报修单详情，repairId: RP20250421001
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - Writing [Result(code=0, msg=null, data=RepairDetailVO(id=RP20250421001, studentId=2111102112, studentName=董梁1 (truncated)...]
+2025-04-28 22:37:35 [http-nio-8080-exec-8] - Completed 200 OK
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - POST "/SchoolRoomSys/hm/repair/urge", parameters={}
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - Mapped to com.dl.controller.housemaster.RepairUrgeController#urgeRepairWorker(RepairUrgeRequest)
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - Read "application/json;charset=UTF-8" to [RepairUrgeRequest{repairId='RP20250421001', hmId='999034001', workerId='999001110', urgeContent='111 (truncated)...]
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - 宿管催办维修人员，参数：RepairUrgeRequest{repairId='RP20250421001', hmId='999034001', workerId='999001110', urgeContent='111111'}
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - 创建催促记录, 参数: UrgeRecordDTO(fromId=999034001, toId=999001110, approvalId=RP20250421001, approvalType=1, urgeType=3, urgeContent=111111)
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - 该用户已经催促过, approvalId: RP20250421001, fromId: 999034001, toId: 999001110, urgeType: 3
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - Writing [Result(code=0, msg=null, data=null)]
+2025-04-28 22:38:12 [http-nio-8080-exec-2] - Completed 200 OK
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - GET "/SchoolRoomSys/hm/repair/detail?repairId=RP20250421001", parameters={masked}
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - Mapped to com.dl.controller.housemaster.RepairDetailController#getRepairDetail(String)
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - 查询报修单详情，repairId: RP20250421001
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - Writing [Result(code=0, msg=null, data=RepairDetailVO(id=RP20250421001, studentId=2111102112, studentName=董梁1 (truncated)...]
+2025-04-28 22:38:14 [http-nio-8080-exec-3] - Completed 200 OK
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - GET "/SchoolRoomSys/hm/repair/list?hmId=999034001", parameters={masked}
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - Mapped to com.dl.controller.housemaster.RepairApprovalQueryController#getRepairApprovalList(String)
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - 查询宿管[999034001]的报修单列表
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - Writing [Result(code=0, msg=null, data=[RepairApprovalVO(id=RP20250421001, studentId=2111102112, studentName= (truncated)...]
+2025-04-28 22:38:18 [http-nio-8080-exec-9] - Completed 200 OK
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - GET "/SchoolRoomSys/hm/room/query?buildId=34", parameters={masked}
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - Mapped to com.dl.controller.housemaster.RoomQueryController#queryRooms(RoomQueryDTO)
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - 查询宿舍信息: RoomQueryDTO(buildId=34, roomId=null, pageNum=1, pageSize=10, buildName=null, layerNumber=null, isMixed=null, roomType=null, status=null, collegeIds=null, manageTeacherName=null)
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - Writing [Result(code=0, msg=null, data=[RoomQueryVO(roomId=101, roomType=6, occupiedCount=0, availableBeds=6) (truncated)...]
+2025-04-28 22:38:19 [http-nio-8080-exec-7] - Completed 200 OK
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - POST "/SchoolRoomSys/master/login", parameters={}
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - Mapped to com.dl.controller.MasterLoginController#login(LoginDTO)
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - Read "application/json;charset=UTF-8" to [LoginDTO(userType=4, userId=999034001, password=123456)]
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - 宿管登录: 999034001
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 71635
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128757
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128771
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128786
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128801
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128813
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128827
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/schoolroomsys?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.8, lastPacketReceivedIdleMillis : 128841
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - Writing [Result(code=0, msg=null, data=HouseMasterLoginVO(userId=999034001, userName=张三14, name=张三14, sex=男,  (truncated)...]
+2025-04-28 22:39:30 [http-nio-8080-exec-13] - Completed 200 OK
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - GET "/SchoolRoomSys/hm/index/data?hmId=999034001&buildId=34", parameters={masked}
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - Mapped to com.dl.controller.housemaster.HmIndexController#getIndexData(String, String)
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - 获取宿管首页统计数据，hmId: 999034001, buildId: 34
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - 查询宿管[999034001]首页数据，宿舍楼ID：34
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - Writing [Result(code=1, msg=null, data=HmIndexVO(pendingRepairCount=0, totalRoomCount=202))]
+2025-04-28 22:39:30 [http-nio-8080-exec-12] - Completed 200 OK
