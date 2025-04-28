@@ -56,7 +56,7 @@ public class RepairApproval {
     /**
      * 宿管审批状态 0-待审批 1-已通过 2-已驳回
      */
-    private String hmStatus;
+    private Integer hmStatus;
     
     /**
      * 宿管审批意见
@@ -97,4 +97,12 @@ public class RepairApproval {
      * 更新时间
      */
     private LocalDateTime updateTime;
+
+    public void setHmStatus(Integer hmStatus) {
+        this.hmStatus = hmStatus;
+    }
+
+    public void setWorkerId(String workerId) {
+        this.rpId = workerId;
+    }
 } 
