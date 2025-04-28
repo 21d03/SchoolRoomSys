@@ -16,6 +16,7 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.annotation.Resource;
 
@@ -30,6 +31,9 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
 
     @Resource
     private JwtTokenSchoolInterceptor jwtTokenSchoolInterceptor;
+
+    @Value("${upload.imagePath}")
+    private String imagePath;
 
     /**
      * 注册自定义拦截器
@@ -132,5 +136,8 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+        
+        registry.addResourceHandler("/images/**")
+                .addResourceLocations("file:" + imagePath + "/");
     }
 }

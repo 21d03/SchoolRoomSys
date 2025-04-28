@@ -4,12 +4,15 @@ import com.dl.entity.vo.RepairDetailVO;
 import com.dl.mapper.RepairDetailMapper;
 import com.dl.result.Result;
 import com.dl.service.RepairDetailService;
-import com.dl.utils.ImageUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 报修详情查询服务实现
@@ -21,8 +24,8 @@ public class RepairDetailServiceImpl implements RepairDetailService {
     @Autowired
     private RepairDetailMapper repairDetailMapper;
     
-    @Autowired
-    private ImageUtil imageUtil;
+    @Value("${upload.imageUrlPrefix}")
+    private String imageUrlPrefix;
     
     @Override
     public Result getRepairDetail(String repairId) {
@@ -35,10 +38,12 @@ public class RepairDetailServiceImpl implements RepairDetailService {
                 return Result.error("报修单不存在");
             }
             
-            // 处理图片，将路径转换为Base64编码
-            if (repairDetail.getImages() != null && !repairDetail.getImages().isEmpty()) {
-                List<String> imageBase64List = imageUtil.getBase64Images(repairDetail.getImages());
-                repairDetail.setImageBase64List(imageBase64List);
+            // 处理图片，将路径转换为完整URL
+            if (StringUtils.hasText(repairDetail.getImages())) {
+                List<String> imageUrls = Arrays.stream(repairDetail.getImages().split(","))
+                        .map(path -> imageUrlPrefix + "/" + path)
+                        .collect(Collectors.toList());
+                repairDetail.setImageBase64List(imageUrls);
             }
             
             return Result.success(repairDetail);
